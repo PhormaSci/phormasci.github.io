@@ -1,11 +1,46 @@
 /**
  * Phorma Scientific - Minimal JavaScript
  * Zero-bloat, vanilla JavaScript implementation
- * Handles mobile navigation toggle only
+ * Handles mobile navigation toggle and dark mode theme switching
  */
 
 (function() {
   'use strict';
+
+  // Dark Mode Theme Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const logoImg = document.querySelector('.nav-logo img');
+
+  // Function to update logo based on theme
+  function updateLogo(theme) {
+    if (logoImg) {
+      const isSpanish = window.location.pathname.includes('/es/');
+      const basePath = isSpanish ? '../assets/' : 'assets/';
+
+      if (theme === 'dark') {
+        logoImg.src = basePath + 'logo-invertido.svg';
+      } else {
+        logoImg.src = basePath + 'logo.svg';
+      }
+    }
+  }
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', currentTheme);
+  updateLogo(currentTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      const theme = html.getAttribute('data-theme');
+      const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateLogo(newTheme);
+    });
+  }
 
   // Mobile Navigation Toggle
   const navToggle = document.getElementById('navToggle');
