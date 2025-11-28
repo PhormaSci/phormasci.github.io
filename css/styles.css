@@ -198,6 +198,28 @@ code {
   opacity: 1;
 }
 
+/* Language Switcher */
+.nav-menu .lang-switch {
+  margin-left: var(--space-sm);
+  padding-left: var(--space-sm);
+  border-left: var(--border-width) solid var(--color-grey);
+}
+
+.nav-menu .lang-switch a {
+  font-weight: 700;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-width) solid var(--color-black);
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.nav-menu .lang-switch a:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-bottom-color: var(--color-black);
+}
+
 /* Mobile Navigation Toggle */
 .nav-toggle {
   display: none;
