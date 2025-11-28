@@ -32,6 +32,11 @@ Phorma Scientific transforms scientific complexity into production-grade systems
 │   └── styles.css            # Single stylesheet (12KB)
 ├── js/
 │   └── main.js               # Minimal navigation JS (4KB)
+├── es/                       # Spanish translations
+│   ├── index.html            # Home (Spanish)
+│   ├── services.html         # Services (Spanish)
+│   ├── trainees.html         # Trainees (Spanish)
+│   └── contact.html          # Contact (Spanish)
 ├── index.html                # Home (Manifesto)
 ├── services.html             # Service Offerings
 ├── trainees.html             # Corporate Workshops
@@ -62,6 +67,15 @@ Phorma Scientific transforms scientific complexity into production-grade systems
 - Contact information and response times
 - Contact form (Formspree integration ready)
 - Quick action cards for common inquiries
+
+## Internationalization
+
+The site is available in **English** and **Spanish**:
+
+- **English:** Root directory (`/`)
+- **Spanish:** `/es/` directory
+
+Language switcher in navigation allows seamless switching between languages. All content, including technical terminology, has been professionally translated while maintaining the brand's precise, architecturally-focused tone.
 
 ## Development
 
