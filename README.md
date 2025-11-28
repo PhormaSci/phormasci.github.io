@@ -35,6 +35,7 @@ Phorma Scientific transforms scientific complexity into production-grade systems
 ├── index.html                # Home (Manifesto)
 ├── services.html             # Service Offerings
 ├── trainees.html             # Corporate Workshops
+├── contact.html              # Contact page with form
 └── README.md
 ```
 
@@ -56,6 +57,11 @@ Phorma Scientific transforms scientific complexity into production-grade systems
 - 6 Corporate Workshop programs
 - Structured training for R&D teams
 - Production-grade upskilling
+
+### 4. Contact (`contact.html`)
+- Contact information and response times
+- Contact form (Formspree integration ready)
+- Quick action cards for common inquiries
 
 ## Development
 
@@ -123,7 +129,7 @@ See [LICENSE](LICENSE) file.
 
 ## Contact
 
-- **Email:** contact@phorma.xyz / contact@phorma.ar
+- **Email:** info@phorma.sh
 - **Philosophy:** Structure over Chaos
 
 ---

@@ -535,3 +535,67 @@ ul.styled-list li::before {
   left: 0;
   font-family: var(--font-mono);
 }
+
+/* ==========================================
+   FORM ELEMENTS
+   ========================================== */
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+  color: var(--color-black);
+}
+
+.form-input {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: var(--space-sm);
+  border: var(--border-width) solid var(--color-black);
+  background: var(--color-white);
+  color: var(--color-black);
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-black);
+  box-shadow: 0 0 0 2px var(--color-black);
+}
+
+.form-input:hover {
+  background: var(--color-grey);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+select.form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-sm) center;
+  padding-right: var(--space-lg);
+}
+
+.form-input::placeholder {
+  color: var(--color-grey-dark);
+  opacity: 0.6;
+}
