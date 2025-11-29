@@ -10,26 +10,31 @@
   // Dark Mode Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const html = document.documentElement;
-  const logoImg = document.querySelector('.nav-logo img');
+  const navLogoImg = document.querySelector('.nav-logo img');
+  const heroLogoImg = document.querySelector('.hero-logo');
 
-  // Function to update logo based on theme
-  function updateLogo(theme) {
-    if (logoImg) {
-      const isSpanish = window.location.pathname.includes('/es/');
-      const basePath = isSpanish ? '../assets/' : 'assets/';
+  // Function to update logos based on theme
+  function updateLogos(theme) {
+    const isSpanish = window.location.pathname.includes('/es/');
+    const basePath = isSpanish ? '../assets/' : 'assets/';
 
-      if (theme === 'dark') {
-        logoImg.src = basePath + 'logo-invertido.svg';
-      } else {
-        logoImg.src = basePath + 'logo.svg';
-      }
+    const logoSrc = theme === 'dark' ? basePath + 'logo-invertido.svg' : basePath + 'logo.svg';
+
+    // Update navigation logo
+    if (navLogoImg) {
+      navLogoImg.src = logoSrc;
+    }
+
+    // Update hero logo
+    if (heroLogoImg) {
+      heroLogoImg.src = logoSrc;
     }
   }
 
   // Check for saved theme preference or default to light mode
   const currentTheme = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', currentTheme);
-  updateLogo(currentTheme);
+  updateLogos(currentTheme);
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function() {
@@ -38,7 +43,7 @@
 
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      updateLogo(newTheme);
+      updateLogos(newTheme);
     });
   }
 
