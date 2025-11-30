@@ -244,6 +244,7 @@ code {
   background: var(--color-bg);
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--border-radius);
+  color: var(--color-fg);
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 1.125rem;
