@@ -167,7 +167,10 @@
         '01-system-audit.md',
         '02-research-software-engineering.md',
         '03-scientific-ml.md',
-        '04-performance-synthesis.md'
+        '04-performance-synthesis.md',
+        '05-bioimage-informatics.md',
+        '06-digital-petrography.md',
+        '07-computational-phenomics.md'
       ];
 
       // Adjust filenames for Spanish
@@ -189,7 +192,10 @@
         '03-sciml.md',
         '04-rse-pipelines.md',
         '05-high-performance-julia.md',
-        '06-architectural-systems.md'
+        '06-architectural-systems.md',
+        '07-python-bioimage-analysis.md',
+        '08-napari-plugin-development.md',
+        '09-ai-microscopy.md'
       ];
 
       // Adjust filenames for Spanish
