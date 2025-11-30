@@ -57,145 +57,9 @@
   <!-- Workshops Grid -->
   <section class="section">
     <div class="container">
-      <div class="grid grid-2">
+      <div class="grid grid-2" id="content-container">
 
-        <!-- Course 1: Numerical Computing Fundamentals -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Fundamentos de Computación Numérica</h3>
-            <p class="card-meta">Python / Julia</p>
-          </div>
-          <div class="card-body">
-            <p>Domine los fundamentos de computación numérica robusta con enfoque en reproducibilidad, estabilidad y corrección.</p>
-            <ul class="styled-list mb-md">
-              <li>Aritmética de punto flotante y errores numéricos</li>
-              <li>Estabilidad y condicionamiento de algoritmos</li>
-              <li>Mejores prácticas de álgebra lineal</li>
-              <li>Marcos de reproducibilidad</li>
-            </ul>
-            <p><strong>Duración:</strong> 2 días</p>
-            <p><strong>Formato:</strong> Taller práctico</p>
-            <p><strong>Requisitos:</strong> Conocimientos básicos de programación</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Código numérico listo para producción que es verificable y mantenible.</p>
-          </div>
-        </div>
-
-        <!-- Course 2: Production Rigor -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Rigor de Producción</h3>
-            <p class="card-meta">Mejores Prácticas</p>
-          </div>
-          <div class="card-body">
-            <p>Transforme flujos de trabajo de investigación en sistemas de nivel de producción con prácticas modernas de ingeniería de software.</p>
-            <ul class="styled-list mb-md">
-              <li>Desarrollo dirigido por pruebas (TDD)</li>
-              <li>Integración y despliegue continuos (CI/CD)</li>
-              <li>Flujos de trabajo Git y control de versiones</li>
-              <li>Revisión de código y estándares de colaboración</li>
-            </ul>
-            <p><strong>Duración:</strong> 3 días</p>
-            <p><strong>Formato:</strong> Taller + Sesiones de Revisión de Código</p>
-            <p><strong>Requisitos:</strong> Base de código existente para refactorizar</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Pipelines de pruebas automatizadas y software científico desplegable.</p>
-          </div>
-        </div>
-
-        <!-- Course 3: Applied Scientific Machine Learning (SciML) -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Machine Learning Científico Aplicado</h3>
-            <p class="card-meta">SciML</p>
-          </div>
-          <div class="card-body">
-            <p>Integre ML informado por física y solucionadores de ecuaciones diferenciales en flujos de trabajo de investigación.</p>
-            <ul class="styled-list mb-md">
-              <li>Redes neuronales informadas por física (PINNs)</li>
-              <li>ODEs neuronales y solucionadores de ecuaciones diferenciales</li>
-              <li>Cuantificación de incertidumbre</li>
-              <li>Validación y benchmarking de modelos</li>
-            </ul>
-            <p><strong>Duración:</strong> 4 días</p>
-            <p><strong>Formato:</strong> Capacitación práctica intensiva</p>
-            <p><strong>Requisitos:</strong> Fundamentos de ML, cálculo, álgebra lineal</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Modelos SciML operacionales con pipelines de validación completos.</p>
-          </div>
-        </div>
-
-        <!-- Course 4: RSE & Production Pipelines -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">RSE y Pipelines de Producción</h3>
-            <p class="card-meta">Investigación a Producción</p>
-          </div>
-          <div class="card-body">
-            <p>Pase de prototipos Jupyter/MATLAB a sistemas de producción de nivel empresarial.</p>
-            <ul class="styled-list mb-md">
-              <li>Diseño de arquitectura modular</li>
-              <li>Desarrollo y despliegue de APIs</li>
-              <li>Ingeniería de pipelines de datos</li>
-              <li>Monitoreo y observabilidad</li>
-            </ul>
-            <p><strong>Duración:</strong> 3 días</p>
-            <p><strong>Formato:</strong> Taller con refactorización en vivo</p>
-            <p><strong>Requisitos:</strong> Código de investigación que necesita productivización</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Sistemas de producción escalables y mantenibles a partir de prototipos de investigación.</p>
-          </div>
-        </div>
-
-        <!-- Course 5: High-Performance Julia -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Julia de Alto Rendimiento</h3>
-            <p class="card-meta">Optimización y Paralelismo</p>
-          </div>
-          <div class="card-body">
-            <p>Desbloquee las capacidades de rendimiento de Julia mediante computación paralela, multi-threading y técnicas de optimización.</p>
-            <ul class="styled-list mb-md">
-              <li>Perfilado y benchmarking de rendimiento</li>
-              <li>Multi-threading y paralelismo</li>
-              <li>Computación GPU con CUDA.jl</li>
-              <li>Estabilidad de tipos y optimización del compilador</li>
-            </ul>
-            <p><strong>Duración:</strong> 3 días</p>
-            <p><strong>Formato:</strong> Laboratorio práctico intensivo</p>
-            <p><strong>Requisitos:</strong> Fundamentos de Julia, álgebra lineal</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Mejoras de rendimiento de 10x+ mediante paralelización y optimización.</p>
-          </div>
-        </div>
-
-        <!-- Course 6: Architectural Systems Design -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Diseño de Sistemas Arquitectónicos</h3>
-            <p class="card-meta">Arquitectura Avanzada</p>
-          </div>
-          <div class="card-body">
-            <p>Diseñe sistemas escalables y mantenibles usando lenguajes específicos de dominio (DSLs), estrategias de monorepo y patrones de desacoplamiento.</p>
-            <ul class="styled-list mb-md">
-              <li>Diseño de lenguajes específicos de dominio (DSL)</li>
-              <li>Arquitectura y herramientas de monorepo</li>
-              <li>Inversión de dependencias y desacoplamiento</li>
-              <li>Patrones de integración de sistemas</li>
-            </ul>
-            <p><strong>Duración:</strong> 4 días</p>
-            <p><strong>Formato:</strong> Taller de arquitectura + casos de estudio</p>
-            <p><strong>Requisitos:</strong> Experiencia en ingeniería de software</p>
-          </div>
-          <div class="card-footer">
-            <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>Resultado:</strong> Planos arquitectónicos para sistemas escalables y mantenibles.</p>
-          </div>
-        </div>
+        <!-- Content loaded dynamically from markdown files -->
 
       </div>
     </div>
@@ -228,5 +92,12 @@
 
   <!-- Minimal JavaScript -->
   <script src="../js/main.js"></script>
+  <script src="../js/content-loader.js"></script>
+  <script>
+    // Load trainees content on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      loadContent('trainees', 'es');
+    });
+  </script>
 </body>
 </html>
