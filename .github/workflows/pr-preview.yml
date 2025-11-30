@@ -5,8 +5,13 @@ on:
     types: [opened, synchronize, reopened, closed]
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
+
+# Prevent concurrent modifications to the preview repo
+concurrency:
+  group: preview-deploy-${{ github.head_ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy-preview:
@@ -15,6 +20,8 @@ jobs:
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v4
+        with:
+          path: source
 
       - name: Generate branch slug
         id: slug
@@ -23,58 +30,290 @@ jobs:
           # Convert to lowercase and replace non-alphanumeric chars with hyphens
           SLUG=$(echo "$BRANCH_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')
           echo "branch_slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_OUTPUT
           echo "Preview will be deployed to: test/$SLUG/"
 
-      - name: Checkout gh-pages branch
+      - name: Checkout preview repo gh-pages branch
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.repository_owner }}/pr-site-preview
           ref: gh-pages
-          path: gh-pages-content
+          token: ${{ secrets.PREVIEW_REPO_TOKEN }}
+          path: preview-repo
+
+      - name: Pull latest changes to handle concurrent updates
+        run: |
+          cd preview-repo
+          git pull origin gh-pages || true
 
       - name: Prepare preview directory
         run: |
           # Create test directory structure if it doesn't exist
-          mkdir -p gh-pages-content/test
+          mkdir -p preview-repo/test
 
           # Remove existing preview for this branch if it exists
-          rm -rf "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}"
+          rm -rf "preview-repo/test/${{ steps.slug.outputs.branch_slug }}"
 
           # Create new preview directory
-          mkdir -p "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}"
+          mkdir -p "preview-repo/test/${{ steps.slug.outputs.branch_slug }}"
 
       - name: Copy PR content to preview directory
         run: |
-          # Copy all files except .git, .github, and gh-pages-content
-          rsync -av --exclude='.git' --exclude='.github' --exclude='gh-pages-content' --exclude='CNAME' ./ "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}/"
+          # Copy all files except .git, .github, and source directory metadata
+          rsync -av --exclude='.git' --exclude='.github' --exclude='CNAME' source/ "preview-repo/test/${{ steps.slug.outputs.branch_slug }}/"
 
-      - name: Update base href in HTML files (optional)
+      - name: Update base href in HTML files
         run: |
-          PREVIEW_PATH="/test/${{ steps.slug.outputs.branch_slug }}"
+          PREVIEW_PATH="/pr-site-preview/test/${{ steps.slug.outputs.branch_slug }}"
           # Update any absolute paths to work in subdirectory
-          find "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|href=\"/|href=\"$PREVIEW_PATH/|g" {} \;
-          find "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|src=\"/|src=\"$PREVIEW_PATH/|g" {} \;
+          find "preview-repo/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|href=\"/|href=\"$PREVIEW_PATH/|g" {} \;
+          find "preview-repo/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|src=\"/|src=\"$PREVIEW_PATH/|g" {} \;
 
-      - name: Commit and push to gh-pages
+      - name: Create preview metadata
         run: |
-          cd gh-pages-content
+          mkdir -p preview-repo/test/${{ steps.slug.outputs.branch_slug }}
+          cat > "preview-repo/test/${{ steps.slug.outputs.branch_slug }}/.preview-meta.json" <<EOF
+          {
+            "pr_number": ${{ github.event.pull_request.number }},
+            "branch": "${{ github.head_ref }}",
+            "branch_slug": "${{ steps.slug.outputs.branch_slug }}",
+            "timestamp": "${{ steps.slug.outputs.timestamp }}",
+            "commit": "${{ github.event.pull_request.head.sha }}",
+            "pr_title": $(echo '${{ github.event.pull_request.title }}' | jq -Rs .),
+            "pr_url": "${{ github.event.pull_request.html_url }}"
+          }
+          EOF
+
+      - name: Generate index page
+        run: |
+          cd preview-repo
+
+          # Start HTML
+          cat > index.html <<'HTMLSTART'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PR Preview Deployments - Phorma Scientific</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 2rem;
+              }
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                padding: 2rem;
+              }
+              h1 {
+                color: #2d3748;
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+              }
+              .subtitle {
+                color: #718096;
+                margin-bottom: 2rem;
+                font-size: 0.95rem;
+              }
+              .preview-grid {
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+              }
+              .preview-card {
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 1.5rem;
+                transition: all 0.2s;
+                background: #f7fafc;
+              }
+              .preview-card:hover {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                transform: translateY(-2px);
+              }
+              .preview-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 0.75rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+              }
+              .pr-badge {
+                background: #667eea;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              }
+              .preview-meta {
+                font-size: 0.85rem;
+                color: #718096;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              }
+              .preview-meta div {
+                margin-bottom: 0.25rem;
+              }
+              .preview-actions {
+                display: flex;
+                gap: 0.75rem;
+                flex-wrap: wrap;
+              }
+              .btn {
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.9rem;
+                transition: all 0.2s;
+                display: inline-block;
+              }
+              .btn-primary {
+                background: #667eea;
+                color: white;
+              }
+              .btn-primary:hover {
+                background: #5568d3;
+              }
+              .btn-secondary {
+                background: #e2e8f0;
+                color: #2d3748;
+              }
+              .btn-secondary:hover {
+                background: #cbd5e0;
+              }
+              .empty-state {
+                text-align: center;
+                padding: 4rem 2rem;
+                color: #718096;
+              }
+              .empty-state svg {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 1rem;
+                opacity: 0.5;
+              }
+              .timestamp {
+                font-family: 'Courier New', monospace;
+                background: #edf2f7;
+                padding: 0.15rem 0.4rem;
+                border-radius: 3px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>PR Preview Deployments</h1>
+              <div class="subtitle">Active pull request preview deployments for Phorma Scientific</div>
+              <div class="preview-grid" id="previews">
+          HTMLSTART
+
+          # Find all preview metadata files and generate cards
+          FOUND_PREVIEWS=false
+          for meta_file in test/*/.preview-meta.json; do
+            if [ -f "$meta_file" ]; then
+              FOUND_PREVIEWS=true
+
+              # Parse JSON metadata
+              PR_NUM=$(jq -r '.pr_number' "$meta_file")
+              BRANCH=$(jq -r '.branch' "$meta_file")
+              SLUG=$(jq -r '.branch_slug' "$meta_file")
+              TIMESTAMP=$(jq -r '.timestamp' "$meta_file")
+              COMMIT=$(jq -r '.commit' "$meta_file")
+              PR_TITLE=$(jq -r '.pr_title' "$meta_file")
+              PR_URL=$(jq -r '.pr_url' "$meta_file")
+
+              # Generate preview card
+              cat >> index.html <<EOF
+                <div class="preview-card">
+                  <div class="preview-title">
+                    <span class="pr-badge">PR #${PR_NUM}</span>
+                    ${PR_TITLE}
+                  </div>
+                  <div class="preview-meta">
+                    <div><strong>Branch:</strong> ${BRANCH}</div>
+                    <div><strong>Updated:</strong> <span class="timestamp">${TIMESTAMP}</span></div>
+                    <div><strong>Commit:</strong> <code>${COMMIT:0:7}</code></div>
+                  </div>
+                  <div class="preview-actions">
+                    <a href="/pr-site-preview/test/${SLUG}/" class="btn btn-primary">View Preview</a>
+                    <a href="${PR_URL}" class="btn btn-secondary" target="_blank">View PR</a>
+                  </div>
+                </div>
+          EOF
+            fi
+          done
+
+          # If no previews found, show empty state
+          if [ "$FOUND_PREVIEWS" = false ]; then
+            cat >> index.html <<'EOF'
+                <div class="empty-state">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                  </svg>
+                  <h2>No Active Previews</h2>
+                  <p>PR previews will appear here when pull requests are opened.</p>
+                </div>
+          EOF
+          fi
+
+          # Close HTML
+          cat >> index.html <<'HTMLEND'
+              </div>
+            </div>
+          </body>
+          </html>
+          HTMLEND
+
+      - name: Commit and push to preview repo
+        run: |
+          cd preview-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add test/${{ steps.slug.outputs.branch_slug }}
-          git commit -m "Deploy PR preview for #${{ github.event.pull_request.number }} (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
-          git push origin gh-pages
+
+          # Pull again before committing to handle any concurrent changes
+          git pull origin gh-pages --rebase || true
+
+          git add .
+          git commit -m "Deploy PR #${{ github.event.pull_request.number }} preview (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
+
+          # Retry push up to 3 times in case of concurrent updates
+          for i in {1..3}; do
+            if git push origin gh-pages; then
+              echo "Push successful"
+              break
+            else
+              echo "Push failed, attempt $i of 3. Pulling and retrying..."
+              git pull origin gh-pages --rebase
+              sleep 2
+            fi
+          done
 
       - name: Comment on PR
         uses: actions/github-script@v7
         with:
           script: |
             const branchSlug = '${{ steps.slug.outputs.branch_slug }}';
-            const previewUrl = `https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/test/${branchSlug}/`;
+            const previewUrl = `https://${{ github.repository_owner }}.github.io/pr-site-preview/test/${branchSlug}/`;
+            const indexUrl = `https://${{ github.repository_owner }}.github.io/pr-site-preview/`;
 
             const body = `## 🚀 Preview Deployment
 
             Your PR preview has been deployed successfully!
 
             **Preview URL:** ${previewUrl}
+
+            **All Previews:** ${indexUrl}
 
             The preview will be updated automatically with each new commit to this PR.
 
@@ -123,10 +362,15 @@ jobs:
           echo "branch_slug=$SLUG" >> $GITHUB_OUTPUT
           echo "Cleaning up preview at: test/$SLUG/"
 
-      - name: Checkout gh-pages branch
+      - name: Checkout preview repo gh-pages branch
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.repository_owner }}/pr-site-preview
           ref: gh-pages
+          token: ${{ secrets.PREVIEW_REPO_TOKEN }}
+
+      - name: Pull latest changes
+        run: git pull origin gh-pages || true
 
       - name: Remove preview directory
         run: |
@@ -137,13 +381,217 @@ jobs:
             echo "Preview directory does not exist, nothing to clean up"
           fi
 
+      - name: Regenerate index page
+        run: |
+          # Start HTML
+          cat > index.html <<'HTMLSTART'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PR Preview Deployments - Phorma Scientific</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 2rem;
+              }
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                padding: 2rem;
+              }
+              h1 {
+                color: #2d3748;
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+              }
+              .subtitle {
+                color: #718096;
+                margin-bottom: 2rem;
+                font-size: 0.95rem;
+              }
+              .preview-grid {
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+              }
+              .preview-card {
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 1.5rem;
+                transition: all 0.2s;
+                background: #f7fafc;
+              }
+              .preview-card:hover {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                transform: translateY(-2px);
+              }
+              .preview-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 0.75rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+              }
+              .pr-badge {
+                background: #667eea;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              }
+              .preview-meta {
+                font-size: 0.85rem;
+                color: #718096;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              }
+              .preview-meta div {
+                margin-bottom: 0.25rem;
+              }
+              .preview-actions {
+                display: flex;
+                gap: 0.75rem;
+                flex-wrap: wrap;
+              }
+              .btn {
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.9rem;
+                transition: all 0.2s;
+                display: inline-block;
+              }
+              .btn-primary {
+                background: #667eea;
+                color: white;
+              }
+              .btn-primary:hover {
+                background: #5568d3;
+              }
+              .btn-secondary {
+                background: #e2e8f0;
+                color: #2d3748;
+              }
+              .btn-secondary:hover {
+                background: #cbd5e0;
+              }
+              .empty-state {
+                text-align: center;
+                padding: 4rem 2rem;
+                color: #718096;
+              }
+              .empty-state svg {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 1rem;
+                opacity: 0.5;
+              }
+              .timestamp {
+                font-family: 'Courier New', monospace;
+                background: #edf2f7;
+                padding: 0.15rem 0.4rem;
+                border-radius: 3px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>PR Preview Deployments</h1>
+              <div class="subtitle">Active pull request preview deployments for Phorma Scientific</div>
+              <div class="preview-grid" id="previews">
+          HTMLSTART
+
+          # Find all preview metadata files and generate cards
+          FOUND_PREVIEWS=false
+          for meta_file in test/*/.preview-meta.json; do
+            if [ -f "$meta_file" ]; then
+              FOUND_PREVIEWS=true
+
+              # Parse JSON metadata
+              PR_NUM=$(jq -r '.pr_number' "$meta_file")
+              BRANCH=$(jq -r '.branch' "$meta_file")
+              SLUG=$(jq -r '.branch_slug' "$meta_file")
+              TIMESTAMP=$(jq -r '.timestamp' "$meta_file")
+              COMMIT=$(jq -r '.commit' "$meta_file")
+              PR_TITLE=$(jq -r '.pr_title' "$meta_file")
+              PR_URL=$(jq -r '.pr_url' "$meta_file")
+
+              # Generate preview card
+              cat >> index.html <<EOF
+                <div class="preview-card">
+                  <div class="preview-title">
+                    <span class="pr-badge">PR #${PR_NUM}</span>
+                    ${PR_TITLE}
+                  </div>
+                  <div class="preview-meta">
+                    <div><strong>Branch:</strong> ${BRANCH}</div>
+                    <div><strong>Updated:</strong> <span class="timestamp">${TIMESTAMP}</span></div>
+                    <div><strong>Commit:</strong> <code>${COMMIT:0:7}</code></div>
+                  </div>
+                  <div class="preview-actions">
+                    <a href="/pr-site-preview/test/${SLUG}/" class="btn btn-primary">View Preview</a>
+                    <a href="${PR_URL}" class="btn btn-secondary" target="_blank">View PR</a>
+                  </div>
+                </div>
+          EOF
+            fi
+          done
+
+          # If no previews found, show empty state
+          if [ "$FOUND_PREVIEWS" = false ]; then
+            cat >> index.html <<'EOF'
+                <div class="empty-state">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                  </svg>
+                  <h2>No Active Previews</h2>
+                  <p>PR previews will appear here when pull requests are opened.</p>
+                </div>
+          EOF
+          fi
+
+          # Close HTML
+          cat >> index.html <<'HTMLEND'
+              </div>
+            </div>
+          </body>
+          </html>
+          HTMLEND
+
       - name: Commit and push cleanup
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Pull again before committing
+          git pull origin gh-pages --rebase || true
+
           git add -A
-          git commit -m "Cleanup PR preview for #${{ github.event.pull_request.number }} (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
-          git push origin gh-pages
+          git commit -m "Cleanup PR #${{ github.event.pull_request.number }} preview (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
+
+          # Retry push up to 3 times
+          for i in {1..3}; do
+            if git push origin gh-pages; then
+              echo "Push successful"
+              break
+            else
+              echo "Push failed, attempt $i of 3. Pulling and retrying..."
+              git pull origin gh-pages --rebase
+              sleep 2
+            fi
+          done
 
       - name: Comment on PR
         uses: actions/github-script@v7
