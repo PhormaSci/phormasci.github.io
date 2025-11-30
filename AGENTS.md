@@ -6,7 +6,7 @@ This document provides context for AI agents working with the Phorma Scientific 
 
 **Phorma Scientific** is a minimalist, high-performance static website built with zero frameworks or dependencies. The site embodies the company's "Structure over Chaos" philosophy through precise, architecturally sound design.
 
-- **Live Sites:** `phorma.xyz` / `phorma.ar`
+- **Live Sites:** `phorma.sh` / `phorma.xyz` / `phorma.ar`
 - **Stack:** Pure HTML5, CSS3, and Vanilla JavaScript
 - **Philosophy:** Zero-bloat, mobile-first, performance-obsessed
 - **Bundle Size Target:** < 50KB total (uncompressed)
@@ -232,13 +232,88 @@ When writing content (markdown or HTML):
 
 - **Main Branch:** `main` (auto-deploys to GitHub Pages)
 - **Feature Branches:** Use descriptive names (`feature/`, `docs/`, `fix/`)
-- **Commits:** Clear, concise messages
+- **Commits:** Follow Conventional Commits format (see below)
 - **PRs:** Required for all changes (no direct pushes to main)
+
+### Conventional Commits
+
+This project uses **Conventional Commits** for structured, readable commit history:
+
+**Format:**
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+**Types:**
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation changes
+- `style:` Formatting, CSS changes (no code change)
+- `refactor:` Code refactoring
+- `perf:` Performance improvements
+- `test:` Adding tests
+- `chore:` Maintenance, tooling
+- `ci:` CI/CD changes
+
+**Examples:**
+```bash
+feat: Add dark theme toggle to navigation
+fix: Correct mobile menu z-index on iOS
+docs: Update README with justfile commands
+style: Improve hero section spacing
+refactor: Simplify markdown parser logic
+chore: Add justfile for development tasks
+ci: Add path filters to PR preview workflow
+```
+
+### Conventional Comments
+
+Use **Conventional Comments** for PR reviews and code discussions:
+
+**Format:**
+```
+<label> [decorations]: <subject>
+
+[discussion]
+```
+
+**Labels:**
+- `praise:` Positive feedback
+- `nitpick:` Minor issue
+- `suggestion:` Improvement idea
+- `issue:` Problem that needs fixing
+- `todo:` Follow-up task
+- `question:` Clarification needed
+- `thought:` Thinking out loud
+- `chore:` Maintenance task
+- `note:` General note
+
+**Decorations:**
+- `(blocking)` — Must be addressed before merge
+- `(non-blocking)` — Can be addressed later
+- `(if-minor)` — Only if it's a small change
+
+**Examples:**
+```
+suggestion: Consider using CSS custom properties for consistent theming
+
+issue (blocking): This breaks mobile navigation on Safari iOS
+
+nitpick: Extra whitespace on line 42
+
+praise: Excellent use of semantic HTML!
+
+question: Should this work in the Spanish version too?
+```
 
 ## Deployment
 
 - Automatic deployment via GitHub Pages on push to `main`
-- Custom domains: `phorma.xyz` / `phorma.ar`
+- Custom domains: `phorma.sh` / `phorma.xyz` / `phorma.ar`
 - CNAME file in root manages domain routing
 - No build step required (pure static files)
 

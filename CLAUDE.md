@@ -200,12 +200,92 @@ If you notice errors after making changes:
 
 ### Commit Messages
 
-Follow these conventions:
+This project follows **Conventional Commits** format:
+
+**Format:**
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+**Types:**
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation changes
+- `style:` Formatting, CSS changes (no code change)
+- `refactor:` Code refactoring
+- `perf:` Performance improvements
+- `test:` Adding tests
+- `chore:` Maintenance tasks, tooling
+- `ci:` CI/CD changes
+
+**Examples:**
 - `feat: Add new service XYZ`
 - `fix: Correct mobile navigation bug`
 - `docs: Update README with new instructions`
 - `style: Improve dark theme contrast`
 - `refactor: Simplify content loader logic`
+- `chore: Add justfile for development`
+- `ci: Add path filters to PR preview`
+
+**Detailed Example:**
+```
+feat: Add dark theme toggle to navigation
+
+Implement theme switcher that persists user preference in localStorage.
+Toggle switches between light and dark mode by adding/removing 'dark'
+class on body element.
+
+- Add theme toggle button to header
+- Store preference in localStorage
+- Apply saved theme on page load
+- Update logo based on theme
+```
+
+### Code Review Comments
+
+Use **Conventional Comments** for PR reviews:
+
+**Format:**
+```
+<label> [decorations]: <subject>
+
+[discussion]
+```
+
+**Labels:**
+- `praise:` Positive feedback
+- `nitpick:` Minor issue (non-blocking)
+- `suggestion:` Improvement idea
+- `issue:` Problem that needs fixing
+- `todo:` Follow-up task
+- `question:` Clarification needed
+- `thought:` General thought
+- `chore:` Maintenance note
+- `note:` General note
+
+**Decorations:**
+- `(blocking)` — Must fix before merge
+- `(non-blocking)` — Can address later
+- `(if-minor)` — Only if small change
+
+**Examples:**
+```
+suggestion: Consider using CSS custom properties for theme values
+
+issue (blocking): This breaks mobile nav on iOS Safari
+
+nitpick: Extra whitespace on line 42
+
+praise: Excellent semantic HTML usage!
+
+question: Should this work in Spanish version too?
+
+todo (non-blocking): Add unit tests for this function
+```
 
 ### Pull Requests
 
