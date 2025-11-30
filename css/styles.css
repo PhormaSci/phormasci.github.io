@@ -265,6 +265,7 @@ code {
   display: none;
   background: none;
   border: var(--border-width) solid var(--color-border);
+  color: var(--color-fg);
   cursor: pointer;
   padding: var(--space-xs) var(--space-sm);
   font-family: var(--font-mono);
