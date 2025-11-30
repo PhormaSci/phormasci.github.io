@@ -1,0 +1,167 @@
+name: PR Preview Deployment
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Generate branch slug
+        id: slug
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          # Convert to lowercase and replace non-alphanumeric chars with hyphens
+          SLUG=$(echo "$BRANCH_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')
+          echo "branch_slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "Preview will be deployed to: test/$SLUG/"
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-content
+
+      - name: Prepare preview directory
+        run: |
+          # Create test directory structure if it doesn't exist
+          mkdir -p gh-pages-content/test
+
+          # Remove existing preview for this branch if it exists
+          rm -rf "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}"
+
+          # Create new preview directory
+          mkdir -p "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}"
+
+      - name: Copy PR content to preview directory
+        run: |
+          # Copy all files except .git, .github, and gh-pages-content
+          rsync -av --exclude='.git' --exclude='.github' --exclude='gh-pages-content' --exclude='CNAME' ./ "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}/"
+
+      - name: Update base href in HTML files (optional)
+        run: |
+          PREVIEW_PATH="/test/${{ steps.slug.outputs.branch_slug }}"
+          # Update any absolute paths to work in subdirectory
+          find "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|href=\"/|href=\"$PREVIEW_PATH/|g" {} \;
+          find "gh-pages-content/test/${{ steps.slug.outputs.branch_slug }}" -name "*.html" -type f -exec sed -i "s|src=\"/|src=\"$PREVIEW_PATH/|g" {} \;
+
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages-content
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add test/${{ steps.slug.outputs.branch_slug }}
+          git commit -m "Deploy PR preview for #${{ github.event.pull_request.number }} (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
+          git push origin gh-pages
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branchSlug = '${{ steps.slug.outputs.branch_slug }}';
+            const previewUrl = `https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/test/${branchSlug}/`;
+
+            const body = `## 🚀 Preview Deployment
+
+            Your PR preview has been deployed successfully!
+
+            **Preview URL:** ${previewUrl}
+
+            The preview will be updated automatically with each new commit to this PR.
+
+            ---
+            <sub>Deployed from commit: ${{ github.event.pull_request.head.sha }}</sub>`;
+
+            // Check if we already commented
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' && comment.body.includes('## 🚀 Preview Deployment')
+            );
+
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }
+
+  cleanup-preview:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate branch slug
+        id: slug
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          # Convert to lowercase and replace non-alphanumeric chars with hyphens
+          SLUG=$(echo "$BRANCH_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')
+          echo "branch_slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "Cleaning up preview at: test/$SLUG/"
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview directory
+        run: |
+          if [ -d "test/${{ steps.slug.outputs.branch_slug }}" ]; then
+            rm -rf "test/${{ steps.slug.outputs.branch_slug }}"
+            echo "Preview directory removed successfully"
+          else
+            echo "Preview directory does not exist, nothing to clean up"
+          fi
+
+      - name: Commit and push cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Cleanup PR preview for #${{ github.event.pull_request.number }} (${{ steps.slug.outputs.branch_slug }})" || echo "No changes to commit"
+          git push origin gh-pages
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branchSlug = '${{ steps.slug.outputs.branch_slug }}';
+            const wasMerged = context.payload.pull_request.merged;
+            const action = wasMerged ? 'merged' : 'closed';
+
+            const body = `## 🧹 Preview Cleanup
+
+            PR preview has been cleaned up after being ${action}.
+
+            The preview deployment at \`/test/${branchSlug}/\` has been removed from GitHub Pages.`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });
