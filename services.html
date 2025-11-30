@@ -56,92 +56,8 @@
   <!-- Services Grid -->
   <section class="section">
     <div class="container">
-      <div class="grid grid-2">
-
-        <!-- Service 1: System Audit & Architecture -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S1 — Entry Point</p>
-            <h3 class="card-title">System Audit & Architecture</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Goal:</strong> Identify structural debt and bottlenecks in your scientific computing infrastructure.</p>
-            <p>We perform comprehensive code audits, performance profiling, and architectural analysis to diagnose critical issues in your research codebase.</p>
-            <ul class="styled-list">
-              <li>Codebase Health Assessment</li>
-              <li>Performance Bottleneck Identification</li>
-              <li>Compliance & Reproducibility Gap Analysis</li>
-              <li>Technical Debt Quantification</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Deliverable:</strong> Architectural Modernization Roadmap with prioritized action items and refactoring strategy.</p>
-          </div>
-        </div>
-
-        <!-- Service 2: Research Software Engineering (RSE) -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S2 — Core Engineering</p>
-            <h3 class="card-title">Research Software Engineering</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Focus:</strong> Implementation of computational rigor, reproducibility standards, and decoupled architecture.</p>
-            <p>We transform research prototypes into maintainable, tested, and scalable software systems that meet enterprise production standards.</p>
-            <ul class="styled-list">
-              <li>Production-Grade Code Implementation</li>
-              <li>Test-Driven Development & CI/CD</li>
-              <li>Modular Architecture Design</li>
-              <li>Documentation & Knowledge Transfer</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Stack:</strong> <code>Julia</code> <code>C#</code> <code>Python</code></p>
-          </div>
-        </div>
-
-        <!-- Service 3: Scientific Machine Learning (SciML) -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S3 — Applied Intelligence</p>
-            <h3 class="card-title">Scientific Machine Learning</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Focus:</strong> Operationalizing novel models from R&D into scalable, auditable enterprise platforms.</p>
-            <p>We specialize in integrating physics-informed neural networks, differential equation solvers, and ML models with domain-specific constraints into production systems.</p>
-            <ul class="styled-list">
-              <li>SciML Model Development & Integration</li>
-              <li>Social Data & NLP Pipelines</li>
-              <li>Hybrid Physics-ML Systems</li>
-              <li>Model Validation & Uncertainty Quantification</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Deliverable:</strong> Production-ready ML systems with complete monitoring, versioning, and audit trails.</p>
-          </div>
-        </div>
-
-        <!-- Service 4: Performance Synthesis -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S4 — Optimization</p>
-            <h3 class="card-title">Performance Synthesis</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Focus:</strong> Optimization, compiler tuning, and parallel computing.</p>
-            <p>We engineer algorithmic and systems-level optimizations that deliver measurable, benchmarked performance improvements.</p>
-            <ul class="styled-list">
-              <li>Algorithmic Optimization</li>
-              <li>Parallel & Distributed Computing</li>
-              <li>Memory & Cache Optimization</li>
-              <li>Compiler & Runtime Tuning</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Deliverable:</strong> Benchmarked 3x speed increase with performance analysis report.</p>
-          </div>
-        </div>
-
+      <div class="grid grid-2" id="content-container">
+        <!-- Content loaded dynamically from markdown files -->
       </div>
     </div>
   </section>
@@ -172,5 +88,12 @@
 
   <!-- Minimal JavaScript -->
   <script src="js/main.js"></script>
+  <script src="js/content-loader.js"></script>
+  <script>
+    // Load services content on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      loadContent('services', 'en');
+    });
+  </script>
 </body>
 </html>

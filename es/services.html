@@ -56,92 +56,8 @@
   <!-- Services Grid -->
   <section class="section">
     <div class="container">
-      <div class="grid grid-2">
-
-        <!-- Service 1: System Audit & Architecture -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S1 — Punto de Entrada</p>
-            <h3 class="card-title">Auditoría de Sistema y Arquitectura</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Objetivo:</strong> Identificar deuda estructural y cuellos de botella en su infraestructura de computación científica.</p>
-            <p>Realizamos auditorías exhaustivas de código, perfilado de rendimiento y análisis arquitectónico para diagnosticar problemas críticos en su base de código de investigación.</p>
-            <ul class="styled-list">
-              <li>Evaluación de Salud del Código Base</li>
-              <li>Identificación de Cuellos de Botella de Rendimiento</li>
-              <li>Análisis de Brechas de Cumplimiento y Reproducibilidad</li>
-              <li>Cuantificación de Deuda Técnica</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Entregable:</strong> Hoja de ruta de modernización arquitectónica con ítems de acción priorizados y estrategia de refactorización.</p>
-          </div>
-        </div>
-
-        <!-- Service 2: Research Software Engineering (RSE) -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S2 — Ingeniería Principal</p>
-            <h3 class="card-title">Ingeniería de Software de Investigación</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Enfoque:</strong> Implementación de rigor computacional, estándares de reproducibilidad y arquitectura desacoplada.</p>
-            <p>Transformamos prototipos de investigación en sistemas de software mantenibles, probados y escalables que cumplen con estándares de producción empresarial.</p>
-            <ul class="styled-list">
-              <li>Implementación de Código de Nivel de Producción</li>
-              <li>Desarrollo Dirigido por Pruebas y CI/CD</li>
-              <li>Diseño de Arquitectura Modular</li>
-              <li>Documentación y Transferencia de Conocimiento</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Stack:</strong> <code>Julia</code> <code>C#</code> <code>Python</code></p>
-          </div>
-        </div>
-
-        <!-- Service 3: Scientific Machine Learning (SciML) -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S3 — Inteligencia Aplicada</p>
-            <h3 class="card-title">Machine Learning Científico</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Enfoque:</strong> Operacionalizar modelos novedosos de I+D en plataformas empresariales escalables y auditables.</p>
-            <p>Nos especializamos en integrar redes neuronales informadas por física, solucionadores de ecuaciones diferenciales y modelos ML con restricciones específicas de dominio en sistemas de producción.</p>
-            <ul class="styled-list">
-              <li>Desarrollo e Integración de Modelos SciML</li>
-              <li>Pipelines de Datos Sociales y NLP</li>
-              <li>Sistemas Híbridos Física-ML</li>
-              <li>Validación de Modelos y Cuantificación de Incertidumbre</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Entregable:</strong> Sistemas ML listos para producción con monitoreo completo, versionado y trazas de auditoría.</p>
-          </div>
-        </div>
-
-        <!-- Service 4: Performance Synthesis -->
-        <div class="card">
-          <div class="card-header">
-            <p class="card-meta">S4 — Optimización</p>
-            <h3 class="card-title">Síntesis de Rendimiento</h3>
-          </div>
-          <div class="card-body">
-            <p><strong>Enfoque:</strong> Optimización, ajuste de compiladores y computación paralela.</p>
-            <p>Diseñamos optimizaciones a nivel algorítmico y de sistemas que entregan mejoras de rendimiento medibles y benchmarkeadas.</p>
-            <ul class="styled-list">
-              <li>Optimización Algorítmica</li>
-              <li>Computación Paralela y Distribuida</li>
-              <li>Optimización de Memoria y Caché</li>
-              <li>Ajuste de Compiladores y Runtime</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <p><strong>Entregable:</strong> Aumento de velocidad 3x benchmarkeado con reporte de análisis de rendimiento.</p>
-          </div>
-        </div>
-
+      <div class="grid grid-2" id="content-container">
+        <!-- Content loaded dynamically from markdown files -->
       </div>
     </div>
   </section>
@@ -172,5 +88,12 @@
 
   <!-- Minimal JavaScript -->
   <script src="../js/main.js"></script>
+  <script src="../js/content-loader.js"></script>
+  <script>
+    // Load services content on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      loadContent('services', 'es');
+    });
+  </script>
 </body>
 </html>
