@@ -26,7 +26,14 @@
       const colonIndex = line.indexOf(':');
       if (colonIndex > -1) {
         const key = line.substring(0, colonIndex).trim();
-        const value = line.substring(colonIndex + 1).trim();
+        let value = line.substring(colonIndex + 1).trim();
+
+        // Remove surrounding quotes (single or double) if present
+        if ((value.startsWith('"') && value.endsWith('"')) ||
+            (value.startsWith("'") && value.endsWith("'"))) {
+          value = value.slice(1, -1);
+        }
+
         frontmatter[key] = value;
       }
     });
@@ -118,6 +125,93 @@
   }
 
   /**
+   * Render hero section from markdown data
+   */
+  function renderHeroSection(data) {
+    const { frontmatter } = data;
+
+    return `
+      <section class="hero">
+        <div class="container hero-content">
+          <img src="${frontmatter.logo || 'assets/logo.svg'}" alt="Phorma Scientific" class="hero-logo">
+          <h1>${frontmatter.heading || ''}</h1>
+          <p class="hero-subheading">${frontmatter.subheading || ''}</p>
+          <a href="${frontmatter.cta_link || '#'}" class="btn btn-primary">${frontmatter.cta_text || ''}</a>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render two-column section from markdown data
+   */
+  function renderTwoColumnSection(data) {
+    const { frontmatter, content } = data;
+
+    return `
+      <section class="section border-bottom">
+        <div class="container">
+          <div class="grid grid-2">
+            <div>
+              <h2 class="text-mono">${frontmatter.title || ''}</h2>
+              <p class="text-muted">${frontmatter.subtitle || ''}</p>
+            </div>
+            <div>
+              ${markdownToHtml(content)}
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render featured service section from markdown data
+   */
+  function renderFeaturedSection(data) {
+    const { frontmatter, content } = data;
+
+    return `
+      <section class="section" id="audit">
+        <div class="container">
+          <div class="highlight-box">
+            <div class="grid grid-2">
+              <div>
+                <h3 class="text-mono mb-sm">${frontmatter.title || ''}</h3>
+                <p class="text-muted text-upper" style="font-size: 0.875rem; margin-bottom: 1rem;">${frontmatter.meta || ''}</p>
+              </div>
+              <div>
+                ${markdownToHtml(content)}
+                <p style="margin-top: 1.5rem;">
+                  <a href="${frontmatter.cta_link || 'contact.html'}" class="btn">${frontmatter.cta_text || ''}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render home page section based on type
+   */
+  function renderHomeSection(data) {
+    const { frontmatter } = data;
+    const type = frontmatter.type;
+
+    if (type === 'hero') {
+      return renderHeroSection(data);
+    } else if (type === 'section') {
+      return renderTwoColumnSection(data);
+    } else if (type === 'featured') {
+      return renderFeaturedSection(data);
+    }
+
+    return '';
+  }
+
+  /**
    * Load markdown files from a directory
    */
   async function loadMarkdownFiles(basePath, fileList, renderFunction) {
@@ -155,14 +249,13 @@
    * Initialize content loading based on page type
    */
   window.loadContent = function(type, lang) {
-    const isServices = type === 'services';
     const basePath = lang === 'es' ? '../content' : 'content';
     const contentPath = `${basePath}/${type}/${lang}`;
 
     let fileList = [];
     let renderFunction;
 
-    if (isServices) {
+    if (type === 'services') {
       fileList = [
         '01-system-audit.md',
         '02-research-software-engineering.md',
@@ -181,8 +274,7 @@
       }
 
       renderFunction = renderServiceCard;
-    } else {
-      // Trainees
+    } else if (type === 'trainees') {
       fileList = [
         '01-numerical-computing.md',
         '02-production-rigor.md',
@@ -205,6 +297,15 @@
       }
 
       renderFunction = renderTraineeCard;
+    } else if (type === 'home') {
+      fileList = [
+        '01-hero.md',
+        '02-challenge.md',
+        '03-solution.md',
+        '04-featured.md'
+      ];
+
+      renderFunction = renderHomeSection;
     }
 
     loadMarkdownFiles(contentPath, fileList, renderFunction);
