@@ -75,7 +75,7 @@
   /**
    * Render a service card from markdown data
    */
-  function renderServiceCard(data) {
+  function renderServiceCard(data, lang) {
     const { frontmatter, content } = data;
 
     // Split content by horizontal rule
@@ -102,7 +102,7 @@
   /**
    * Render a trainee card from markdown data
    */
-  function renderTraineeCard(data) {
+  function renderTraineeCard(data, lang) {
     const { frontmatter, content } = data;
 
     return `
@@ -113,12 +113,12 @@
         </div>
         <div class="card-body">
           ${markdownToHtml(content)}
-          <p><strong>${frontmatter.duration ? 'Duration:' : 'Duración:'}</strong> ${frontmatter.duration || ''}</p>
-          <p><strong>${frontmatter.format ? 'Format:' : 'Formato:'}</strong> ${frontmatter.format || ''}</p>
-          <p><strong>${frontmatter.prerequisites ? 'Prerequisites:' : 'Requisitos:'}</strong> ${frontmatter.prerequisites || ''}</p>
+          <p><strong>${lang === 'es' ? 'Duración:' : 'Duration:'}</strong> ${frontmatter.duration || ''}</p>
+          <p><strong>${lang === 'es' ? 'Formato:' : 'Format:'}</strong> ${frontmatter.format || ''}</p>
+          <p><strong>${lang === 'es' ? 'Requisitos:' : 'Prerequisites:'}</strong> ${frontmatter.prerequisites || ''}</p>
         </div>
         <div class="card-footer">
-          <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>${frontmatter.outcome ? 'Outcome:' : 'Resultado:'}</strong> ${frontmatter.outcome || ''}</p>
+          <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>${lang === 'es' ? 'Resultado:' : 'Outcome:'}</strong> ${frontmatter.outcome || ''}</p>
         </div>
       </div>
     `;
@@ -196,7 +196,7 @@
   /**
    * Render home page section based on type
    */
-  function renderHomeSection(data) {
+  function renderHomeSection(data, lang) {
     const { frontmatter } = data;
     const type = frontmatter.type;
 
@@ -214,7 +214,7 @@
   /**
    * Load markdown files from a directory
    */
-  async function loadMarkdownFiles(basePath, fileList, renderFunction) {
+  async function loadMarkdownFiles(basePath, fileList, renderFunction, lang) {
     const container = document.getElementById('content-container');
     if (!container) return;
 
@@ -238,7 +238,7 @@
       });
 
       // Render all cards
-      container.innerHTML = results.map(renderFunction).join('');
+      container.innerHTML = results.map(data => renderFunction(data, lang)).join('');
     } catch (error) {
       console.error('Error loading content:', error);
       container.innerHTML = '<p class="text-center">Error loading content. Please refresh the page.</p>';
@@ -308,6 +308,6 @@
       renderFunction = renderHomeSection;
     }
 
-    loadMarkdownFiles(contentPath, fileList, renderFunction);
+    loadMarkdownFiles(contentPath, fileList, renderFunction, lang);
   };
 })();
