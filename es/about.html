@@ -59,104 +59,7 @@
   <!-- Team Section -->
   <section class="section">
     <div class="container">
-      <div class="team-grid">
-
-        <!-- Sasha Kielbowicz Profile -->
-        <article class="team-member">
-          <div class="team-member-header">
-            <h2 class="team-member-name">Sasha Kielbowicz</h2>
-            <p class="team-member-title text-mono">Arquitecto de Sistemas Cuantitativos</p>
-          </div>
-
-          <div class="team-member-content">
-            <p class="team-member-bio">
-              Arquitecto de sistemas cuantitativos especializado en ingeniería de software de investigación para modelado financiero y computación de alto rendimiento. Graduado en Física con experiencia comprobada entregando soluciones críticas para organizaciones de primer nivel incluyendo Mercado Libre, JP Morgan, Qontigo y SimCorp.
-            </p>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Posición Actual</h3>
-              <p><strong>Líder Técnico, Ingeniería de Planificación Financiera y Analítica</strong></p>
-              <p class="text-muted">Mercado Libre (la plataforma de e-commerce más grande de América Latina)</p>
-            </div>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Experiencia Principal</h3>
-              <ul class="team-member-list">
-                <li>Sistemas de pricing y analítica de riesgo multi-activo</li>
-                <li>Ingeniería de Software de Investigación (RSE) y optimización numérica</li>
-                <li>Computación de alto rendimiento (Julia, Python, C#)</li>
-                <li>Arquitectura de sistemas y DevOps</li>
-                <li>Desarrollo de lenguajes específicos de dominio</li>
-              </ul>
-            </div>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Logros Clave</h3>
-              <ul class="team-member-list">
-                <li>Logró mejoras de rendimiento del 300% en motores de pricing de bonos convertibles</li>
-                <li>Redujo errores en pipelines de forecasting en un 90% mediante principios RSE</li>
-                <li>Lideró el diseño arquitectónico de infraestructura cuantitativa core</li>
-                <li>Incrementó la velocidad de ingeniería en un 15% en equipos de 14 personas</li>
-              </ul>
-            </div>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Educación</h3>
-              <p>Licenciatura en Física, Universidad de Buenos Aires</p>
-            </div>
-
-            <div class="team-member-footer">
-              <a href="https://ak.saxa.xyz/cv/en.html" class="team-member-link" target="_blank" rel="noopener noreferrer">Ver CV Completo →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Agustin Corbat Profile -->
-        <article class="team-member">
-          <div class="team-member-header">
-            <h2 class="team-member-name">Agustin Corbat</h2>
-            <p class="team-member-title text-mono">Analista de Bioimágenes y Científico de Datos</p>
-          </div>
-
-          <div class="team-member-content">
-            <p class="team-member-bio">
-              Físico interdisciplinario con formación médica especializado en extraer insights cuantitativos de datos visuales complejos. Combina aprendizaje profundo avanzado y modelado basado en física para resolver problemas novedosos en sectores científicos e industriales.
-            </p>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Experiencia Principal</h3>
-              <ul class="team-member-list">
-                <li>Análisis cuantitativo de imágenes e informática de bioimágenes</li>
-                <li>Aprendizaje profundo y modelado matemático</li>
-                <li>Técnicas de microscopía (fluorescencia, óptica, electrónica)</li>
-                <li>Señalización celular y biología de sistemas</li>
-                <li>Fenotipado agrícola y reconocimiento de patrones</li>
-              </ul>
-            </div>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Intereses de Investigación</h3>
-              <ul class="team-member-list">
-                <li>Cascadas de señalización celular y redes apoptóticas</li>
-                <li>Modelado matemático de sistemas biológicos</li>
-                <li>Biología del desarrollo y formación de patrones</li>
-                <li>Diseño de flujos de trabajo personalizados para datos científicos</li>
-              </ul>
-            </div>
-
-            <div class="team-member-section">
-              <h3 class="team-member-subtitle text-mono">Educación</h3>
-              <p>Doctorado en Física, Universidad de Buenos Aires</p>
-              <p class="text-muted">Investigador Postdoctoral, Karolinska Institutet</p>
-            </div>
-
-            <div class="team-member-footer">
-              <a href="https://acorbat.github.io/" class="team-member-link" target="_blank" rel="noopener noreferrer">Ver Portafolio →</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
+      <div class="team-grid" id="content-container"></div>
     </div>
   </section>
 
@@ -177,6 +80,11 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="../js/content-loader.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    // Load team page content
+    loadContent('team', 'es');
+  </script>
 </body>
 </html>
