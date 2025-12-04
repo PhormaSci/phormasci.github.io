@@ -212,6 +212,109 @@
   }
 
   /**
+   * Render mission page hero section
+   */
+  function renderMissionHero(data) {
+    const { frontmatter } = data;
+
+    return `
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>${frontmatter.title || ''}</h1>
+          <p class="hero-subheading">${frontmatter.subtitle || ''}</p>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render mission intro section (How We Do It)
+   */
+  function renderMissionIntro(data) {
+    const { frontmatter } = data;
+
+    return `
+      <section class="section border-bottom">
+        <div class="container">
+          <div class="text-center mb-lg">
+            <h2 class="text-mono">${frontmatter.title || ''}</h2>
+            <p class="hero-subheading">${frontmatter.subtitle || ''}</p>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render mission example (highlight box)
+   */
+  function renderMissionExample(data) {
+    const { frontmatter, content } = data;
+
+    return `
+      <div class="highlight-box mb-lg">
+        <div class="grid grid-2">
+          <div>
+            <h3 class="text-mono mb-sm">${frontmatter.title || ''}</h3>
+            <p class="text-muted text-upper" style="font-size: 0.875rem;">${frontmatter.subtitle || ''}</p>
+          </div>
+          <div>
+            ${markdownToHtml(content)}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * Render mission commitment section
+   */
+  function renderMissionCommitment(data) {
+    const { frontmatter, content } = data;
+
+    return `
+      <section class="section">
+        <div class="container">
+          <div class="grid grid-2">
+            <div>
+              <h2 class="text-mono">${frontmatter.title || ''}</h2>
+              <p class="text-muted text-upper">${frontmatter.subtitle || ''}</p>
+            </div>
+            <div>
+              ${markdownToHtml(content)}
+              <p class="mt-lg">
+                <a href="${frontmatter.cta_link || 'contact.html'}" class="btn btn-primary">${frontmatter.cta_text || ''}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render mission page section based on type
+   */
+  function renderMissionSection(data, lang) {
+    const { frontmatter } = data;
+    const type = frontmatter.type;
+
+    if (type === 'hero') {
+      return renderMissionHero(data);
+    } else if (type === 'section') {
+      return renderTwoColumnSection(data);
+    } else if (type === 'intro') {
+      return renderMissionIntro(data);
+    } else if (type === 'example') {
+      return renderMissionExample(data);
+    } else if (type === 'commitment') {
+      return renderMissionCommitment(data);
+    }
+
+    return '';
+  }
+
+  /**
    * Render category header
    */
   function renderCategoryHeader(category) {
@@ -225,7 +328,7 @@
   /**
    * Load markdown files from a directory
    */
-  async function loadMarkdownFiles(basePath, fileList, renderFunction, lang, groupByCategory = false) {
+  async function loadMarkdownFiles(basePath, fileList, renderFunction, lang, groupByCategory = false, isMission = false) {
     const container = document.getElementById('content-container');
     if (!container) return;
 
@@ -265,6 +368,38 @@
           html += renderCategoryHeader(category);
           html += grouped[category].map(data => renderFunction(data, lang)).join('');
         });
+        container.innerHTML = html;
+      } else if (isMission) {
+        // Special handling for mission page - wrap examples in a section
+        let html = '';
+        let inExamplesSection = false;
+
+        results.forEach(data => {
+          const type = data.frontmatter.type;
+
+          if (type === 'intro') {
+            // Start of examples section
+            html += renderFunction(data, lang);
+            html += '<section class="section border-bottom"><div class="container">';
+            inExamplesSection = true;
+          } else if (type === 'example') {
+            // Add example within the section
+            html += renderFunction(data, lang);
+          } else {
+            // Close examples section if needed
+            if (inExamplesSection) {
+              html += '</div></section>';
+              inExamplesSection = false;
+            }
+            html += renderFunction(data, lang);
+          }
+        });
+
+        // Close examples section if still open
+        if (inExamplesSection) {
+          html += '</div></section>';
+        }
+
         container.innerHTML = html;
       } else {
         // Render all cards without grouping
@@ -339,10 +474,24 @@
       ];
 
       renderFunction = renderHomeSection;
+    } else if (type === 'mission') {
+      fileList = [
+        '01-hero.md',
+        '02-reality.md',
+        '03-hidden-cost.md',
+        '04-how-intro.md',
+        '05-example-script.md',
+        '06-example-scale.md',
+        '07-example-audit.md',
+        '08-commitment.md'
+      ];
+
+      renderFunction = renderMissionSection;
     }
 
     // Enable category grouping for trainees page
     const groupByCategory = (type === 'trainees');
-    loadMarkdownFiles(contentPath, fileList, renderFunction, lang, groupByCategory);
+    const isMission = (type === 'mission');
+    loadMarkdownFiles(contentPath, fileList, renderFunction, lang, groupByCategory, isMission);
   };
 })();
