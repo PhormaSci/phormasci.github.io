@@ -3,6 +3,18 @@ name: PR Preview Deployment
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
+    paths:
+      # Only run preview when site content changes
+      - '**.html'
+      - 'js/**'
+      - 'css/**'
+      - 'content/**'
+      - 'assets/**'
+      # Exclude infrastructure files
+      - '!.github/**'
+      - '!**.md'
+      - '!LICENSE'
+      - '!CNAME'
 
 permissions:
   contents: read
