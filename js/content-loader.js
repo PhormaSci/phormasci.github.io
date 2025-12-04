@@ -212,9 +212,20 @@
   }
 
   /**
+   * Render category header
+   */
+  function renderCategoryHeader(category) {
+    return `
+      <div style="grid-column: 1 / -1; margin-top: 2rem; margin-bottom: 1rem;">
+        <h2 class="text-mono" style="font-size: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">${category}</h2>
+      </div>
+    `;
+  }
+
+  /**
    * Load markdown files from a directory
    */
-  async function loadMarkdownFiles(basePath, fileList, renderFunction, lang) {
+  async function loadMarkdownFiles(basePath, fileList, renderFunction, lang, groupByCategory = false) {
     const container = document.getElementById('content-container');
     if (!container) return;
 
@@ -237,8 +248,28 @@
         return orderA - orderB;
       });
 
-      // Render all cards
-      container.innerHTML = results.map(data => renderFunction(data, lang)).join('');
+      // Group by category if requested
+      if (groupByCategory) {
+        const grouped = {};
+        results.forEach(data => {
+          const category = data.frontmatter.category || 'Other';
+          if (!grouped[category]) {
+            grouped[category] = [];
+          }
+          grouped[category].push(data);
+        });
+
+        // Render grouped content with category headers
+        let html = '';
+        Object.keys(grouped).forEach(category => {
+          html += renderCategoryHeader(category);
+          html += grouped[category].map(data => renderFunction(data, lang)).join('');
+        });
+        container.innerHTML = html;
+      } else {
+        // Render all cards without grouping
+        container.innerHTML = results.map(data => renderFunction(data, lang)).join('');
+      }
     } catch (error) {
       console.error('Error loading content:', error);
       container.innerHTML = '<p class="text-center">Error loading content. Please refresh the page.</p>';
@@ -276,23 +307,25 @@
       renderFunction = renderServiceCard;
     } else if (type === 'trainees') {
       fileList = [
-        '01-numerical-computing.md',
-        '02-production-rigor.md',
-        '03-sciml.md',
-        '04-rse-pipelines.md',
-        '05-high-performance-julia.md',
-        '06-architectural-systems.md'
+        '11-numerical-computing.md',
+        '15-high-performance-julia.md',
+        '21-generative-ai-scientific-software.md',
+        '31-sciml.md',
+        '41-production-rigor.md',
+        '42-rse-pipelines.md',
+        '43-architectural-systems.md'
       ];
 
       // Adjust filenames for Spanish
       if (lang === 'es') {
         fileList = [
-          '01-computacion-numerica.md',
-          '02-rigor-produccion.md',
-          '03-sciml.md',
-          '04-rse-pipelines.md',
-          '05-julia-alto-rendimiento.md',
-          '06-sistemas-arquitectonicos.md'
+          '11-computacion-numerica.md',
+          '15-julia-alto-rendimiento.md',
+          '21-ia-generativa-software-cientifico.md',
+          '31-sciml.md',
+          '41-rigor-produccion.md',
+          '42-rse-pipelines.md',
+          '43-sistemas-arquitectonicos.md'
         ];
       }
 
@@ -308,6 +341,8 @@
       renderFunction = renderHomeSection;
     }
 
-    loadMarkdownFiles(contentPath, fileList, renderFunction, lang);
+    // Enable category grouping for trainees page
+    const groupByCategory = (type === 'trainees');
+    loadMarkdownFiles(contentPath, fileList, renderFunction, lang, groupByCategory);
   };
 })();
