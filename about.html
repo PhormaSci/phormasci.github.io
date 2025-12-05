@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Phorma Scientific - Transforming scientific complexity into production-grade systems. Rigor. Performance. Architecture.">
-  <title>Phorma Scientific - Structure over Chaos</title>
+  <meta name="description" content="Meet the team behind Phorma Scientific - experts in quantitative systems and scientific computing.">
+  <title>Who We Are - Phorma Scientific</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-fondo-blanco.png">
@@ -35,33 +35,33 @@
           MENU
         </button>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="index.html">HOME</a></li>
           <li><a href="services.html">SERVICES</a></li>
           <li><a href="trainees.html">TRAINEES</a></li>
-          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="lang-switch"><a href="es/index.html">ES</a></li>
+          <li class="lang-switch"><a href="es/about.html">ES</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Dynamic Content Container -->
-  <div id="content-container"></div>
-
-  <!-- Authority -->
-  <!-- HIDDEN: Tier-1 Organizations section
-  <section class="section border-top">
-    <div class="container text-center">
-      <h4 class="text-mono text-muted mb-lg">Trusted by Tier-1 Organizations</h4>
-      <div class="authority-grid">
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">JPM</div>
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">MERCADO LIBRE</div>
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">SIMCORP</div>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Who We Are</h1>
+      <p class="hero-subtitle">
+        A partnership of specialists bridging rigorous science and production-grade engineering.
+      </p>
     </div>
   </section>
-  -->
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="container">
+      <div class="team-grid" id="content-container"></div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer" id="contact">
@@ -83,8 +83,8 @@
   <script src="js/content-loader.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Load home page content
-    loadContent('home', 'en');
+    // Load team page content
+    loadContent('team', 'en');
   </script>
 </body>
 </html>
