@@ -313,7 +313,8 @@
         '31-sciml.md',
         '41-production-rigor.md',
         '42-rse-pipelines.md',
-        '43-architectural-systems.md'
+        '43-architectural-systems.md',
+        '44-testing-practices.md'
       ];
 
       // Adjust filenames for Spanish
@@ -325,7 +326,8 @@
           '31-sciml.md',
           '41-rigor-produccion.md',
           '42-rse-pipelines.md',
-          '43-sistemas-arquitectonicos.md'
+          '43-sistemas-arquitectonicos.md',
+          '44-practicas-pruebas.md'
         ];
       }
 
