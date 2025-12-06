@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Phorma Scientific - Transforming scientific complexity into production-grade systems. Rigor. Performance. Architecture.">
-  <title>Phorma Scientific - Structure over Chaos</title>
+  <meta name="description" content="Phorma Scientific Mission - Transforming scientific prototypes into production-grade systems for deep tech startups.">
+  <title>Mission - Phorma Scientific</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-fondo-blanco.png">
@@ -12,7 +12,7 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
@@ -35,33 +35,21 @@
           MENU
         </button>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="active">HOME</a></li>
-          <li><a href="mission.html">MISSION</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="mission.html" class="active">MISSION</a></li>
           <li><a href="services.html">SERVICES</a></li>
           <li><a href="trainees.html">TRAINEES</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="lang-switch"><a href="es/index.html">ES</a></li>
+          <li class="lang-switch"><a href="es/mission.html">ES</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Dynamic Content Container -->
-  <div id="content-container"></div>
-
-  <!-- Authority -->
-  <!-- HIDDEN: Tier-1 Organizations section
-  <section class="section border-top">
-    <div class="container text-center">
-      <h4 class="text-mono text-muted mb-lg">Trusted by Tier-1 Organizations</h4>
-      <div class="authority-grid">
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">JPM</div>
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">MERCADO LIBRE</div>
-        <div class="authority-logo" style="width: 120px; height: 60px; border: 1px solid #E5E5E5; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: #999;">SIMCORP</div>
-      </div>
-    </div>
-  </section>
-  -->
+  <!-- Mission Content -->
+  <div id="content-container">
+    <!-- Content loaded dynamically from markdown files -->
+  </div>
 
   <!-- Footer -->
   <footer class="footer" id="contact">
@@ -79,12 +67,14 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="js/content-loader.js"></script>
+  <!-- Minimal JavaScript -->
   <script src="js/main.js"></script>
+  <script src="js/content-loader.js?v=2"></script>
   <script>
-    // Load home page content
-    loadContent('home', 'en');
+    // Load mission content on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      loadContent('mission', 'en');
+    });
   </script>
 </body>
 </html>
