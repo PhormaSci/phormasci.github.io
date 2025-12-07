@@ -6,6 +6,17 @@
   <meta name="description" content="Phorma Scientific - Transforming scientific complexity into production-grade systems. Rigor. Performance. Architecture.">
   <title>Phorma Scientific - Structure over Chaos</title>
 
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Phorma Scientific - Structure over Chaos">
+  <meta property="og:description" content="Phorma Scientific - Transforming scientific complexity into production-grade systems. Rigor. Performance. Architecture.">
+  <meta property="og:image" content="https://phorma.sh/assets/logo-fondo.png">
+  <meta property="og:url" content="https://phorma.sh/index.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phorma Scientific - Structure over Chaos">
+  <meta name="twitter:description" content="Phorma Scientific - Transforming scientific complexity into production-grade systems. Rigor. Performance. Architecture.">
+  <meta name="twitter:image" content="https://phorma.sh/assets/logo-fondo.png">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-fondo-blanco.png">
   <link rel="apple-touch-icon" href="assets/logo-fondo-blanco.png">
@@ -84,7 +95,9 @@
   <script src="js/main.js"></script>
   <script>
     // Load home page content
-    loadContent('home', 'en');
+    document.addEventListener('DOMContentLoaded', function() {
+      loadContent('home', 'en');
+    });
   </script>
 </body>
 </html>
