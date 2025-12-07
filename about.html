@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Phorma Scientific Mission - Transforming scientific prototypes into production-grade systems for deep tech startups.">
-  <title>Mission - Phorma Scientific</title>
+  <meta name="description" content="Meet the team behind Phorma Scientific - experts in quantitative systems and scientific computing.">
+  <title>Who We Are - Phorma Scientific</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-fondo-blanco.png">
@@ -12,7 +12,7 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
@@ -36,21 +36,33 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html">HOME</a></li>
-          <li><a href="mission.html" class="active">MISSION</a></li>
+          <li><a href="mission.html">MISSION</a></li>
           <li><a href="services.html">SERVICES</a></li>
           <li><a href="trainees.html">TRAINEES</a></li>
-          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="lang-switch"><a href="es/mission.html">ES</a></li>
+          <li class="lang-switch"><a href="es/about.html">ES</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Mission Content -->
-  <div id="content-container">
-    <!-- Content loaded dynamically from markdown files -->
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Who We Are</h1>
+      <p class="hero-subtitle">
+        A partnership of specialists bridging rigorous science and production-grade engineering.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="container">
+      <div class="team-grid" id="content-container"></div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer" id="contact">
@@ -68,14 +80,12 @@
     </div>
   </footer>
 
-  <!-- Minimal JavaScript -->
+  <!-- JavaScript -->
+  <script src="js/content-loader.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/content-loader.js?v=2"></script>
   <script>
-    // Load mission content on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      loadContent('mission', 'en');
-    });
+    // Load team page content
+    loadContent('team', 'en');
   </script>
 </body>
 </html>
