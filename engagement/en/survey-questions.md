@@ -1,18 +1,25 @@
-# Scientific Software Health Check Survey
-## Client Engagement Survey - Google Form Questions
+# Scientific Software Maturity Assessment
+## Customer Survey - Google Form Questions (Improved Version)
 
-This document contains the questions for the "Scientific Software Health Check" survey, designed to identify technical debt and operational inefficiencies in R&D organizations.
+This document contains a revised version of the survey, following the **Customer Discovery (Osterwalder)** methodology.
+
+**Applied Principles:**
+1.  **Separate the Problem from the Solution:** The questions focus on understanding the client's "Pains" and "Jobs-to-be-Done," without suggesting specific tools (our solution).
+2.  **Ask Open-Ended and Scenario-Based Questions:** The priority is for the client to describe their reality in their own words.
+3.  **Measure Impact:** The options aim to quantify the consequences of the problems (time, risk, frustration) instead of just verifying if they use a certain technology.
 
 ---
 
 ## Survey Introduction
 
-**Title:** Scientific Software Health Check: R&D Pipeline Assessment
+**Title:** Scientific Software Maturity Assessment
 
 **Description:**
-This brief 5-minute survey helps identify opportunities to accelerate your R&D innovation cycle. By understanding your current computational infrastructure, we can highlight areas where technical inefficiencies may be slowing your team's scientific discovery process.
+At Phorma Scientific ([Phorma.sh](https://phorma.sh)), we help R&D teams **accelerate their research and development cycles**. This 5-minute survey is designed to understand the challenges your organization faces when using software for science.
 
-Your responses will be treated confidentially and used solely to prepare a customized diagnostic report for your organization.
+Your answers are confidential and will help us identify bottlenecks that may be slowing down innovation in your team.
+
+At the end, you will have the option to schedule a **free 30-minute diagnostic interview** to discuss these points.
 
 ---
 
@@ -22,7 +29,7 @@ Your responses will be treated confidentially and used solely to prepare a custo
 **Field Type:** Short Answer
 **Required:** Yes
 
-**Question:** What is your organization name?
+**Question:** What is your organization's name?
 
 ---
 
@@ -30,9 +37,9 @@ Your responses will be treated confidentially and used solely to prepare a custo
 **Field Type:** Short Answer
 **Required:** Yes
 
-**Question:** Your name and title?
+**Question:** Your name and role
 
-_Example: Dr. Jane Smith, Director of Bioinformatics_
+_Example: Alex Perez, Head of Bioinformatics_
 
 ---
 
@@ -40,23 +47,39 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 **Field Type:** Email
 **Required:** Yes
 
-**Question:** Best email to reach you?
+**Question:** Your contact email
 
 ---
 
-### Question 4: Organization Type
+### Question 4A: Entity Type
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Which best describes your organization?
+**Question:** Which of the following options best describes your organization's entity type?
 
 **Options:**
 - Academic Research Institution
-- Biotech Startup (Seed/Series A)
-- Biotech Startup (Series B+)
-- Pharmaceutical Company
-- Healthcare/Clinical Research
-- Material Science/Engineering R&D
+- Startup (any phase)
+- Established Company (non-startup)
+- Healthcare/Clinical Entity
+- Other: ___________
+
+---
+
+### Question 4B: Main Topic or Specialty
+**Field Type:** Multiple Choice
+**Required:** Yes
+
+**Question:** What is the main R&D topic or specialty in your organization?
+
+**Options:**
+- Biotechnology
+- Health Sciences/Medicine
+- Materials Science/Engineering
+- Basic Science Laboratories
+- Academic Research
+- Finance
+- Economics
 - Other: ___________
 
 ---
@@ -65,7 +88,7 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** How many researchers/scientists are on your computational team?
+**Question:** How many people on your team spend a significant amount of their time on computational tasks (data analysis, modeling, software development)?
 
 **Options:**
 - 1-5
@@ -76,187 +99,183 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 
 ---
 
-## Section 2: Pain Point Assessment
+## Section 2: Workflows and Challenges
 
-### Question 6: Velocity & Scalability (The Technical Debt Trap)
+### Question 7: From Prototype to Production
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Which of the following best describes the transition of software from your research team to your production environment?
+**Question:** Imagine a software prototype (e.g., an analysis script) developed by a scientist proves to be successful. Which of these situations best describes what happens next for others to use it reliably?
 
 **Options:**
-- **A) Ad-hoc & Local:** We rely on manual Excel sheets and scripts stored on individual laptops; there is no central 'production' environment.
-- **B) Functional but Fragile:** We have code that works, but we rely on a specific sequence of manual steps and dread touching it because it might break.
-- **C) The Rewrite Cycle:** Research code is essentially discarded, and engineering teams must rewrite algorithms from scratch for production, causing months of delay.
-- **D) Automated and Seamless:** Code is version-controlled, containerized (Docker), and deploys via CI/CD pipelines without manual intervention.
+- **A) Informal:** The script is shared "as is," and each person runs it as they can on their own computer.
+- **B) Rewrite from scratch:** The engineering team takes it, but has to rewrite it almost completely, which delays implementation for weeks or months.
+- **C) Author-dependent:** The scientist who created it must invest a significant amount of time to clean it up, document it, and help others use it.
+- **D) Defined process:** We have a clear process to package, validate, and deploy the software so it is accessible and reliable for the rest of the team.
 
 ---
 
-### Question 7: Integrity & Reproducibility (The Science Trap)
+### Question 8: Continuity and Reproducibility
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** If your lead computational scientist were to leave tomorrow, how confident are you that their analysis pipelines could be re-run by a new hire to produce identical results on a fresh machine?
+**Question:** If the key person in your computational area leaves tomorrow, how difficult would it be for another team member to run a critical analysis and get the same results?
 
 **Options:**
-- **A) Impossible:** The data lives on their hard drive and the methodology is partially in their head.
-- **B) Anxious:** There are many "magic steps" (manual file moves, parameter tweaks) that only the lead scientist knows.
-- **C) Somewhat Confident:** We have the code, but setting up the environment takes weeks of trial and error to match library versions.
-- **D) Extremely Confident:** Everything is containerized (Docker/Singularity), dependencies are pinned, and data is versioned (DVC/Pachyderm).
+- **A) Almost impossible:** The key knowledge is not documented, and the data or code is isolated on their computer.
+- **B) Very difficult:** It would take us weeks or even months to rebuild the software environment, find the correct data, and validate the results.
+- **C) Possible, but with effort:** It would take several days to set up a new environment and ensure everything works as expected.
+- **D) Straightforward:** We have the documentation and tools to reproduce the environment and results in a matter of hours or a few days.
 
 ---
 
-### Question 8: Talent & Continuity (The People Trap)
+### Question 9: R&D Team Focus
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** How much time does your R&D team spend on software maintenance, data cleaning, and debugging versus new scientific discovery?
+**Question:** What percentage of time do you estimate your R&D team spends on support tasks (maintaining software, cleaning data, fixing bugs) instead of researching or developing innovations?
 
 **Options:**
-- **A) > 60% on maintenance** (Technical Bankruptcy)
-- **B) 30-60% on maintenance** (Dragging Velocity)
-- **C) 10-30% on maintenance** (Healthy Balance)
-- **D) < 10% on maintenance** (Pure Innovation Focus)
+- **A) >60% of the time** (Mainly on support)
+- **B) 30-60% of the time** (Balanced towards support)
+- **C) 10-30% of the time** (Balanced towards research)
+- **D) <10% of the time** (Mainly on research)
 
 ---
 
-## Section 3: Current State Assessment
+### Question 10: Main Operational Challenge
+**Field Type:** Paragraph
+**Required:** Yes
 
-### Question 9: Version Control & Collaboration
+**Question:** In your own words, what is the biggest bottleneck or technical challenge holding back your R&D team today?
+
+---
+
+## Section 3: Current Tools and Practices
+
+### Question 11: Version Control and Collaboration
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Which version control system does your team currently use?
+**Question:** How does your team share and manage code?
 
 **Options:**
-- Git (GitHub, GitLab, Bitbucket)
+- We don't use a formal system. It's shared via email or chat.
+- We use shared folders (e.g., Dropbox, Google Drive, OneDrive).
 - Subversion (SVN)
-- Shared network drives with file versioning (e.g., Dropbox, OneDrive)
-- No formal version control
+- Git (e.g., GitHub, GitLab, Bitbucket)
 - Other: ___________
 
 ---
 
-### Question 10: Data Management
+### Question 12: Data Management and Analysis
 **Field Type:** Checkboxes (Select all that apply)
 **Required:** Yes
 
-**Question:** Which tools does your team use for data analysis and management? (Select all that apply)
+**Question:** What tools does your team primarily use to analyze and manage data?
 
 **Options:**
 - Microsoft Excel
 - R / RStudio
-- Python (Jupyter Notebooks)
+- Python (e.g., Jupyter, Pandas)
 - MATLAB
-- Specialized domain software (e.g., BLAST, PyMOL, ImageJ)
-- SQL Databases
-- Cloud data warehouses (e.g., Snowflake, BigQuery)
+- Domain-specific software (e.g., BLAST, PyMOL, ImageJ)
+- Databases (e.g., SQL, NoSQL)
+- Cloud platforms (e.g., Snowflake, BigQuery)
 - Custom in-house tools
 - Other: ___________
 
 ---
 
-### Question 11: Infrastructure
+### Question 13: Computational Infrastructure
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Where does your team primarily run computational analyses?
+**Question:** Where are most computational analyses run?
 
 **Options:**
-- Individual laptops/desktops
-- Shared on-premise servers
-- HPC cluster (on-premise)
-- Cloud infrastructure (AWS, Azure, GCP)
-- Hybrid (mix of on-premise and cloud)
+- On personal computers (laptops/desktops)
+- Shared local servers (on-premise)
+- High-Performance Computing (HPC) cluster
+- Cloud infrastructure (e.g., AWS, Azure, GCP)
+- Hybrid (mix of local and cloud)
 
 ---
 
-### Question 12: Testing & Quality Assurance
+### Question 14: Software Testing and Quality
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** How does your team ensure code quality and correctness?
+**Question:** How do you ensure that the code produces correct and reliable results?
 
 **Options:**
-- Automated testing with continuous integration (CI)
-- Manual code review by peers
-- Ad-hoc testing when someone notices a problem
-- We don't have a formal QA process
+- We don't have a formal validation process.
+- Sporadic manual testing, usually when someone reports a problem.
+- Peer code review.
+- We develop automated tests that run regularly.
 - Other: ___________
 
 ---
 
-## Section 4: Pain Points & Goals
+## Section 4: Goals and Next Steps
 
-### Question 13: Biggest Challenge
-**Field Type:** Paragraph
-**Required:** No
-
-**Question:** What is the single biggest technical or operational challenge your R&D team faces today?
-
----
-
-### Question 14: Strategic Goals
+### Question 15: Strategic Priorities
 **Field Type:** Checkboxes (Select all that apply)
 **Required:** Yes
 
-**Question:** What are your top strategic priorities for this year? (Select all that apply)
+**Question:** For the next year, what are the most important priorities for your team or department?
 
 **Options:**
-- Accelerate time-to-market for new products/therapies
-- Improve data reproducibility and regulatory compliance
-- Scale computational infrastructure for larger datasets
-- Reduce operational costs (cloud, infrastructure, personnel)
-- Onboard new team members faster
-- Integrate AI/ML into workflows
-- Improve collaboration across teams
+- Accelerate time to discovery or market for products.
+- Improve the reproducibility of results to comply with regulations or publications.
+- Scale computational capacity to handle larger data volumes.
+- Reduce operational costs (cloud, infrastructure, personnel).
+- Facilitate the onboarding and training of new team members.
+- Integrate AI/ML capabilities into our workflows.
+- Improve collaboration between teams (e.g., R&D and engineering).
 - Other: ___________
 
 ---
 
-### Question 15: Interest in Deep Dive
+### Question 16: Interest in Diagnostic
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Based on your responses, you may benefit from a complimentary 45-minute Deep Dive Diagnostic with Phorma Scientific to quantify technical inefficiencies and propose a modernization roadmap. Would you be interested?
+**Question:** Would you be interested in scheduling a **free 30-minute diagnostic interview** with our team to explore your challenges and outline possible solutions?
 
 **Options:**
-- Yes, I'd like to schedule a Deep Dive Interview
-- Maybe, send me more information first
-- Not at this time
+- Yes, I'd like to schedule the interview.
+- Maybe, I'd like to receive more information first.
+- Not at this time.
 
 ---
 
 ## Survey Completion Message
 
-**Title:** Thank you for completing the Scientific Software Health Check!
+**Title:** Thank you for your answers!
 
 **Message:**
+We appreciate the time you have taken. The information you shared is very valuable.
 
-Based on your responses, your R&D organization may be carrying a "Technical Tax" that could be slowing your innovation cycle.
+**Next steps:**
 
-**What happens next:**
+1.  Our team will review your answers.
+2.  If you chose "Yes," we will contact you to coordinate the **free diagnostic interview**.
+3.  If applicable, after the conversation, we might propose a plan to create a **modernization report and strategic roadmap (paid service)**. This report would detail:
+    *   A maturity analysis of your workflows.
+    *   An assessment of how current inefficiencies impact your goals (ROI).
+    *   A roadmap with actionable recommendations.
 
-1. Our team will analyze your responses within 2 business days
-2. You will receive a preliminary assessment via email
-3. If you selected "Yes" for the Deep Dive, we will reach out to schedule a 45-minute diagnostic interview
-4. Following the interview, we will provide a customized report with:
-   - Your Scientific Software Maturity Level (1-5)
-   - Quantified ROI analysis of current inefficiencies
-   - Recommended modernization roadmap
-
-Phorma Scientific specializes in converting technical debt into strategic equity for R&D organizations.
-
-**Questions?** Contact us at: [Insert Contact Email]
+**Questions?** Write to us at: [Insert Contact Email]
 
 ---
 
 ## Notes for Google Form Setup
 
-1. **Use page breaks** to separate the four main sections for better user experience
-2. **Enable "Show progress bar"** so respondents know how far along they are
-3. **Set up email notifications** to alert the team when a new response is submitted
-4. **Use conditional logic:** If Q15 = "Yes", show an additional optional field for preferred contact times
-5. **Enable "Response receipts"** so respondents get a copy of their answers
-6. **Custom thank you page:** Use the completion message above
-7. **Limit to 1 response per email** to prevent duplicate submissions
+1.  **Use page breaks** to separate the four main sections.
+2.  **Enable "Show progress bar"** for participants to see their progress.
+3.  **Set up email notifications** to alert the team of new responses.
+4.  **Use conditional logic:** If Q15 = "Yes," show an optional field for preferred contact times.
+5.  **Enable "Response receipts"** so participants receive a copy of their answers.
+6.  **Custom thank you page:** Use the completion message above.
+7.  **Limit to 1 response per email** to prevent duplicate submissions.
