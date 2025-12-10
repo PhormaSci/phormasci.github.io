@@ -51,19 +51,35 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 4: Tipo de Organización
+### Pregunta 4A: Tipo de Entidad
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
-**Pregunta:** ¿Cuál de estas opciones describe mejor a tu organización?
+**Pregunta:** ¿Cuál de las siguientes opciones describe mejor el tipo de entidad al que pertenece tu organización?
 
 **Opciones:**
 - Institución de Investigación Académica
-- Startup de Biotecnología (Semilla/Serie A)
-- Startup de Biotecnología (Serie B+)
-- Empresa Farmacéutica
-- Investigación en Salud/Clínica
-- I+D en Ciencia de Materiales/Ingeniería
+- Startup (cualquier fase)
+- Empresa Consolidada (no startup)
+- Entidad de Salud/Clínica
+- Otro: ___________
+
+---
+
+### Pregunta 4B: Tópico o Especialidad Principal
+**Tipo de Campo:** Opción Múltiple
+**Requerido:** Sí
+
+**Pregunta:** ¿Cuál es el tópico o la especialidad principal de I+D en tu organización?
+
+**Opciones:**
+- Biotecnología
+- Ciencias de la Salud/Medicina
+- Ciencia de Materiales/Ingeniería
+- Laboratorios de Ciencia Básica
+- Investigación Académica
+- Finanzas
+- Economía
 - Otro: ___________
 
 ---
@@ -85,7 +101,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ## Sección 2: Flujos de Trabajo y Desafíos
 
-### Pregunta 6: Del Prototipo a la Producción
+### Pregunta 7: Del Prototipo a la Producción
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -99,7 +115,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 7: Continuidad y Reproducibilidad
+### Pregunta 8: Continuidad y Reproducibilidad
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -113,7 +129,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 8: Foco del Equipo de I+D
+### Pregunta 9: Foco del Equipo de I+D
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -127,7 +143,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 9: Principal Desafío Operativo
+### Pregunta 10: Principal Desafío Operativo
 **Tipo de Campo:** Párrafo
 **Requerido:** Sí
 
@@ -137,7 +153,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ## Sección 3: Herramientas y Prácticas Actuales
 
-### Pregunta 10: Control de Versiones y Colaboración
+### Pregunta 11: Control de Versiones y Colaboración
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -152,7 +168,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 11: Gestión y Análisis de Datos
+### Pregunta 12: Gestión y Análisis de Datos
 **Tipo de Campo:** Casillas de Verificación (Selecciona todas las que apliquen)
 **Requerido:** Sí
 
@@ -171,7 +187,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 12: Infraestructura Computacional
+### Pregunta 13: Infraestructura Computacional
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -186,7 +202,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 13: Pruebas y Calidad del Software
+### Pregunta 14: Pruebas y Calidad del Software
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
@@ -203,7 +219,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ## Sección 4: Objetivos y Próximos Pasos
 
-### Pregunta 14: Prioridades Estratégicas
+### Pregunta 15: Prioridades Estratégicas
 **Tipo de Campo:** Casillas de Verificación (Selecciona todas las que apliquen)
 **Requerido:** Sí
 
@@ -221,7 +237,7 @@ _Ejemplo: Alex Pérez, Líder de Bioinformática_
 
 ---
 
-### Pregunta 15: Interés en Diagnóstico
+### Pregunta 16: Interés en Diagnóstico
 **Tipo de Campo:** Opción Múltiple
 **Requerido:** Sí
 
