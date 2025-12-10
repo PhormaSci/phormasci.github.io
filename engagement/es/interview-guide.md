@@ -1,320 +1,80 @@
-# Guía de Entrevista Diagnóstica de Inmersión Profunda
-## Protocolo de Entrevista de Propuesta de Valor Osterwalder
+# Guía para Entrevista de Diagnóstico Gratuita (30 Minutos)
 
-**Propósito:** Esta entrevista utiliza el marco de Diseño de Propuesta de Valor para mapear los Trabajos por Hacer (JTBD) del cliente, Dolores y Ganancias a los servicios específicos de Phorma.
+**Objetivo Principal:** Validar los "dolores" del cliente identificados en la encuesta, profundizar en el más crítico, y determinar si hay un buen encaje para proponer un servicio pagado (Hoja de Ruta Estratégica).
 
-**Duración:** 45-60 minutos
-
-**Personas Objetivo:**
-- **Comprador Económico:** VP de I+D, CTO, Director de Informática
-- **Usuario Final:** Científico Líder, Bioinformático, Investigador Computacional
-
-**Modo de Entrevista:** Semi-estructurado (usar como guía, permitir que la conversación fluya naturalmente)
+**Modo:** Conversación consultiva. La meta es aportar claridad al cliente, no vender.
 
 ---
 
-## Preparación Previa a la Entrevista
+### Preparación (5 minutos antes de la llamada)
 
-### Información para Revisar Antes de la Llamada
-
-1. Respuestas de la encuesta de la Evaluación de Salud del Software Científico
-2. Información pública de la organización (sitio web, publicaciones, anuncios de financiamiento)
-3. Perfiles de LinkedIn de los entrevistados (para entender antecedentes)
-4. Cualquier informe de la industria relevante para su sector (farmacéutico, biotecnología, ciencia de materiales)
-
-### Materiales para Tener Listos
-
-- Lienzo de Propuesta de Valor en blanco (para mapeo en tiempo real)
-- Resumen de respuestas de la encuesta
-- Plantilla de cálculo de ROI
-- Gráfico de referencia del Modelo de Madurez de Software Científico (SSMM)
+1.  **Revisar las respuestas de la encuesta:** Identifica 1-2 "dolores" que parezcan más intensos.
+    *   *Ej: El cliente marcó "Reescribir desde cero" para el paso a producción y ">60% del tiempo" en soporte.*
+2.  **Revisar el perfil de LinkedIn del contacto:** Entiende su rol y su trayectoria.
+3.  **Tener a mano el nombre de su organización y su rol.**
 
 ---
 
-## Estructura de la Entrevista
+### Estructura de la Entrevista (30 Minutos)
 
-### Fase 1: Apertura y Establecimiento del Contexto (5-10 minutos)
+#### 1. Bienvenida y Alineación (5 minutos)
 
-**Objetivo:** Establecer rapport, establecer expectativas y recopilar contexto básico.
+**Objetivo:** Establecer un tono de colaboración y confirmar el propósito de la llamada.
 
-#### Guión de Apertura
+**Guión de Apertura:**
+"Hola [Nombre del Contacto], gracias por tu tiempo. Mi nombre es [Tu Nombre] de Phorma Scientific."
 
-"Gracias por tomarse el tiempo para hablar conmigo hoy. Según sus respuestas de la encuesta, parece que su equipo está navegando algunos desafíos técnicos interesantes. El objetivo de esta conversación es profundizar en sus flujos de trabajo actuales de I+D—no para venderle nada hoy, sino para comprender genuinamente dónde existen puntos de fricción.
+"Revisé las respuestas que diste en nuestro Diagnóstico de Madurez y me parecieron muy interesantes. El objetivo de estos 30 minutos es simple: quiero profundizar en uno o dos de los desafíos que mencionaste para darte una perspectiva externa. Esta es una sesión de trabajo, no una presentación. Mi meta es que te lleves de aquí una idea más clara, sin importar si seguimos colaborando o no. ¿Te parece bien?"
 
-Al final, compartiré algunas observaciones preliminares y, si tiene sentido, podemos discutir cómo Phorma podría ayudar. ¿Le parece bien?"
-
-#### Preguntas de Contexto
-
-1. **Identificación de Persona:**
-   - "¿Puede describirme su rol y responsabilidades principales?"
-   - "¿Quién más está involucrado en decisiones sobre herramientas computacionales e infraestructura?"
-
-2. **Contexto Organizacional:**
-   - "¿Cómo es el organigrama del equipo de I+D?"
-   - "¿Cuántas personas hay en el equipo y cuáles son sus disciplinas principales?"
-
-3. **Contexto Estratégico:**
-   - "¿Cuáles son sus tres principales objetivos estratégicos para este año fiscal?"
-   - _Ejemplos: "Reducir tiempo hasta IND," "Integrar datos Multi-Ómicos," "Reducir costos de nube," "Lanzar una nueva línea de productos"_
+**Preguntas de Contexto:**
+*   "Para empezar, ¿podrías contarme brevemente cuál es el objetivo principal de tu equipo para este año?"
 
 ---
 
-### Fase 2: Trabajos por Hacer (JTBD) (10-15 minutos)
+#### 2. Profundización en el Dolor Principal (15 minutos)
 
-**Objetivo:** Comprender qué está intentando lograr realmente el cliente—trabajos funcionales, sociales y emocionales.
+**Objetivo:** Ir más allá de la respuesta de la encuesta y entender la historia y las consecuencias del problema.
 
-#### Preguntas Principales de JTBD
+**Guión de Transición:**
+"Gracias por ese contexto. En tu encuesta, mencionaste algo que me llamó la atención: [**Menciona la respuesta más llamativa**]. Por ejemplo: *'Cuando un prototipo de un científico tiene éxito, el equipo de ingeniería debe reescribirlo casi por completo, retrasando todo por meses'.*"
 
-4. **Para Director de I+D/CTO (Comprador Económico):**
-   - "¿Cuáles son los hitos críticos que debe alcanzar este año para asegurar financiamiento continuo o confianza de la junta?"
-   - "Cuando piensa en sus competidores, ¿qué le da ventaja? ¿Qué lo está ralentizando?"
-   - "Si pudiera agitar una varita mágica y arreglar una cosa sobre sus operaciones de I+D, ¿qué sería?"
+**Preguntas de Exploración (usa 2-3 de estas):**
+*   "¿Podrías contarme alguna historia reciente donde esto haya sucedido? ¿Cómo fue el proceso?"
+*   "Cuando eso ocurre, ¿cuál es el impacto real en el proyecto? ¿Hablamos de retrasos, frustración, costes inesperados?"
+*   "Desde tu perspectiva, ¿cuál es la causa raíz de ese problema?"
+*   "Si pudieras agitar una varita mágica y cambiar algo de ese proceso, ¿qué sería?"
+*   (Si aplica) "Mencionaste que tu equipo dedica cerca de [X%] de su tiempo a tareas de soporte. ¿Cómo se ve eso en el día a día?"
 
-5. **Para Bioinformático/Científico Líder (Usuario Final):**
-   - "Descríbame el ciclo de vida típico de un proyecto en su laboratorio—desde el momento en que se genera una hipótesis hasta la entrega final de datos."
-   - "Cuando se sienta a analizar un conjunto de datos, ¿cuál es la tarea más tediosa y repetitiva que debe realizar?"
-   - "¿Cuál es la parte más emocionante de su trabajo? ¿Cuál es la parte que desearía poder omitir?"
-
-6. **Para Ambas Personas:**
-   - "¿Cómo define el 'éxito' para un proyecto computacional?"
-   - "¿Cómo se ve 'suficientemente bueno' versus 'estándar de oro'?"
-
-#### Trabajos Sociales y Emocionales
-
-7. "¿Cómo se percibe el trabajo computacional en su organización? ¿Se ve como un centro de costos o un activo estratégico?"
-
-8. "Cuando presenta resultados a la alta dirección o a partes interesadas externas, ¿qué les importa más?"
-
-9. "¿Cómo se siente personalmente cuando un pipeline se rompe o un resultado no se puede reproducir? ¿Cuál es el costo emocional para el equipo?"
+**Escucha activa:** Usa frases como "Eso suena frustrante", "Entiendo", "Cuéntame más sobre eso" para validar sus sentimientos y animarlos a seguir compartiendo.
 
 ---
 
-### Fase 3: Diagnóstico de Dolores (15-20 minutos)
+#### 3. Cierre y Propuesta de Siguiente Paso (10 minutos)
 
-**Objetivo:** Identificar malos resultados, riesgos y obstáculos. Sondear intensidad y frecuencia.
+**Objetivo:** Resumir el problema, conectarlo con una solución de alto nivel y presentar la Hoja de Ruta Estratégica como el siguiente paso lógico (y pagado).
 
-#### Categoría de Dolor 1: Integridad y Reproducibilidad
+**Guión de Resumen:**
+"Gracias por compartir eso, [Nombre del Contacto]. Lo que escucho es que el principal cuello de botella no es la falta de ideas científicas, sino la fricción para llevar esas ideas a una herramienta robusta y escalable. Este ciclo de 'prototipo frágil -> reescritura costosa' está consumiendo un tiempo valioso que podría dedicarse a la innovación."
 
-10. **La Sonda de Integridad:**
-    - "¿Ha experimentado alguna situación donde un resultado clave no pudo ser reproducido, o donde se perdieron datos debido a problemas de versionado?"
-    - _Si es sí:_ "¿Cuál fue el impacto comercial de ese evento? ¿Cuánto tiempo se perdió investigando la discrepancia?"
-    - _Si es no:_ "¿Qué salvaguardas tiene en lugar para prevenir eso?"
+"Has descrito el problema perfectamente."
 
-11. **La Sonda de Corrupción de Datos:**
-    - "En su encuesta, mencionó usar [Excel/Jupyter/etc.]. ¿Alguna vez ha descubierto un error en un conjunto de datos después de que el análisis ya estaba completo?"
-    - _Sugerencia:_ "Por ejemplo, nombres de genes que se convierten en fechas en Excel, o fórmulas que sobrescriben accidentalmente datos crudos?"
-    - _Si es sí:_ "¿Cómo lo detectó? ¿Cuál fue el impacto posterior?"
+**Guión del Puente a la Solución:**
+"Resolver esto de raíz implica establecer un puente entre la ciencia y la ingeniería de software, con prácticas y arquitecturas que permitan que los prototipos evolucionen en lugar de ser desechados."
 
-12. **La Sonda del Factor Bus:**
-    - "Si su persona computacional líder se fuera mañana, ¿cuánto tiempo tomaría poner a un reemplazo al día?"
-    - "¿Qué se perdería en esa transición—conocimiento, código, acceso a datos?"
+**Guión de la Propuesta:**
+"Nuestra conversación de hoy ha sido un excelente primer diagnóstico. Para diseñar una solución real, el siguiente paso es realizar un análisis más profundo."
 
-#### Categoría de Dolor 2: Velocidad y Escalabilidad
+"Por eso, ofrecemos un servicio llamado **Informe de Modernización y Hoja de Ruta Estratégica**. En él, nuestro equipo se sumerge en tus flujos de trabajo y código para entregar un plan de acción concreto, con análisis de ROI y recomendaciones priorizadas."
 
-13. **La Sonda de Eficiencia (Inmersión Profunda):**
-    - "Mencionó pasar [X%] del tiempo en depuración y mantenimiento. ¿Puede darme un ejemplo específico del último mes?"
-    - "Si pudiera recuperar la mitad de ese tiempo, ¿qué problemas científicos específicos abordaría su equipo?"
+"No es necesario que decidas ahora, pero, **¿te interesaría que te envíe una propuesta formal sin compromiso para este servicio?** Así puedes revisarla con tu equipo."
 
-14. **La Sonda del Muro de Escalabilidad:**
-    - "A medida que sus conjuntos de datos crecen—digamos, 10x en tamaño—¿se siente confiado de que su infraestructura actual puede manejarlo?"
-    - "¿Alguna vez ha tenido que abandonar un análisis porque era computacionalmente inviable?"
-
-15. **La Sonda de Integración:**
-    - "¿Cuánto tiempo tarda un nuevo algoritmo desarrollado por un investigador en desplegarse en una herramienta que el resto de la empresa pueda usar?"
-    - "¿Son días, semanas o meses?"
-    - _Si es largo:_ "¿Cuáles son los cuellos de botella en ese proceso?"
-
-16. **La Sonda de la Brecha de Traducción:**
-    - "¿Tiene equipos separados de 'investigación' e 'ingeniería'? ¿Cómo se comunican?"
-    - "Cuando la investigación pasa a ingeniería, ¿qué típicamente se pierde en la traducción?"
-
-#### Categoría de Dolor 3: Talento y Continuidad
-
-17. **La Sonda de la Brecha de Habilidades:**
-    - "Cuando está contratando, ¿qué es más difícil de encontrar: personas con experiencia en el dominio (biología, química) o personas que puedan codificar bien?"
-    - "¿Alguna vez ha contratado a alguien que fuera brillante científicamente pero luchara con el software?"
-
-18. **La Sonda de Incorporación:**
-    - "¿Cuánto tiempo tarda un nuevo empleado en volverse productivo—realmente ejecutando análisis independientemente?"
-    - "¿Cuáles son las mayores barreras para una incorporación más rápida?"
-
-19. **La Sonda del Costo de Oportunidad:**
-    - "Cuando sus científicos senior están pasando tiempo arreglando scripts rotos o limpiando datos, ¿qué no están haciendo?"
-    - "¿Cuánto le cuesta eso a la organización en términos de innovación perdida?"
-
-#### Categoría de Dolor 4: Deuda Técnica Oculta (Avanzado)
-
-20. **La Sonda de Entrelazamiento:**
-    - "Si cambia un parámetro o característica de entrada en su modelo, ¿afecta todo lo demás de manera impredecible?"
-    - "¿Cuántas pruebas hace antes de impulsar un cambio a producción?"
-
-21. **La Sonda de la Jungla de Pipelines:**
-    - "¿Cuántos scripts o herramientas diferentes están encadenados en su pipeline de análisis típico?"
-    - "Si un paso cambia, ¿qué tan fácil es actualizar los pasos posteriores?"
-
-22. **La Sonda del Consumidor No Declarado:**
-    - "¿Hay 'dependencias silenciosas'—donde la salida de un equipo es consumida por otro equipo, pero no hay un contrato o comunicación formal?"
+**Cierre Final:**
+*   **Si dice que sí:** "Perfecto. Te enviaré la propuesta por correo electrónico en las próximas 24 horas. Gracias de nuevo por tu tiempo, ha sido una conversación muy productiva."
+*   **Si duda o dice que no:** "Entendido, no hay problema. Agradezco igualmente tu tiempo y la transparencia. Espero que la conversación te haya sido útil para clarificar tus desafíos. Si algo cambia en el futuro, no dudes en contactarnos."
 
 ---
 
-### Fase 4: Identificación de Ganancias (10-15 minutos)
+### Acciones Post-Entrevista
 
-**Objetivo:** Comprender cómo se ve 'mejor'. ¿Qué deleitaría al cliente?
-
-#### Preguntas de Ganancia
-
-23. **El Estado Ideal:**
-    - "Si su infraestructura de software fuera ideal, ¿cómo se vería?"
-    - "¿Cómo cambiaría su posición competitiva?"
-
-24. **La Ganancia de Velocidad:**
-    - "¿Qué significaría para su organización si pudiera reducir el tiempo de análisis en un 50%?"
-    - "¿Qué nuevas preguntas podría hacer con esa capacidad extra?"
-
-25. **La Ganancia de Calidad:**
-    - "¿Qué significaría si pudiera garantizar reproducibilidad bit a bit para todos los análisis?"
-    - "¿Cómo afectaría eso las presentaciones regulatorias o la confianza de los inversores?"
-
-26. **La Ganancia de Incorporación:**
-    - "¿Qué significaría si pudiera incorporar a un nuevo científico y tenerlo ejecutando análisis productivo en el Día 1, en lugar de la Semana 4?"
-
-27. **La Ganancia de Innovación:**
-    - "Si pudiera liberar el 20-30% del tiempo de su equipo del trabajo de mantenimiento, ¿qué proyectos revolucionarios perseguiría?"
-
-28. **La Ganancia Inesperada:**
-    - "¿Hay algo en lo que no haya pensado todavía—una capacidad que ni siquiera sabe que necesita—que sería revolucionaria si la tuviera?"
-
----
-
-### Fase 5: Manejo de Objeciones y Costos Hundidos (5 minutos)
-
-**Objetivo:** Abordar la preocupación de "ya hemos invertido tanto".
-
-29. **La Sonda de Costo Hundido:**
-    - "Ha construido mucha infraestructura a lo largo de los años. ¿Cuánto esfuerzo se requiere actualmente para mantener su 'código pegamento' heredado?"
-    - "¿Este esfuerzo de mantenimiento crece linealmente o exponencialmente a medida que agrega nuevas fuentes de datos?"
-
-30. **El Riesgo de la Inacción:**
-    - "Si no aborda estas ineficiencias técnicas, ¿qué sucede en 12 meses? ¿24 meses?"
-    - "¿Cuál es el riesgo de no hacer nada?"
-
----
-
-### Fase 6: Cierre y Próximos Pasos (5 minutos)
-
-#### Síntesis
-
-31. "Según nuestra conversación, parece que los tres principales puntos de dolor son:
-    1. [Dolor 1]
-    2. [Dolor 2]
-    3. [Dolor 3]
-
-    ¿Resuena con usted?"
-
-32. "Y las mayores oportunidades de ganancia serían:
-    1. [Ganancia 1]
-    2. [Ganancia 2]
-
-    ¿Es eso preciso?"
-
-#### Llamado a la Acción
-
-33. "Esto es lo que me gustaría proponer:
-    - Sintetizaré todo lo que discutimos hoy en un **Informe de Justificación**.
-    - Este informe incluirá:
-      - Su **Nivel de Madurez de Software Científico** actual (1-5)
-      - Un **análisis cuantificado de ROI** que muestra cuánto le están costando las ineficiencias actuales
-      - Una **hoja de ruta recomendada** para la modernización
-    - Lo tendré para usted dentro de **5 días hábiles**.
-    - Después de que lo revise, podemos programar un seguimiento para discutir si Phorma es la opción correcta para ayudarlo a ejecutar.
-
-    ¿Le funciona?"
-
-#### Permiso para Seguimiento
-
-34. "¿Hay alguien más en su equipo que deba ser parte de la próxima conversación?"
-
-35. "¿Cuál es la mejor manera de mantenernos en contacto—correo electrónico, Slack o controles programados?"
-
----
-
-## Acciones Post-Entrevista
-
-### Inmediato (Dentro de 24 horas)
-
-- [ ] Enviar correo electrónico de agradecimiento con resumen de la reunión
-- [ ] Actualizar CRM con notas detalladas
-- [ ] Marcar cualquier problema urgente mencionado (ej., corrupción de datos activa, plazos inminentes)
-
-### Dentro de 5 Días Hábiles
-
-- [ ] Completar Informe de Justificación con:
-  - Evaluación SSMM
-  - Cálculo de ROI
-  - Perfil de riesgo (epistémico y técnico)
-  - Mapeo de soluciones (servicios de Phorma a JTBD)
-  - Hoja de ruta recomendada
-- [ ] Enviar informe por correo electrónico con nota de presentación personalizada
-- [ ] Programar llamada de seguimiento (si el cliente indicó interés)
-
-### Continuo
-
-- [ ] Monitorear eventos desencadenantes (anuncios de financiamiento, cambios de equipo, publicaciones)
-- [ ] Agregar a secuencia de nutrición si no está listo para comprar ahora
-- [ ] Solicitar presentaciones a pares en organizaciones similares
-
----
-
-## Consejos y Mejores Prácticas de Entrevista
-
-### Hacer
-
-✅ **Escuchar más de lo que habla** (regla 80/20)
-✅ **Hacer seguimientos de "por qué" y "cómo"** para profundizar
-✅ **Usar el silencio estratégicamente** para dejar pensar al cliente
-✅ **Validar emociones** ("Eso suena increíblemente frustrante")
-✅ **Tomar notas detalladas** (considerar grabar con permiso)
-✅ **Ser genuinamente curioso** sobre su ciencia
-
-### No Hacer
-
-❌ **No promocionar los servicios de Phorma durante la entrevista** (guardar para el informe)
-❌ **No descartar su enfoque actual** (incluso si es objetivamente malo)
-❌ **No usar jerga que no usen** (reflejar su lenguaje)
-❌ **No interrumpir** o terminar sus oraciones
-❌ **No hacer suposiciones** sobre sus prioridades
-
----
-
-## Apéndice: Mapeo de Preguntas al Lienzo de Propuesta de Valor
-
-| Pregunta de Entrevista # | Mapea a Elemento VPC | Propósito |
-|--------------------------|----------------------|-----------|
-| P1-P3 | Perfil del Cliente (Contexto) | Identificación de persona |
-| P4-P9 | Trabajos del Cliente | Comprender qué están tratando de lograr |
-| P10-P22 | Dolores del Cliente | Identificar obstáculos, riesgos, malos resultados |
-| P23-P28 | Ganancias del Cliente | Comprender resultados deseados y beneficios |
-| P29-P30 | Dolores (Manejo de Objeciones) | Abordar la falacia del costo hundido |
-| P31-P35 | Transición al Ajuste | Puente a la Propuesta de Valor de Phorma |
-
----
-
-## Codificación de Respuestas de Muestra
-
-Después de la entrevista, codificar respuestas usando este marco:
-
-### Escala de Intensidad del Dolor
-- **Crítico (5):** Riesgo existencial, amenaza viabilidad
-- **Alto (4):** Bloqueador mayor, impacto financiero significativo
-- **Moderado (3):** Molesto, pero existen soluciones alternativas
-- **Bajo (2):** Inconveniente menor
-- **Ninguno (1):** No es una preocupación
-
-### Escala de Importancia del Trabajo
-- **Esencial (5):** Crítico para la misión, debe tener éxito
-- **Importante (4):** Alta prioridad, impacto significativo
-- **Agradable tener (3):** Útil pero no crítico
-- **Opcional (2):** Baja prioridad
-- **Irrelevante (1):** No está en su radar
-
-Use estas escalas para priorizar qué dolores resolver y qué ganancias crear en el Informe de Justificación.
+1.  **Inmediatamente:** Actualiza tu CRM con notas detalladas de la conversación.
+2.  **Dentro de 24 horas (si aplica):** Envía el correo de seguimiento con la propuesta para el "Informe de Modernización y Hoja de Ruta Estratégica".

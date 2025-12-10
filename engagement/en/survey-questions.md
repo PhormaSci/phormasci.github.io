@@ -1,25 +1,25 @@
-# Scientific Software Maturity Assessment
+# Scientific Software Maturity Diagnosis
 ## Customer Survey - Google Form Questions (Improved Version)
 
 This document contains a revised version of the survey, following the **Customer Discovery (Osterwalder)** methodology.
 
-**Applied Principles:**
-1.  **Separate the Problem from the Solution:** The questions focus on understanding the client's "Pains" and "Jobs-to-be-Done," without suggesting specific tools (our solution).
-2.  **Ask Open-Ended and Scenario-Based Questions:** The priority is for the client to describe their reality in their own words.
-3.  **Measure Impact:** The options aim to quantify the consequences of the problems (time, risk, frustration) instead of just verifying if they use a certain technology.
+**Principles Applied:**
+1.  **Separate the Problem from the Solution:** The questions focus on understanding the customer's "Pains" and "Jobs-to-be-Done" without suggesting specific tools (our solution).
+2.  **Ask Open-ended, Scenario-Based Questions:** It prioritizes letting the customer describe their reality in their own words.
+3.  **Measure Impact:** The options aim to quantify the consequences of problems (time, risk, frustration) rather than just checking if they use a certain technology.
 
 ---
 
 ## Survey Introduction
 
-**Title:** Scientific Software Maturity Assessment
+**Title:** Diagnose Your Scientific Software's Maturity
 
 **Description:**
 At Phorma Scientific ([Phorma.sh](https://phorma.sh)), we help R&D teams **accelerate their research and development cycles**. This 5-minute survey is designed to understand the challenges your organization faces when using software for science.
 
 Your answers are confidential and will help us identify bottlenecks that may be slowing down innovation in your team.
 
-At the end, you will have the option to schedule a **free 30-minute diagnostic interview** to discuss these points.
+At the end, you will have the option to schedule a **free 30-minute diagnostic interview** to discuss these points further.
 
 ---
 
@@ -29,7 +29,7 @@ At the end, you will have the option to schedule a **free 30-minute diagnostic i
 **Field Type:** Short Answer
 **Required:** Yes
 
-**Question:** What is your organization's name?
+**Question:** What is the name of your organization?
 
 ---
 
@@ -47,7 +47,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Field Type:** Email
 **Required:** Yes
 
-**Question:** Your contact email
+**Question:** Your contact email address
 
 ---
 
@@ -55,7 +55,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Which of the following options best describes your organization's entity type?
+**Question:** Which of the following best describes your organization's entity type?
 
 **Options:**
 - Academic Research Institution
@@ -66,17 +66,17 @@ _Example: Alex Perez, Head of Bioinformatics_
 
 ---
 
-### Question 4B: Main Topic or Specialty
+### Question 4B: Primary Topic or Specialty
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** What is the main R&D topic or specialty in your organization?
+**Question:** What is the primary R&D topic or specialty in your organization?
 
 **Options:**
 - Biotechnology
 - Health Sciences/Medicine
 - Materials Science/Engineering
-- Basic Science Laboratories
+- Basic Science Labs
 - Academic Research
 - Finance
 - Economics
@@ -88,7 +88,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** How many people on your team spend a significant amount of their time on computational tasks (data analysis, modeling, software development)?
+**Question:** How many people on your team spend a significant portion of their time on computational tasks (data analysis, modeling, software development)?
 
 **Options:**
 - 1-5
@@ -108,10 +108,10 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Question:** Imagine a software prototype (e.g., an analysis script) developed by a scientist proves to be successful. Which of these situations best describes what happens next for others to use it reliably?
 
 **Options:**
-- **A) Informal:** The script is shared "as is," and each person runs it as they can on their own computer.
-- **B) Rewrite from scratch:** The engineering team takes it, but has to rewrite it almost completely, which delays implementation for weeks or months.
+- **A) Informal:** The script is shared "as is," and each person runs it as best they can on their own computer.
+- **B) Rewrite from scratch:** The engineering team takes it, but they have to rewrite it almost completely, which delays implementation by weeks or months.
 - **C) Author-dependent:** The scientist who created it must invest a significant amount of time to clean it up, document it, and help others use it.
-- **D) Defined process:** We have a clear process to package, validate, and deploy the software so it is accessible and reliable for the rest of the team.
+- **D) Defined process:** We have a clear process to package, validate, and deploy the software so that it is accessible and reliable for the rest of the team.
 
 ---
 
@@ -123,7 +123,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 
 **Options:**
 - **A) Almost impossible:** The key knowledge is not documented, and the data or code is isolated on their computer.
-- **B) Very difficult:** It would take us weeks or even months to rebuild the software environment, find the correct data, and validate the results.
+- **B) Very difficult:** It would take us weeks or even months to rebuild the software environment, find the right data, and validate the results.
 - **C) Possible, but with effort:** It would take several days to set up a new environment and ensure everything works as expected.
 - **D) Straightforward:** We have the documentation and tools to reproduce the environment and results in a matter of hours or a few days.
 
@@ -191,14 +191,14 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Where are most computational analyses run?
+**Question:** Where do most of the computational analyses run?
 
 **Options:**
 - On personal computers (laptops/desktops)
-- Shared local servers (on-premise)
+- Local shared servers (on-premise)
 - High-Performance Computing (HPC) cluster
 - Cloud infrastructure (e.g., AWS, Azure, GCP)
-- Hybrid (mix of local and cloud)
+- Hybrid (mix of on-premise and cloud)
 
 ---
 
@@ -212,7 +212,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 - We don't have a formal validation process.
 - Sporadic manual testing, usually when someone reports a problem.
 - Peer code review.
-- We develop automated tests that run regularly.
+- We develop automated tests that are run regularly.
 - Other: ___________
 
 ---
@@ -226,7 +226,7 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Question:** For the next year, what are the most important priorities for your team or department?
 
 **Options:**
-- Accelerate time to discovery or market for products.
+- Accelerate discovery time or time-to-market for products.
 - Improve the reproducibility of results to comply with regulations or publications.
 - Scale computational capacity to handle larger data volumes.
 - Reduce operational costs (cloud, infrastructure, personnel).
@@ -237,11 +237,11 @@ _Example: Alex Perez, Head of Bioinformatics_
 
 ---
 
-### Question 16: Interest in Diagnostic
+### Question 16: Interest in Diagnosis
 **Field Type:** Multiple Choice
 **Required:** Yes
 
-**Question:** Would you be interested in scheduling a **free 30-minute diagnostic interview** with our team to explore your challenges and outline possible solutions?
+**Question:** Would you be interested in scheduling a **free 30-minute diagnostic interview** with our team to explore your challenges and outline potential solutions?
 
 **Options:**
 - Yes, I'd like to schedule the interview.
@@ -255,13 +255,13 @@ _Example: Alex Perez, Head of Bioinformatics_
 **Title:** Thank you for your answers!
 
 **Message:**
-We appreciate the time you have taken. The information you shared is very valuable.
+We appreciate the time you've taken. The information you've shared is very valuable.
 
 **Next steps:**
 
 1.  Our team will review your answers.
 2.  If you chose "Yes," we will contact you to coordinate the **free diagnostic interview**.
-3.  If applicable, after the conversation, we might propose a plan to create a **modernization report and strategic roadmap (paid service)**. This report would detail:
+3.  If applicable, after the conversation, we may propose a plan to develop a **modernization report and strategic roadmap (a paid service)**. This report would detail:
     *   A maturity analysis of your workflows.
     *   An assessment of how current inefficiencies impact your goals (ROI).
     *   A roadmap with actionable recommendations.
@@ -273,9 +273,9 @@ We appreciate the time you have taken. The information you shared is very valuab
 ## Notes for Google Form Setup
 
 1.  **Use page breaks** to separate the four main sections.
-2.  **Enable "Show progress bar"** for participants to see their progress.
+2.  **Enable "Show progress bar"** so participants can see their progress.
 3.  **Set up email notifications** to alert the team of new responses.
-4.  **Use conditional logic:** If Q15 = "Yes," show an optional field for preferred contact times.
+4.  **Use conditional logic:** If Q16 = "Yes", show an optional field for preferred contact times.
 5.  **Enable "Response receipts"** so participants receive a copy of their answers.
-6.  **Custom thank you page:** Use the completion message above.
-7.  **Limit to 1 response per email** to prevent duplicate submissions.
+6.  **Custom thank-you page:** Use the completion message above.
+7.  **Limit to 1 response per email** to avoid duplicate submissions.

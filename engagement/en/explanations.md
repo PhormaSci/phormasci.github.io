@@ -12,7 +12,7 @@ You know how scientists and researchers often create amazing computer programs t
 
 ## Technical/Professional
 
-Phorma Scientific is a consultancy that specializes in transforming scientific computing prototypes into production-grade systems. We bridge the gap between academic research and enterprise-level software by providing four key services:
+Phorma Scientific is a consultancy that specializes in transforming scientific computing prototypes into production-grade systems. Our process begins with a diagnostic phase, including our **Scientific Software Maturity Diagnosis**, to identify bottlenecks and risks before proposing a solution. We bridge the gap between academic research and enterprise-level software by providing four key services:
 
 1.  **System Audits:** We analyze existing codebases to identify architectural debt, performance bottlenecks, and reproducibility issues, delivering a modernization roadmap.
 2.  **Research Software Engineering (RSE):** We implement robust, scalable, and maintainable software from research prototypes, employing best practices like test-driven development and modular architecture.
@@ -27,7 +27,7 @@ For deep tech startups struggling to scale their scientific breakthroughs, Phorm
 
 ## For Investors and Clients
 
-Phorma Scientific de-risks your investment in deep tech by ensuring the underlying technology is sound, scalable, and ready for market. We address the common failure point for scientific startups: the inability to transition from a successful research prototype to a commercially viable product.
+Phorma Scientific de-risks your investment in deep tech by ensuring the underlying technology is sound, scalable, and ready for market. Our process begins with a **Maturity Diagnosis** to assess the current state of your software, followed by a **Strategic Roadmap** that aligns technical improvements with business goals. We address the common failure point for scientific startups: the inability to transition from a successful research prototype to a commercially viable product.
 
 Our services directly translate to value by:
 

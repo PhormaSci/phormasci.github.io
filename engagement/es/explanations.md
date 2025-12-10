@@ -12,7 +12,7 @@ Imagina que tienes una idea genial para un proyecto de ciencias, como un robot q
 
 ## Técnico/Profesional
 
-Phorma Scientific es una consultora que se especializa en transformar prototipos de computación científica en sistemas de grado de producción. Cerramos la brecha entre la investigación académica y el software de nivel empresarial al proporcionar cuatro servicios clave:
+Phorma Scientific es una consultora que se especializa en transformar prototipos de computación científica en sistemas de grado de producción. Nuestro proceso comienza con una fase de diagnóstico, que incluye nuestro **Diagnóstico de Madurez de Software Científico**, para identificar los cuellos de botella y los riesgos antes de proponer una solución. Cerramos la brecha entre la investigación académica y el software de nivel empresarial al proporcionar cuatro servicios clave:
 
 1.  **Auditorías de Sistemas:** Analizamos las bases de código existentes para identificar la deuda arquitectónica, los cuellos de botella en el rendimiento y los problemas de reproducibilidad, entregando una hoja de ruta de modernización.
 2.  **Ingeniería de Software de Investigación (RSE):** Implementamos software robusto, escalable y mantenible a partir de prototipos de investigación, empleando las mejores prácticas como el desarrollo basado en pruebas y la arquitectura modular.
@@ -27,7 +27,7 @@ Para las startups de tecnología profunda que luchan por escalar sus avances cie
 
 ## Para Inversores y Clientes
 
-Phorma Scientific reduce el riesgo de su inversión en tecnología profunda al garantizar que la tecnología subyacente sea sólida, escalable y esté lista para el mercado. Abordamos el punto de falla común de las nuevas empresas científicas: la incapacidad de pasar de un prototipo de investigación exitoso a un producto comercialmente viable.
+Phorma Scientific reduce el riesgo de su inversión en tecnología profunda al garantizar que la tecnología subyacente sea sólida, escalable y esté lista para el mercado. Nuestro proceso comienza con un **Diagnóstico de Madurez** para evaluar el estado actual de su software, seguido de una **Hoja de Ruta Estratégica** que alinea las mejoras técnicas con los objetivos de negocio. Abordamos el punto de falla común de las nuevas empresas científicas: la incapacidad de pasar de un prototipo de investigación exitoso a un producto comercialmente viable.
 
 Nuestros servicios se traducen directamente en valor al:
 
@@ -36,4 +36,4 @@ Nuestros servicios se traducen directamente en valor al:
 *   **Mejorar el rendimiento y la escalabilidad:** Nos aseguramos de que su software pueda manejar las demandas de una base de usuarios en crecimiento y conjuntos de datos más grandes, lo cual es fundamental para la valoración y la adopción en el mercado.
 *   **Mejorar la reproducibilidad y el cumplimiento:** Implementamos el rigor necesario para garantizar que sus resultados sean verificables y que sus sistemas cumplan con los estándares de la industria, un factor clave para la aprobación regulatoria y para generar confianza con los clientes.
 
-Al asociarse con Phorma Scientific, no solo está construyendo software; está construiendo las bases para un negocio exitoso y sostenible. Convertimos ideas científicas brillantes en activos valiosos.
+Al asociarse con Phorma Scientific, no solo está construyendo software; está construyendo las bases para un negocio exitoso y sostenible. Convertimos ideas científicas brillantes en activos valiosos.
