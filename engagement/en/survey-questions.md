@@ -85,10 +85,10 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 **Question:** Which of the following best describes the transition of software from your research team to your production environment?
 
 **Options:**
-- **A) Automated and Seamless:** Code is version-controlled, containerized (Docker), and deploys via CI/CD pipelines without manual intervention.
+- **A) Ad-hoc & Local:** We rely on manual Excel sheets and scripts stored on individual laptops; there is no central 'production' environment.
 - **B) Functional but Fragile:** We have code that works, but we rely on a specific sequence of manual steps and dread touching it because it might break.
 - **C) The Rewrite Cycle:** Research code is essentially discarded, and engineering teams must rewrite algorithms from scratch for production, causing months of delay.
-- **D) Ad-hoc & Local:** We rely on manual Excel sheets and scripts stored on individual laptops; there is no central 'production' environment.
+- **D) Automated and Seamless:** Code is version-controlled, containerized (Docker), and deploys via CI/CD pipelines without manual intervention.
 
 ---
 
@@ -99,10 +99,10 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 **Question:** If your lead computational scientist were to leave tomorrow, how confident are you that their analysis pipelines could be re-run by a new hire to produce identical results on a fresh machine?
 
 **Options:**
-- **A) Extremely Confident:** Everything is containerized (Docker/Singularity), dependencies are pinned, and data is versioned (DVC/Pachyderm).
-- **B) Somewhat Confident:** We have the code, but setting up the environment takes weeks of trial and error to match library versions.
-- **C) Anxious:** There are many "magic steps" (manual file moves, parameter tweaks) that only the lead scientist knows.
-- **D) Impossible:** The data lives on their hard drive and the methodology is partially in their head.
+- **A) Impossible:** The data lives on their hard drive and the methodology is partially in their head.
+- **B) Anxious:** There are many "magic steps" (manual file moves, parameter tweaks) that only the lead scientist knows.
+- **C) Somewhat Confident:** We have the code, but setting up the environment takes weeks of trial and error to match library versions.
+- **D) Extremely Confident:** Everything is containerized (Docker/Singularity), dependencies are pinned, and data is versioned (DVC/Pachyderm).
 
 ---
 
@@ -113,10 +113,10 @@ _Example: Dr. Jane Smith, Director of Bioinformatics_
 **Question:** How much time does your R&D team spend on software maintenance, data cleaning, and debugging versus new scientific discovery?
 
 **Options:**
-- **A) < 10% on maintenance** (Pure Innovation Focus)
-- **B) 10-30% on maintenance** (Healthy Balance)
-- **C) 30-60% on maintenance** (Dragging Velocity)
-- **D) > 60% on maintenance** (Technical Bankruptcy)
+- **A) > 60% on maintenance** (Technical Bankruptcy)
+- **B) 30-60% on maintenance** (Dragging Velocity)
+- **C) 10-30% on maintenance** (Healthy Balance)
+- **D) < 10% on maintenance** (Pure Innovation Focus)
 
 ---
 

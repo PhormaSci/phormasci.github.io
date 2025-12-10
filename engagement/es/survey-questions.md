@@ -85,10 +85,10 @@ _Ejemplo: Dra. María González, Directora de Bioinformática_
 **Pregunta:** ¿Cuál de las siguientes describe mejor la transición del software de su equipo de investigación a su entorno de producción?
 
 **Opciones:**
-- **A) Automatizado y Sin Problemas:** El código está bajo control de versiones, contenedorizado (Docker) y se despliega mediante pipelines CI/CD sin intervención manual.
+- **A) Ad-hoc y Local:** Dependemos de hojas de Excel manuales y scripts almacenados en laptops individuales; no hay un entorno de 'producción' central.
 - **B) Funcional pero Frágil:** Tenemos código que funciona, pero dependemos de una secuencia específica de pasos manuales y tememos tocarlo porque podría romperse.
 - **C) El Ciclo de Reescritura:** El código de investigación es esencialmente descartado, y los equipos de ingeniería deben reescribir algoritmos desde cero para producción, causando meses de retraso.
-- **D) Ad-hoc y Local:** Dependemos de hojas de Excel manuales y scripts almacenados en laptops individuales; no hay un entorno de 'producción' central.
+- **D) Automatizado y Sin Problemas:** El código está bajo control de versiones, contenedorizado (Docker) y se despliega mediante pipelines CI/CD sin intervención manual.
 
 ---
 
@@ -99,10 +99,10 @@ _Ejemplo: Dra. María González, Directora de Bioinformática_
 **Pregunta:** Si su científico computacional principal se fuera mañana, ¿qué tan confiado está de que sus pipelines de análisis podrían ser re-ejecutados por un nuevo empleado para producir resultados idénticos en una máquina nueva?
 
 **Opciones:**
-- **A) Extremadamente Confiado:** Todo está contenedorizado (Docker/Singularity), las dependencias están fijadas, y los datos están versionados (DVC/Pachyderm).
-- **B) Algo Confiado:** Tenemos el código, pero configurar el entorno toma semanas de prueba y error para igualar las versiones de las librerías.
-- **C) Ansioso:** Hay muchos "pasos mágicos" (movimientos manuales de archivos, ajustes de parámetros) que solo el científico principal conoce.
-- **D) Imposible:** Los datos viven en su disco duro y la metodología está parcialmente en su cabeza.
+- **A) Imposible:** Los datos viven en su disco duro y la metodología está parcialmente en su cabeza.
+- **B) Ansioso:** Hay muchos "pasos mágicos" (movimientos manuales de archivos, ajustes de parámetros) que solo el científico principal conoce.
+- **C) Algo Confiado:** Tenemos el código, pero configurar el entorno toma semanas de prueba y error para igualar las versiones de las librerías.
+- **D) Extremadamente Confiado:** Todo está contenedorizado (Docker/Singularity), las dependencias están fijadas, y los datos están versionados (DVC/Pachyderm).
 
 ---
 
@@ -113,10 +113,10 @@ _Ejemplo: Dra. María González, Directora de Bioinformática_
 **Pregunta:** ¿Cuánto tiempo dedica su equipo de I+D al mantenimiento de software, limpieza de datos y depuración versus nuevo descubrimiento científico?
 
 **Opciones:**
-- **A) < 10% en mantenimiento** (Enfoque en Innovación Pura)
-- **B) 10-30% en mantenimiento** (Balance Saludable)
-- **C) 30-60% en mantenimiento** (Arrastrando Velocidad)
-- **D) > 60% en mantenimiento** (Bancarrota Técnica)
+- **A) > 60% en mantenimiento** (Bancarrota Técnica)
+- **B) 30-60% en mantenimiento** (Arrastrando Velocidad)
+- **C) 10-30% en mantenimiento** (Balance Saludable)
+- **D) < 10% en mantenimiento** (Enfoque en Innovación Pura)
 
 ---
 
