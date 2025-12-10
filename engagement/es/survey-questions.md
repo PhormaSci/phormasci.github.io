@@ -15,7 +15,7 @@ Este documento contiene una versión revisada de la encuesta, siguiendo la metod
 **Título:** Diagnóstico de Madurez de tu Software Científico
 
 **Descripción:**
-En Phorma Scientific ([Phorma.sh](https://phorma.sh)), ayudamos a equipos de I+D a optimizar sus flujos de trabajo computacionales. Esta encuesta de 5 minutos está diseñada para entender los desafíos que tu organización enfrenta en el desarrollo y uso de software.
+En Phorma Scientific ([Phorma.sh](https://phorma.sh)), ayudamos a equipos de I+D a **acelerar sus ciclos de investigación y desarrollo**. Esta encuesta de 5 minutos está diseñada para entender los desafíos que tu organización enfrenta al usar software para la ciencia.
 
 Tus respuestas son confidenciales y nos ayudarán a identificar cuellos de botella que pueden estar frenando la innovación en tu equipo.
 
