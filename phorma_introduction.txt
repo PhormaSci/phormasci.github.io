@@ -1,0 +1,13 @@
+Phorma Scientific is a specialized consultancy that transforms scientific complexity into production-grade systems. They bridge the gap between scientific research and industrial application by providing robust software engineering, performance optimization, and architectural rigor.
+
+Phorma's core mission is to elevate scientific breakthroughs from the lab to the market. They partner with both academic founders and industry leaders to structure scientific breakthroughs and unlock the potential of data with scientific models. Their expertise lies in transforming validated research into robust, scalable, and production-ready assets.
+
+Their services include:
+
+*   **System Audit & Architecture:** Identifying and resolving structural debt, performance bottlenecks, and compliance gaps in scientific computing infrastructure.
+*   **Research Software Engineering:** Transforming research prototypes into maintainable, tested, and scalable software systems using languages like Julia, C#, and Python.
+*   **Scientific Machine Learning:** Operationalizing novel models, including physics-informed neural networks and hybrid physics-ML systems, into scalable and auditable enterprise platforms.
+*   **Performance Synthesis:** Engineering algorithmic and systems-level optimizations to deliver benchmarked performance improvements.
+*   **Specialized Domain Expertise:** Phorma also has deep expertise in specific domains like Bioimage Analysis, Medical Image Analysis, Agricultural Image Analysis, and Petrographic Image Analysis, providing tailored solutions for data interpretation and model development.
+
+Phorma is committed to not just building systems, but also to teaching and mentoring their clients' teams, ensuring that the knowledge is transferred and the systems are maintainable. Their motto is "Structure over Chaos."
