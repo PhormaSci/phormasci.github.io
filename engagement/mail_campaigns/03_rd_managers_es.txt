@@ -1,0 +1,94 @@
+# Segmento: Managers de Equipos de I+D (Empresas Consolidadas)
+#
+# Objetivo: Hablar en su idioma: ROI, time-to-market, riesgo, eficiencia del equipo,
+# y el problemático "valle de la muerte" entre I+D e Ingeniería.
+
+---
+**Asunto:** ¿Cuánto le cuesta a tu empresa un ciclo de I+D ineficiente?
+
+**Versión 1 (ROI y Costos Ocultos)**
+
+Hola [Nombre],
+
+El tiempo que tu equipo de I+D pierde en soporte de software, onboarding lento o re-escribiendo código es un costo operativo directo.
+
+En Phorma (phorma.sh) ayudamos a los managers a cuantificar este costo y a implementar soluciones con ROI medible.
+
+Nuestro **Diagnóstico de Madurez de Software** (5 min) es una herramienta gratuita para empezar a ponerle números a la ineficiencia.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** El "valle de la muerte" entre tu prototipo de I+D y el producto
+
+**Versión 2 (Time-to-Market)**
+
+Hola [Nombre],
+
+¿Cuántos prototipos prometedores de tu equipo de I+D se estancan o requieren una re-escritura total por parte de ingeniería?
+
+Ese es el "valle de la muerte" que retrasa la innovación. En Phorma construimos el puente.
+
+Te invitamos a usar nuestro **Diagnóstico de 5 minutos** para evaluar cuán grande es esa brecha en tu organización y cómo cerrarla.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]
+
+---
+**Asunto:** El riesgo oculto en tu equipo de I+D
+
+**Versión 3 (Riesgo y Bus Factor)**
+
+Hola [Nombre],
+
+Si tu mejor científico o programador de I+D se va mañana, ¿se frena un proyecto crítico?
+
+La dependencia en "héroes" es un riesgo que muchos managers subestiman hasta que es tarde. La solución es sistémica: documentación, testing y procesos.
+
+Nuestro **Diagnóstico de Madurez** te ayudará a medir el "bus factor" de tu equipo en menos de 5 minutos.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
+
+---
+**Asunto:** ¿Tu equipo de I+D escala?
+
+**Versión 4 (Escalabilidad del Equipo)**
+
+Hola [Nombre],
+
+Escalar un equipo de I+D no es solo contratar más gente. Es asegurar que los nuevos miembros puedan ser productivos en semanas, no en meses.
+
+Un código base caótico y sin documentación hace que el onboarding sea un lastre para todo el equipo.
+
+Evaluá la escalabilidad de tus procesos de I+D con nuestro **Diagnóstico gratuito**.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** De I+D impredecible a un pipeline de innovación
+
+**Versión 5 (Predictibilidad)**
+
+Hola [Nombre],
+
+La gerencia ve la I+D como un "agujero negro" de recursos porque es impredecible. La ingeniería de software robusta aporta predictibilidad.
+
+En Phorma (phorma.sh) ayudamos a transformar los departamentos de I+D en pipelines de innovación confiables.
+
+Todo empieza por un diagnóstico. Te invitamos a usar nuestra herramienta de 5 minutos para mapear tus procesos actuales.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]
