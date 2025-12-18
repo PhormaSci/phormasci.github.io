@@ -476,7 +476,8 @@
         '05-bioimage-analysis.md',
         '06-medical-image-analysis.md',
         '07-agricultural-image-analysis.md',
-        '08-petrographic-image-analysis.md'
+        '08-petrographic-image-analysis.md',
+        '09-teaching-training.md'
       ];
 
       // Adjust filenames for Spanish
@@ -489,7 +490,8 @@
           '05-analisis-bioimagen.md',
           '06-analisis-imagenes-medicas.md',
           '07-analisis-imagenes-agricolas.md',
-          '08-analisis-imagenes-petrograficas.md'
+          '08-analisis-imagenes-petrograficas.md',
+          '09-ensenanza-capacitacion.md'
         ];
       }
 
@@ -561,8 +563,8 @@
       renderFunction = renderMissionSection;
     }
 
-    // Enable category grouping for trainees page
-    const groupByCategory = (type === 'trainees');
+    // Enable category grouping for trainees and services pages
+    const groupByCategory = (type === 'trainees' || type === 'services');
     const isMission = (type === 'mission');
     loadMarkdownFiles(contentPath, fileList, renderFunction, lang, groupByCategory, isMission);
   };

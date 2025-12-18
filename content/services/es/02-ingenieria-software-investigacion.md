@@ -2,6 +2,7 @@
 meta: S2 — Ingeniería Central
 title: Ingeniería de Software de Investigación
 order: 2
+category: Ingeniería de Software de Investigación
 ---
 
 **Enfoque:** Implementación de rigor computacional, estándares de reproducibilidad y arquitectura desacoplada.

@@ -2,6 +2,7 @@
 meta: S6 — Dominio Especializado
 title: Análisis de Imágenes Médicas
 order: 6
+category: Diseño y Desarrollo de Pipelines
 ---
 
 **Foco:** Análisis de imágenes multimodales que abarca desde la cuantificación celular en histopatología hasta la segmentación volumétrica en resonancia magnética.

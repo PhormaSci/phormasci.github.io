@@ -1,7 +1,8 @@
 ---
 meta: S4 — Optimization
 title: Performance Synthesis
-order: 4
+order: 3
+category: Research Software Engineering
 ---
 
 **Focus:** Optimization, compiler tuning, and parallel computing.

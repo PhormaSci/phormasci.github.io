@@ -1,7 +1,8 @@
 ---
 meta: S4 — Optimización
 title: Síntesis de Rendimiento
-order: 4
+order: 3
+category: Ingeniería de Software de Investigación
 ---
 
 **Enfoque:** Optimización, ajuste de compilador y computación paralela.

@@ -2,6 +2,7 @@
 meta: S2 — Core Engineering
 title: Research Software Engineering
 order: 2
+category: Research Software Engineering
 ---
 
 **Focus:** Implementation of computational rigor, reproducibility standards, and decoupled architecture.

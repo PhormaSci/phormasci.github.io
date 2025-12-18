@@ -2,6 +2,7 @@
 meta: S7 — Specialized Domain
 title: Agricultural Image Analysis
 order: 7
+category: Pipeline Design & Development
 ---
 
 **Focus:** Assessing crop health, analyzing root systems, and phenotyping from drone, microscopic and satellite imagery.

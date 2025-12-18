@@ -2,6 +2,7 @@
 meta: S5 — Specialized Domain
 title: Bioimage Analysis & Modeling
 order: 5
+category: Pipeline Design & Development
 ---
 
 **Focus:** Extracting quantitative insights from complex biological and medical imaging data.

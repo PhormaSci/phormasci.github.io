@@ -2,6 +2,7 @@
 meta: S5 — Dominio Especializado
 title: Análisis y Modelado de Bioimágenes
 order: 5
+category: Diseño y Desarrollo de Pipelines
 ---
 
 **Foco:** Extracción de insights cuantitativos a partir de datos complejos de imágenes biológicas y médicas.

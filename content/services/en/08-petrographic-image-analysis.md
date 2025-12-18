@@ -2,6 +2,7 @@
 meta: S8 — Specialized Domain
 title: Petrographic Image Analysis
 order: 8
+category: Pipeline Design & Development
 ---
 
 **Focus:** Characterizing pore networks and quantifying mineral composition and grain structures in rock thin sections.

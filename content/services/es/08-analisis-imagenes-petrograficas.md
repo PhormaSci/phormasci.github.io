@@ -2,6 +2,7 @@
 meta: S8 — Dominio Especializado
 title: Análisis de Imágenes Petrográficas
 order: 8
+category: Diseño y Desarrollo de Pipelines
 ---
 
 **Foco:** Caracterización de redes de poros y cuantificación de la composición mineral y estructuras de grano en secciones delgadas de roca.

@@ -2,6 +2,7 @@
 meta: S6 — Specialized Domain
 title: Medical Image Analysis
 order: 6
+category: Pipeline Design & Development
 ---
 
 **Focus:** Multi-modal image analysis ranging from cellular quantification in histopathology to volumetric segmentation in Magnetic Resonance Imaging.

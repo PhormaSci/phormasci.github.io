@@ -2,6 +2,7 @@
 meta: S1 — Punto de Entrada
 title: Auditoría de Sistema y Arquitectura
 order: 1
+category: Ingeniería de Software de Investigación
 ---
 
 **Objetivo:** Identificar deuda estructural y cuellos de botella en su infraestructura de computación científica.

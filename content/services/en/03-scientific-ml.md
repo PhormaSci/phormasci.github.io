@@ -1,7 +1,8 @@
 ---
 meta: S3 — Applied Intelligence
 title: Scientific Machine Learning
-order: 3
+order: 4
+category: Pipeline Design & Development
 ---
 
 **Focus:** Operationalizing novel models from R&D into scalable, auditable enterprise platforms.

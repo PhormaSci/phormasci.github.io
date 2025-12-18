@@ -2,6 +2,7 @@
 meta: S1 — Entry Point
 title: System Audit & Architecture
 order: 1
+category: Research Software Engineering
 ---
 
 **Goal:** Identify structural debt and bottlenecks in your scientific computing infrastructure.

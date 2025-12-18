@@ -2,6 +2,7 @@
 meta: S7 — Dominio Especializado
 title: Análisis de Imágenes Agrícolas
 order: 7
+category: Diseño y Desarrollo de Pipelines
 ---
 
 **Foco:** Evaluación de la salud de los cultivos, análisis de sistemas radiculares y fenotipado a partir de imágenes de drones, microscopía y satélites.

@@ -1,7 +1,8 @@
 ---
 meta: S3 — Inteligencia Aplicada
 title: Aprendizaje Automático Científico
-order: 3
+order: 4
+category: Diseño y Desarrollo de Pipelines
 ---
 
 **Enfoque:** Operacionalización de modelos novedosos desde I+D hacia plataformas empresariales escalables y auditables.
