@@ -10,7 +10,7 @@
   <meta property="og:title" content="Contact - Phorma Scientific">
   <meta property="og:description" content="Contact Phorma Scientific - Schedule a consultation, system audit, or workshop proposal.">
   <meta property="og:image" content="https://phorma.sh/assets/logo-fondo.png">
-  <meta property="og:url" content="https://phorma.sh/contact.html">
+  <meta property="og:url" content="https://phorma.sh/contact">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact - Phorma Scientific">
@@ -48,18 +48,18 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
           ◐
         </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        MENU
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="mission.html">MISSION</a></li>
-        <li><a href="services.html">SERVICES</a></li>
-        <li><a href="trainees.html">TRAINEES</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html" class="active">CONTACT</a></li>
-        <li class="lang-switch"><a href="es/contact.html">ES</a></li>
-      </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          MENU
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="mission.html">MISSION</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="trainees.html">TRAINEES</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html" class="active">CONTACT</a></li>
+          <li class="lang-switch"><a href="es/contact.html">ES</a></li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -84,7 +84,7 @@
           <div class="mb-xl">
             <h3 class="text-mono" style="font-size: 1rem; margin-bottom: 0.5rem;">Email</h3>
             <p style="font-size: 1.5rem; font-family: var(--font-mono);">
-              <a href="mailto:info@phorma.sh" style="border-bottom: 2px solid var(--color-black);">info@phorma.sh</a>
+              <a href="mailto:info@phorma.sh" style="border-bottom: 2px solid var(--color-fg);">info@phorma.sh</a>
             </p>
           </div>
 
@@ -106,17 +106,17 @@
           <form class="contact-form" action="https://formspree.io/f/xwpdypzp" method="POST">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" class="form-input" required>
+              <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
             </div>
 
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-input" required>
+              <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
             </div>
 
             <div class="form-group">
               <label for="company" class="form-label">Company / Organization</label>
-              <input type="text" id="company" name="company" class="form-input">
+              <input type="text" id="company" name="company" class="form-input" autocomplete="organization">
             </div>
 
             <div class="form-group">

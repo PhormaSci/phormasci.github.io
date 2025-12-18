@@ -10,7 +10,7 @@
   <meta property="og:title" content="Services - Phorma Scientific">
   <meta property="og:description" content="Phorma Scientific Services - System Audits, Research Software Engineering, Scientific ML, and Performance Optimization.">
   <meta property="og:image" content="https://phorma.sh/assets/logo-fondo.png">
-  <meta property="og:url" content="https://phorma.sh/services.html">
+  <meta property="og:url" content="https://phorma.sh/services">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Services - Phorma Scientific">
@@ -76,7 +76,9 @@
   <section class="section">
     <div class="container">
       <div class="grid grid-2" id="content-container">
-        <!-- Content loaded dynamically from markdown files -->
+        <div class="loading-state text-center" style="grid-column: 1 / -1; padding: 4rem 1rem;">
+          <p class="text-mono text-muted">Loading...</p>
+        </div>
       </div>
     </div>
   </section>
@@ -90,7 +92,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div>
@@ -105,9 +107,9 @@
     </div>
   </footer>
 
-  <!-- Minimal JavaScript -->
-  <script src="js/main.js"></script>
+  <!-- JavaScript -->
   <script src="js/content-loader.js"></script>
+  <script src="js/main.js"></script>
   <script>
     // Load services content on page load
     document.addEventListener('DOMContentLoaded', function() {

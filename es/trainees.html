@@ -10,7 +10,7 @@
   <meta property="og:title" content="Capacitación - Phorma Scientific">
   <meta property="og:description" content="Talleres Corporativos de Phorma Scientific - Elevando equipos de I+D a estándares de producción mediante capacitación especializada.">
   <meta property="og:image" content="https://phorma.sh/assets/logo-fondo.png">
-  <meta property="og:url" content="https://phorma.sh/es/trainees.html">
+  <meta property="og:url" content="https://phorma.sh/es/trainees">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Capacitación - Phorma Scientific">
@@ -45,21 +45,21 @@
         PHORMA
       </a>
       <div style="display: flex; align-items: center; gap: var(--space-sm);">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo oscuro" title="Alternar modo oscuro">
           ◐
         </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        MENÚ
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="mission.html">MISIÓN</a></li>
-        <li><a href="services.html">SERVICIOS</a></li>
-        <li><a href="trainees.html" class="active">CAPACITACIÓN</a></li>
-        <li><a href="about.html">NOSOTROS</a></li>
-        <li><a href="contact.html">CONTACTO</a></li>
-        <li class="lang-switch"><a href="../trainees.html">EN</a></li>
-      </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Alternar navegación">
+          MENÚ
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="mission.html">MISIÓN</a></li>
+          <li><a href="services.html">SERVICIOS</a></li>
+          <li><a href="trainees.html" class="active">CAPACITACIÓN</a></li>
+          <li><a href="about.html">NOSOTROS</a></li>
+          <li><a href="contact.html">CONTACTO</a></li>
+          <li class="lang-switch"><a href="../trainees.html">EN</a></li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -77,9 +77,9 @@
   <section class="section">
     <div class="container">
       <div class="grid grid-2" id="content-container">
-
-        <!-- Content loaded dynamically from markdown files -->
-
+        <div class="loading-state text-center" style="grid-column: 1 / -1; padding: 4rem 1rem;">
+          <p class="text-mono text-muted">Cargando...</p>
+        </div>
       </div>
     </div>
   </section>
@@ -94,7 +94,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div>
@@ -109,9 +109,9 @@
     </div>
   </footer>
 
-  <!-- Minimal JavaScript -->
-  <script src="../js/main.js"></script>
+  <!-- JavaScript -->
   <script src="../js/content-loader.js"></script>
+  <script src="../js/main.js"></script>
   <script>
     // Load trainees content on page load
     document.addEventListener('DOMContentLoaded', function() {

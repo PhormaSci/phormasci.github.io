@@ -10,7 +10,7 @@
   <meta property="og:title" content="Phorma Scientific - Estructura sobre el Caos">
   <meta property="og:description" content="Phorma Scientific - Transformando la complejidad científica en sistemas de producción. Rigor. Rendimiento. Arquitectura.">
   <meta property="og:image" content="https://phorma.sh/assets/logo-fondo.png">
-  <meta property="og:url" content="https://phorma.sh/es/index.html">
+  <meta property="og:url" content="https://phorma.sh/es/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Phorma Scientific - Estructura sobre el Caos">
@@ -45,27 +45,31 @@
         PHORMA
       </a>
       <div style="display: flex; align-items: center; gap: var(--space-sm);">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo oscuro" title="Alternar modo oscuro">
           ◐
         </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        MENÚ
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" class="active">INICIO</a></li>
-        <li><a href="mission.html">MISIÓN</a></li>
-        <li><a href="services.html">SERVICIOS</a></li>
-        <li><a href="trainees.html">CAPACITACIÓN</a></li>
-        <li><a href="about.html">NOSOTROS</a></li>
-        <li><a href="contact.html">CONTACTO</a></li>
-        <li class="lang-switch"><a href="../index.html">EN</a></li>
-      </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Alternar navegación">
+          MENÚ
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="active">INICIO</a></li>
+          <li><a href="mission.html">MISIÓN</a></li>
+          <li><a href="services.html">SERVICIOS</a></li>
+          <li><a href="trainees.html">CAPACITACIÓN</a></li>
+          <li><a href="about.html">NOSOTROS</a></li>
+          <li><a href="contact.html">CONTACTO</a></li>
+          <li class="lang-switch"><a href="../index.html">EN</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 
   <!-- Dynamic Content Container -->
-  <div id="content-container"></div>
+  <div id="content-container">
+    <div class="loading-state text-center" style="padding: 4rem 1rem;">
+      <p class="text-mono text-muted">Cargando...</p>
+    </div>
+  </div>
 
   <!-- Authority -->
   <!-- HIDDEN: Tier-1 Organizations section
@@ -82,7 +86,7 @@
   -->
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div>
