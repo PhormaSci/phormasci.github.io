@@ -1,0 +1,85 @@
+# Segmento: VCs de DeepTech
+#
+# Objetivo: Posicionar a Phorma como un aliado estratégico para de-riesgar inversiones
+# y acelerar el crecimiento del portfolio, ofreciendo expertise en due diligence técnico
+# y modernización de software. El CTA es una charla, no la encuesta.
+
+---
+**Asunto:** El mayor riesgo en DeepTech no es la ciencia
+
+**Versión 1 (De-risking)**
+
+Hola [Nombre],
+
+Como inversor en DeepTech, sabés que la ciencia puede ser brillante, pero el riesgo a menudo está en la ejecución: en un software que no escala, no es mantenible o depende de una sola persona.
+
+En Phorma (phorma.sh) nos especializamos en evaluar y mitigar este riesgo de software en startups científicas.
+
+Si te interesa tener una charla de 15 minutos sobre cómo aplicamos esto al due diligence o al apoyo a portfolio companies, me decís y coordinamos.
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** Un "segundo par de ojos" para tu technical due diligence
+
+**Versión 2 (Due Diligence Support)**
+
+Hola [Nombre],
+
+Evaluar la robustez del software de una startup de genómica o materiales es un desafío único, muy distinto a un SaaS tradicional.
+
+Nuestro equipo actúa como un "segundo par de ojos" para VCs, proveyendo un análisis profundo de la arquitectura de software, deuda técnica y escalabilidad de potenciales inversiones.
+
+¿Abierto/a a una breve llamada para presentarnos?
+
+Atentamente,
+[Tu Nombre]
+
+---
+**Asunto:** Para tu portfolio: cómo pasar del paper al producto
+
+**Versión 3 (Portfolio Value-add)**
+
+Hola [Nombre],
+
+Una de las barreras más grandes para el crecimiento de las startups DeepTech en tu portfolio es transformar el "código de paper" de los founders en un producto escalable.
+
+En Phorma (phorma.sh) nos asociamos con startups post-inversión para liderar esta transición, liberando a sus equipos para que se enfoquen en el roadmap.
+
+Si tenés alguna empresa en tu portfolio que esté luchando con este desafío, me gustaría conversar.
+
+Un saludo,
+[Tu Nombre]
+
+---
+**Asunto:** Las "red flags" de software en startups científicas
+
+**Versión 4 (Identificando Riesgos)**
+
+Hola [Nombre],
+
+"El código lo hizo un postdoc que ya se fue". "No tenemos tests porque nos movemos muy rápido". "Funciona en la laptop del founder".
+
+Estas son 'red flags' de software que indican un alto riesgo técnico. En Phorma, hemos desarrollado un framework para detectarlas (y solucionarlas) en startups DeepTech.
+
+Si te interesa conocer nuestro framework, encantado de compartirlo en una llamada.
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** ¿La tecnología de tu próximo unicornio es realmente escalable?
+
+**Versión 5 (La Pregunta Clave)**
+
+Hola [Nombre],
+
+Una gran idea científica no garantiza un negocio escalable. La escalabilidad está en el software.
+
+Nosotros nos metemos en las trincheras del código de las startups para responder esa pregunta: ¿esta arquitectura soportará un crecimiento 100x?
+
+Actuamos como consultores de confianza para VCs que necesitan una respuesta honesta a esa pregunta. Si te resuena, conversemos.
+
+Atentamente,
+[Tu Nombre]
