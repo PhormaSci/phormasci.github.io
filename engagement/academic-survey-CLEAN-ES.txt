@@ -1,0 +1,83 @@
+# Encuesta Diagnóstica Académica
+
+## Sección 1: Tu Contexto
+
+### Pregunta 1
+¿Cuántas personas en tu grupo trabajan con herramientas computacionales, scripts o análisis de datos?
+[Multiple choice]
+- Solo yo
+- 2-5 personas
+- 6-15 personas
+- 16+ personas
+
+### Pregunta 2
+¿Qué herramientas o software usan más frecuentemente en tu grupo?
+[Checkboxes]
+- ImageJ / Fiji
+- Excel / GraphPad Prism
+- Python (scripts, Jupyter)
+- R / RStudio / Bioconductor
+- MATLAB
+- Galaxy / plataformas web
+- Software específico de equipos (microscopio, secuenciador, etc.)
+- Otro
+
+## Sección 2: Desafíos Actuales
+
+### Pregunta 3
+¿Qué pasa cuando alguien en tu equipo crea un script o análisis que funciona?
+[Multiple choice]
+- Lo usamos solo en esa computadora
+- Lo compartimos por email, WhatsApp o USB
+- Lo subimos a una carpeta compartida (Google Drive, Dropbox)
+- Usamos un sistema organizado (como GitHub)
+- No sabemos / No aplica
+
+### Pregunta 4
+¿Alguna vez tuviste estos problemas? (Seleccioná todos los que apliquen)
+[Checkboxes]
+- Un script que funcionaba dejó de funcionar después de actualizar algo
+- No pudimos reproducir resultados de un análisis anterior
+- Cada persona usa una versión diferente del mismo software
+- Perdimos trabajo porque no había backup
+- Nadie más puede usar el código de otra persona
+- Los análisis tardan mucho tiempo en completarse
+- No sabemos si los resultados son correctos
+- No tenemos estos problemas
+
+### Pregunta 5
+¿Cómo guardan y comparten los scripts/códigos en tu equipo?
+[Multiple choice]
+- Cada quien en su computadora
+- Email o mensajería (WhatsApp, Slack)
+- Carpeta compartida (Dropbox, Google Drive, OneDrive)
+- Sistema de versiones (GitHub, GitLab, Bitbucket)
+- No compartimos código
+- No sé / No aplica
+
+## Sección 3: Infraestructura
+
+### Pregunta 6
+¿Dónde corren los análisis computacionalmente intensivos?
+[Multiple choice]
+- En nuestras computadoras personales (laptops/PCs)
+- En una computadora compartida del laboratorio
+- En un servidor o cluster de la institución
+- En la nube (AWS, Google Cloud, Azure)
+- No hacemos análisis pesados
+- No sé
+
+### Pregunta 7
+¿Usan contenedores o ambientes virtuales para ejecutar software?
+[Multiple choice]
+- Sí, usamos Docker / Singularity / contenedores
+- Sí, usamos conda / virtualenv / ambientes virtuales
+- No usamos nada de eso
+- No sé qué es eso
+- No aplica a nuestro trabajo
+
+## Sección 4: Prioridades
+
+### Pregunta 8
+Si pudieras resolver UN problema hoy, ¿cuál sería?
+[Paragraph]

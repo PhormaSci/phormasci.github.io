@@ -1,0 +1,122 @@
+# Encuesta Diagnóstica Industria/Clínica
+
+## Sección 1: Contexto Organizacional
+
+### Pregunta 1
+¿Cuántas personas trabajan en tareas computacionales/de software en tu organización?
+[Multiple choice]
+- 1-2 personas
+- 3-10 personas
+- 11-30 personas
+- 31-100 personas
+- 100+ personas
+
+### Pregunta 2
+¿Qué describe mejor el foco de I+D de tu equipo?
+[Multiple choice]
+- Descubrimiento (investigación básica, exploratoria)
+- Desarrollo (optimización de productos/procesos)
+- Validación/Clínica (ensayos, diagnósticos, regulatory)
+- Mix de varios
+
+## Sección 2: Arquitectura y Pipelines
+
+### Pregunta 3
+¿Qué tan frecuentemente los equipos de ingeniería/IT necesitan reescribir o refactorizar código de I+D?
+[Multiple choice]
+- Nunca o casi nunca
+- Ocasionalmente (1-2 veces al año)
+- Frecuentemente (mensual)
+- Constantemente (cada nuevo proyecto)
+- No tenemos equipo de ingeniería separado
+
+### Pregunta 4
+Cuando un prototipo de software (ej. script de análisis) funciona en I+D, ¿qué tan difícil es llevarlo a producción?
+[Multiple choice]
+- Muy difícil (lleva meses, requiere reescritura completa)
+- Moderadamente difícil (lleva semanas, ajustes significativos)
+- Relativamente fácil (días, ajustes menores)
+- Muy fácil (deployment directo, prácticamente sin cambios)
+- No aplicamos este concepto
+
+### Pregunta 5
+¿Qué tan confiables son tus pipelines de análisis/procesamiento?
+[Multiple choice]
+- Muy frágiles (fallan frecuentemente, requieren intervención manual)
+- Moderadamente estables (fallos ocasionales, debuggeo necesario)
+- Bastante robustos (funcionan de forma confiable con monitoreo)
+- Muy robustos (producción automatizada, manejo de errores completo)
+
+## Sección 3: Reproducibilidad y Gestión de Código
+
+### Pregunta 6
+¿Cómo gestionan los entornos de software para asegurar reproducibilidad?
+[Multiple choice]
+- No gestionamos activamente (cada persona/proyecto usa lo que tiene instalado)
+- Documentamos versiones en READMEs o papers
+- Usamos package managers (conda, pip, renv) con archivos de requisitos
+- Usamos contenedores (Docker, Singularity) para todos los análisis críticos
+- Usamos sistemas completos de gestión de entornos (Nix, Guix, ambientes validados)
+
+### Pregunta 7
+¿Cómo comparte y gestiona el código tu equipo?
+[Multiple choice]
+- Compartimos archivos ad-hoc (email, carpetas compartidas)
+- Usamos control de versiones básico (SVN o Git sin workflows formales)
+- Usamos Git con workflows estructurados (branches, pull requests, code review)
+- Usamos plataformas CI/CD completas (GitHub Actions, GitLab CI, Jenkins)
+
+### Pregunta 8
+¿Qué herramientas usan regularmente?
+[Checkboxes]
+- Python (NumPy, Pandas, scikit-learn)
+- R / Bioconductor
+- MATLAB
+- Nextflow / Snakemake / workflow managers
+- Docker / Singularity / Podman
+- Kubernetes / orquestación de contenedores
+- Jupyter / RStudio / notebooks
+- Bases de datos (PostgreSQL, MongoDB, etc.)
+- Cloud platforms (AWS, GCP, Azure)
+- HPC / SLURM / cluster computing
+- Otro
+
+## Sección 4: Infraestructura
+
+### Pregunta 9
+¿Dónde corren los workloads computacionales principales?
+[Checkboxes]
+- On-premise (servidores propios)
+- HPC institucional o compartido
+- Cloud público (AWS, GCP, Azure)
+- Cloud privado
+- Híbrido (mix de opciones)
+
+### Pregunta 10
+¿Qué prácticas de testing y validación usan?
+[Checkboxes]
+- Unit tests automatizados
+- Integration / end-to-end tests
+- Continuous Integration (CI)
+- Peer review / code review
+- Validación formal (GxP, 21 CFR Part 11)
+- Testing manual ad-hoc
+- No tenemos prácticas formales de testing
+
+## Sección 5: Compliance y Regulatory
+
+### Pregunta 11
+¿Tu organización necesita cumplir con requisitos regulatorios para software?
+[Multiple choice]
+- Sí, GxP (GLP, GMP, GCP)
+- Sí, FDA 21 CFR Part 11 / GAMP
+- Sí, ISO (13485, 17025, otros)
+- Sí, HIPAA / protección de datos
+- No, no tenemos requisitos regulatorios
+- No estoy seguro
+
+## Sección 6: Prioridades
+
+### Pregunta 12
+¿Cuál es el mayor obstáculo técnico para escalar tus operaciones de I+D?
+[Paragraph]
