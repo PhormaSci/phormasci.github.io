@@ -14,44 +14,123 @@ The engagement strategy is designed to identify and convert R&D organizations ca
 
 ```
 engagement/
-├── en/                           # English content
-│   ├── survey-questions.md       # Google Form questions
-│   ├── interview-guide.md        # Deep dive interview protocol
-│   └── email-templates.md        # Email response templates
-├── es/                           # Spanish content
-│   ├── survey-questions.md       # Preguntas para Formulario de Google
-│   ├── interview-guide.md        # Protocolo de entrevista
-│   └── email-templates.md        # Plantillas de correo electrónico
-└── README.md                     # This file
+├── README.md                          # This file (overview)
+├── README-FORM-BUILDER-CLEAN.md       # Quick start for building qualifier
+├── FORM-BUILDER-DOCS-GUIDE.md         # Complete build instructions
+├── qualifier-form-CLEAN-EN.txt        # English qualifier (import file)
+├── qualifier-form-CLEAN-ES.txt        # Spanish qualifier (import file)
+├── qualifier-flow-diagram.md          # Visual routing reference
+├── en/                                # English content
+│   ├── explanations.md                # Service descriptions (ELI5, family, technical)
+│   ├── interview-guide.md             # Deep dive interview protocol
+│   ├── email-templates.md             # Email response templates
+│   └── linkedin-posts.md              # Social media templates
+└── es/                                # Spanish content
+    ├── explanations.md
+    ├── interview-guide.md
+    ├── email-templates.md
+    └── linkedin-posts.md
 ```
 
-## Files Description
+## Quick Start
 
-### 1. Survey Questions (`survey-questions.md`)
+**New to this system?** Start here:
 
-**Purpose:** Short form (5-minute) client survey designed to be implemented as a Google Form.
+1. **Read:** `README-FORM-BUILDER-CLEAN.md` — Overview and quick reference
+2. **Build:** Follow `FORM-BUILDER-DOCS-GUIDE.md` — Step-by-step Google Forms setup
+3. **Import:** Use `qualifier-form-CLEAN-EN.txt` and `qualifier-form-CLEAN-ES.txt`
+4. **Understand:** Review `qualifier-flow-diagram.md` — Visual routing map
 
-**Contents:**
-- Organization profile questions
-- Three core pain point assessments:
-  - Velocity & Scalability (Technical Debt Trap)
-  - Integrity & Reproducibility (Science Trap)
-  - Talent & Continuity (People Trap)
-- Current state assessment
-- Strategic goals identification
-
-**Implementation:**
-1. Create a new Google Form
-2. Use the questions exactly as written in the document
-3. Set up email notifications for new responses
-4. Configure conditional logic as noted
-5. Enable progress bar and response receipts
-
-**Expected Outcome:** Identify high-priority leads based on responses to pain point questions (Q6-Q8).
+**Building time:** ~55 min (English) + ~45 min (Spanish) + ~20 min (testing)
 
 ---
 
-### 2. Interview Guide (`interview-guide.md`)
+## Updated Strategy (Post-Council of Minds)
+
+Based on user feedback from actual testing (IBYME interview, December 2025), the original 16-question monolithic survey was **too complex for academic audiences**.
+
+**New Approach: Branching Qualifier + Specialized Surveys**
+
+### Phase 1: Cold Qualifier (3 questions, 90 seconds)
+- Segments audiences (academic vs. industry vs. clinical)
+- Routes to appropriate next step:
+  - Academic Diagnostic Survey (8 questions, ~7 min) — simplified language
+  - Industry Diagnostic Survey (12 questions, ~10 min) — technical depth
+  - Assessment call booking (Calendly)
+  - Resource nurture (email + case studies)
+  - Newsletter signup (passive engagement)
+
+### Phase 2: Specialized Diagnostic Surveys (Coming Next)
+- **Academic Path:** Plain language, concrete examples (ImageJ, Excel, email), addresses "too difficult" feedback
+- **Industry Path:** Technical depth (CI/CD, infrastructure, compliance), maintains credibility
+
+---
+
+## Files Description
+
+### 1. Qualifier Forms (`qualifier-form-CLEAN-*.txt`)
+
+**Purpose:** Lightweight 3-question entry point that segments and routes leads.
+
+**Contents:**
+- Organization type (academic, startup, pharma, clinical, CRO)
+- Main computational challenge (open text)
+- Preferred next step (survey, call, resources, newsletter)
+
+**Implementation:**
+1. Create new Google Doc
+2. Copy content from `.txt` file
+3. Extensions → Form Builder for Docs → Create form
+4. Manually configure branching, validation, sections
+5. Test all 5 user paths
+
+**Expected Outcome:** Route leads to appropriate engagement path with minimal friction.
+
+---
+
+### 2. Build Guides
+
+**`README-FORM-BUILDER-CLEAN.md`**
+- Quick start overview
+- Success criteria checklist
+- Links to all resources
+- What happens next (Phase 2)
+
+**`FORM-BUILDER-DOCS-GUIDE.md`**
+- Complete 100-step build instructions
+- Manual configuration checklist
+- Branching logic setup (Q3 → 4 paths, Q4 → 2 paths)
+- Testing procedures for all 5 user paths
+- Response tracking formulas (Google Sheets)
+- Troubleshooting guide
+
+**`qualifier-flow-diagram.md`**
+- ASCII art flow diagram
+- Section summary table
+- User journey examples
+- Data collection mapping
+- Analytics tracking points
+
+---
+
+### 3. Service Explanations (`en/explanations.md` + `es/explanations.md`)
+
+**Purpose:** Multi-level descriptions of Phorma services for different audiences.
+
+**Contents:**
+- **ELI5 (Explain Like I'm 5):** Non-technical analogies
+- **Family & Friends:** Accessible language with concrete examples
+- **Technical:** Precise terminology for practitioners
+
+**Use Cases:**
+- Survey introduction text
+- Email templates personalization
+- Website copy
+- Sales conversations with mixed-literacy audiences
+
+---
+
+### 4. Interview Guide (`interview-guide.md`)
 
 **Purpose:** Comprehensive protocol for the 45-60 minute "Deep Dive Diagnostic" interview using the Osterwalder Value Proposition Design framework.
 
@@ -81,7 +160,7 @@ engagement/
 
 ---
 
-### 3. Email Templates (`email-templates.md`)
+### 5. Email Templates (`email-templates.md`)
 
 **Purpose:** Standardized email communications for all stages of client engagement.
 
@@ -101,14 +180,27 @@ engagement/
 **Implementation:**
 - All templates include [bracketed placeholders] for personalization
 - Can be integrated with email marketing platforms
-- Should be customized based on survey/interview responses
+- Should be customized based on qualifier/survey responses
 - Includes tone guidelines and personalization checklist
 
-**Automation Recommendations:**
-- Templates 1-2: Auto-trigger on contact form submission
-- Template 3: Auto-trigger on survey completion
-- Templates 7-8: Add to drip campaign sequence
-- All emails should be logged in CRM
+---
+
+### 6. LinkedIn Posts (`en/linkedin-posts.md` + `es/linkedin-posts.md`)
+
+**Purpose:** Social media content templates for promoting qualifier and building thought leadership.
+
+**Contents:**
+- Post templates for qualifier promotion
+- Technical debt awareness content
+- Case study teasers
+- Industry insights
+- Call-to-action variations
+
+**Use Cases:**
+- Driving traffic to qualifier form
+- Building credibility in target industries
+- Nurturing cold audiences
+- Re-engaging dormant leads
 
 ---
 
@@ -402,6 +494,16 @@ This engagement framework is based on:
 
 ## Changelog
 
+### Version 2.0 (2025-12-23) — **Current**
+- **Breaking Change:** Replaced monolithic 16-question survey with branching qualifier system
+- Added Cold Qualifier (3 questions, 90 sec) with 5 routing paths
+- Created clean import format for Form Builder for Docs
+- Added comprehensive build guides (100-step instructions)
+- Added service explanations (ELI5, family, technical levels)
+- Added LinkedIn post templates
+- **Removed:** Original survey files (too complex per user feedback)
+- **Coming Next:** Academic Survey (8Q) + Industry Survey (12Q)
+
 ### Version 1.0 (2025-12-07)
 - Initial creation of all engagement materials
 - English and Spanish versions of all documents
@@ -409,4 +511,4 @@ This engagement framework is based on:
 
 ---
 
-*Last Updated: 2025-12-07*
+*Last Updated: 2025-12-23*

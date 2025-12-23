@@ -1,0 +1,50 @@
+# Cold Qualifier Form - Spanish
+
+## SECCIÓN 1: Evaluación Rápida
+
+¿Qué describe mejor tu organización?
+- Institución Académica/de Investigación
+- Startup Biotech (Pre-Serie B)
+- Biotech/Pharma (Serie B+)
+- Laboratorio Clínico/Diagnóstico
+- CRO/Proveedor de Servicios
+- Otro
+
+¿Cuál es tu mayor desafío computacional o de software en este momento?
+[Párrafo]
+
+¿Qué te sería más útil en este momento?
+- Hacer una encuesta diagnóstica detallada para identificar problemas técnicos específicos (7-10 min)
+- Agendar una consulta técnica gratuita de 20 minutos con nuestro equipo
+- Recibir casos de estudio y recursos por email
+- Solo estoy explorando — anotame para actualizaciones ocasionales
+
+## SECCIÓN 2A: Elegí tu Encuesta
+
+¿Qué encuesta se ajusta mejor a tu contexto?
+- Encuesta Académica/Investigación (simplificada, ~7 min)
+- Encuesta Industria/Clínica (técnica, ~10 min)
+
+## SECCIÓN 2B: Agendar Consulta
+
+¿A qué email te enviamos la confirmación del calendario?
+[Respuesta corta]
+
+## SECCIÓN 2C: Solicitar Recursos
+
+¿Cuál es tu email?
+[Respuesta corta]
+
+¿Qué temas son más relevantes para vos?
+- Reproducibilidad y control de versiones
+- Performance y optimización de pipelines
+- Compliance regulatorio (GxP, FDA, 21 CFR Part 11)
+- Colaboración en equipo y compartir código
+- Estrategia de infraestructura Cloud/HPC
+- Reducir deuda técnica
+- Capacitar científicos en mejores prácticas de software
+
+## SECCIÓN 2D: Newsletter
+
+¿Querés recibir nuestro newsletter?
+[Respuesta corta]

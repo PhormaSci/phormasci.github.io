@@ -1,0 +1,50 @@
+# Cold Qualifier Form - English
+
+## SECTION 1: Quick Assessment
+
+What best describes your organization?
+- Academic/Research Institution
+- Biotech Startup (Pre-Series B)
+- Biotech/Pharma (Series B+)
+- Clinical/Diagnostics Lab
+- CRO/Service Provider
+- Other
+
+What's your biggest computational or software challenge right now?
+[Paragraph]
+
+What would be most helpful for you right now?
+- Take a detailed diagnostic survey to identify specific technical issues (7-10 min)
+- Book a free 20-minute technical assessment call with our team
+- Receive case studies and resources via email
+- Just browsing — sign me up for occasional updates
+
+## SECTION 2A: Choose Your Survey
+
+Which survey matches your context?
+- Academic/Research Survey (simplified, ~7 min)
+- Industry/Clinical Survey (technical, ~10 min)
+
+## SECTION 2B: Book Assessment Call
+
+What email should we send the calendar confirmation to?
+[Short answer]
+
+## SECTION 2C: Request Resources
+
+What's your email address?
+[Short answer]
+
+Which topics are most relevant to you?
+- Reproducibility and version control
+- Pipeline performance and optimization
+- Regulatory compliance (GxP, FDA, 21 CFR Part 11)
+- Team collaboration and code sharing
+- Cloud/HPC infrastructure strategy
+- Reducing technical debt
+- Training scientists in software best practices
+
+## SECTION 2D: Newsletter Signup
+
+Want to receive our newsletter?
+[Short answer]
