@@ -1,0 +1,138 @@
+# Encuesta Diagnóstica Industria/Clínica
+
+## SECCIÓN 1: Contexto Organizacional
+
+**¿Cuántas personas en tu equipo técnico trabajan con desarrollo de software, pipelines o análisis computacional?**
+
+* 1-5 personas
+* 6-15 personas
+* 16-30 personas
+* 31-50 personas
+* 50+ personas
+
+**¿Qué porcentaje del tiempo de tu equipo se dedica a I+D vs. producción/operaciones?**
+
+* 100% I+D (investigación pura)
+* 75% I+D / 25% Producción
+* 50% I+D / 50% Producción
+* 25% I+D / 75% Producción
+* 100% Producción/Operaciones
+
+---
+
+## SECCIÓN 2: Arquitectura y Flujo de Trabajo
+
+**¿Con qué frecuencia tu equipo de ingeniería necesita reescribir/refactorizar prototipos de I+D para producción?**
+
+* Siempre — los prototipos nunca llegan a prod tal cual
+* Frecuentemente — requieren refactorización significativa
+* A veces — ajustes moderados
+* Rara vez — prototipos son production-ready
+* Nunca — no tenemos ciclo I+D → Producción
+* No sé
+
+**Cuando un prototipo (ej. script de análisis) está listo para uso más amplio, ¿qué tan estructurado es el proceso?**
+
+* Sin proceso — ad-hoc y manual
+* Proceso informal — documentado pero no automatizado
+* Semi-automatizado — algunos pasos automatizados
+* Altamente automatizado — CI/CD pipeline establecido
+* Completamente automatizado y validado
+* No aplica
+
+**¿Qué tan confiable es tu infraestructura computacional en producción?**
+
+* Fallas frecuentes y downtime significativo
+* Problemas ocasionales que requieren intervención
+* Estable con mantenimiento proactivo
+* Altamente confiable con redundancia
+* Mission-critical con SLAs garantizados
+* No tenemos sistemas en producción aún
+
+---
+
+## SECCIÓN 3: Gestión de Código y Entornos
+
+**¿Cómo gestiona tu equipo el código fuente?**
+
+* Sin control de versiones formal
+* Control de versiones básico (Git local)
+* Git con plataforma colaborativa (GitHub/GitLab/Bitbucket)
+* Git + code review + branch protection
+* Git + CI/CD + automated testing
+* Enterprise SCM (perforce, etc.)
+
+**¿Cómo gestionan los entornos de software (dependencias, librerías, versiones)?**
+
+* Sin gestión formal — "funciona en mi máquina"
+* Archivos de requisitos (requirements.txt, environment.yml)
+* Entornos virtuales (venv, conda)
+* Contenedores (Docker, Singularity)
+* Orquestación de contenedores (Kubernetes, Docker Swarm)
+* Sistemas de gestión de configuración (Ansible, Terraform)
+
+---
+
+## SECCIÓN 4: Stack Tecnológico
+
+**¿Qué tecnologías usa tu equipo? (Seleccioná todas las que apliquen)**
+
+* Python (pandas, NumPy, scikit-learn, BioPython)
+* R (Bioconductor, tidyverse)
+* Nextflow / Snakemake / WDL (workflow managers)
+* Docker / Singularity / Podman
+* Kubernetes / Cloud orchestration
+* AWS / GCP / Azure cloud services
+* HPC clusters (Slurm, PBS, SGE)
+* Bases de datos (SQL, NoSQL, graph DBs)
+* CI/CD tools (Jenkins, GitLab CI, GitHub Actions)
+* Jupyter notebooks / RMarkdown
+
+---
+
+## SECCIÓN 5: Infraestructura
+
+**¿Dónde se despliega tu infraestructura computacional de producción?**
+
+* On-premise (servidores propios)
+* Cloud público (AWS, GCP, Azure)
+* Cloud privado
+* Híbrido (on-prem + cloud)
+* Cluster HPC institucional/compartido
+* Aún no tenemos infraestructura de producción
+
+---
+
+## SECCIÓN 6: Testing y Validación
+
+**¿Qué nivel de testing tiene tu código?**
+
+* Sin tests formales
+* Tests manuales ad-hoc
+* Unit tests para componentes críticos
+* Unit + integration tests
+* Unit + integration + end-to-end tests
+* Comprehensive testing + code coverage tracking
+
+---
+
+## SECCIÓN 7: Compliance y Regulación
+
+**¿Tu organización necesita cumplir con alguno de estos requisitos? (Seleccioná todos los que apliquen)**
+
+* FDA 21 CFR Part 11 (software validation)
+* GxP (GLP, GMP, GCP)
+* HIPAA (privacidad de datos de salud)
+* ISO 13485 (dispositivos médicos)
+* ISO 17025 (laboratorios de ensayo)
+* GDPR / LGPD (privacidad de datos)
+* SOC 2 / ISO 27001 (seguridad de información)
+* Ninguno — no tenemos requisitos regulatorios
+* No sé
+
+---
+
+## SECCIÓN 8: Desafíos Principales
+
+**¿Cuál es el mayor obstáculo para escalar tu infraestructura computacional actualmente?**
+[Paragraph]
