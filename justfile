@@ -54,6 +54,10 @@ clean:
 status:
   @git status -sb
 
+# Generate llms.txt and llms-full.txt from markdown content
+llms:
+  @./scripts/generate-llms-txt.sh
+
 # Quick commit with message
 commit message:
   git add -A
