@@ -83,6 +83,13 @@
     });
   }
 
+  // Dynamic copyright year
+  var yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    var now = new Date().getFullYear();
+    yearEl.textContent = now > 2025 ? '2025\u2013' + now : '2025';
+  }
+
   // Smooth scroll for anchor links using event delegation (works with dynamic content)
   document.addEventListener('click', function(e) {
     // Check if clicked element is an anchor with href starting with #
