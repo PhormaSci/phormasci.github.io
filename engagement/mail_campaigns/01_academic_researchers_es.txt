@@ -1,0 +1,94 @@
+# Segmento: Investigadores Académicos (Principal Investigators)
+#
+# Objetivo: Captar su atención abordando dolores relacionados con la publicación,
+# financiación (grants), y la continuidad del conocimiento en el laboratorio.
+
+---
+**Asunto:** Asegurá la reproducibilidad de tu próximo paper
+
+**Versión 1 (Publicación y Reputación)**
+
+Estimado/a Dr./a. [Apellido],
+
+El código que no se puede ejecutar por un revisor puede retrasar o arruinar una publicación.
+
+En Phorma (phorma.sh) ayudamos a los laboratorios a empaquetar sus análisis de forma robusta, garantizando la reproducibilidad.
+
+Te invitamos a usar nuestro **Diagnóstico de Madurez** (5 min) para evaluar si tu software está listo para el escrutinio de una revista de alto impacto.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]
+
+---
+**Asunto:** Fortalecé tu próximo grant con un plan de software sólido
+
+**Versión 2 (Financiación)**
+
+Estimado/a Dr./a. [Apellido],
+
+Las agencias de financiación exigen cada vez más planes de gestión de datos y software. Un anexo técnico débil puede ser una "red flag".
+
+Nosotros ayudamos a los PIs a diseñar e implementar arquitecturas de software que impresionan a los comités de evaluación.
+
+Nuestro **Diagnóstico de Madurez** gratuito te puede dar los puntos clave para incluir en tu próxima aplicación.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** ¿Qué pasa cuando el que hizo el código se gradúa?
+
+**Versión 3 (Fuga de Conocimiento)**
+
+Estimado/a Dr./a. [Apellido],
+
+En cada estudiante que se gradúa, tu laboratorio pierde conocimiento crítico. El código que queda atrás suele ser una "caja negra".
+
+En Phorma (phorma.sh) creamos sistemas y documentación para que el conocimiento permanezca en tu laboratorio, no en la cabeza de una persona.
+
+Identificá el riesgo de fuga de conocimiento en tu laboratorio con nuestro **Diagnóstico de 5 minutos**.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]
+
+---
+**Asunto:** ¿Tu código está frenando la ciencia de tu laboratorio?
+
+**Versión 4 (Eficiencia)**
+
+Estimado/a Dr./a. [Apellido],
+
+Un software ineficiente no solo consume tiempo de cómputo valioso, sino también el tiempo de tus estudiantes y postdocs, que deberían estar haciendo ciencia.
+
+Nos especializamos en optimizar pipelines científicos para acelerar los ciclos de descubrimiento.
+
+Nuestro **Diagnóstico de Madurez** puede ayudarte a identificar los cuellos de botella que están frenando a tu equipo.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
+
+---
+**Asunto:** Construí un legado de software, no un cementerio de scripts
+
+**Versión 5 (Legado)**
+
+Estimado/a Dr./a. [Apellido],
+
+El software de un laboratorio puede ser un activo que impulse la investigación durante años, o una colección de scripts que mueren con cada proyecto.
+
+En Phorma (phorma.sh) te ayudamos a construir un legado de herramientas robustas y mantenibles.
+
+¿Querés saber cómo empezar? Nuestro **Diagnóstico de 5 minutos** es el primer paso.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]

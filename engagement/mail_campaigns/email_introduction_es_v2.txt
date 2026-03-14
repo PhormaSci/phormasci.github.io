@@ -1,0 +1,101 @@
+# Propósito de estos borradores:
+#
+# Este archivo contiene 5 borradores de un correo electrónico inicial para introducir Phorma Scientific.
+# El objetivo es presentar la empresa de forma concisa y directa, y dirigir a los potenciales
+# clientes a un formulario de contacto o encuesta inicial para entender mejor sus necesidades.
+# El tono es directo, en español rioplatense y optimizado para leerse en un celular.
+
+---
+
+**Asunto:** ¿Tu código científico es un caos?
+
+**Versión 1 (Directo al problema)**
+
+Hola [Nombre],
+
+Sabemos que pasar de una idea científica a un producto real es un desafío. El código se vuelve complejo y difícil de escalar.
+
+En Phorma (phorma.sh) te ayudamos a ponerle estructura. Convertimos prototipos de investigación en sistemas de software robustos y listos para producción.
+
+¿Tenés un desafío en mente? Contanos en 2 minutos qué necesitás para que podamos darte una mano.
+
+>> [Link al formulario]
+
+Saludos,
+[Tu Nombre]
+
+
+---
+**Asunto:** Tu investigación, lista para producción
+
+**Versión 2 (Orientado al beneficio)**
+
+Hola [Nombre],
+
+En Phorma (phorma.sh) llevamos tu desarrollo científico del laboratorio al mercado.
+
+Si tenés un prototipo validado, nosotros lo transformamos en un sistema de software escalable, auditable y listo para el siguiente nivel.
+
+Nos gustaría entender mejor tus necesidades. Si tenés 2 minutos para contarnos, te lo agradecemos.
+
+>> [Link al formulario]
+
+Gracias,
+[Tu Nombre]
+
+
+---
+**Asunto:** Potenciamos tu ciencia con software
+
+**Versión 3 (Enfocado en la especialidad)**
+
+Hola [Nombre],
+
+Somos Phorma (phorma.sh), especialistas en RSE (Research Software Engineering) y Scientific Machine Learning. Ayudamos a equipos como el tuyo a optimizar rendimiento, auditar sistemas y escalar sus desarrollos.
+
+"Estructura sobre Caos" es nuestro lema.
+
+Para entender mejor los desafíos actuales, armamos un formulario muy corto. ¿Nos das tu opinión?
+
+>> [Link al formulario]
+
+Un saludo,
+[Tu Nombre]
+
+
+---
+**Asunto:** Phorma: Ciencia a Producción
+
+**Versión 4 (Corto y contundente)**
+
+[Nombre],
+
+En Phorma (phorma.sh) convertimos prototipos científicos en software de producción.
+
+¿Tenés un desafío de ingeniería o performance en tu equipo? Contanos acá en 2 minutos:
+
+>> [Link al formulario]
+
+Nos va a servir mucho para darte una mano.
+
+Saludos,
+[Tu Nombre]
+
+
+---
+**Asunto:** El puente entre tu ciencia y la industria
+
+**Versión 5 (Con una analogía)**
+
+Hola [Nombre],
+
+Tu equipo hace ciencia de punta. Nosotros construimos el puente para llevarla a la industria con software robusto y escalable.
+
+Somos Phorma (phorma.sh). Nos gustaría conocer los desafíos que enfrentan equipos como el tuyo.
+
+Si nos podés contar en este formulario (te toma 2 minutos), nos ayudás un montón.
+
+>> [Link al formulario]
+
+Gracias,
+[Tu Nombre]

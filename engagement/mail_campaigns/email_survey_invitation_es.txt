@@ -1,0 +1,103 @@
+# Propósito de estos borradores:
+#
+# Este archivo contiene 5 borradores de un correo electrónico diseñado para invitar explícitamente
+# a los destinatarios a completar un "Diagnóstico de Madurez de Software Científico".
+# Cada versión utiliza un ángulo de marketing diferente (riesgo, beneficio, auto-evaluación, etc.)
+# para motivar la participación, usando como gancho la posibilidad de agendar una charla de
+# diagnóstico gratuita de 30 minutos al finalizar.
+# El tono es directo, en español rioplatense y optimizado para leerse en un celular.
+
+---
+
+**Asunto:** ¿Qué tan maduro es tu software científico?
+
+**Versión 1 (El "Test de Madurez")**
+
+Hola [Nombre],
+
+Un script que "funciona" en la compu de un científico no es lo mismo que un sistema robusto.
+
+En Phorma (phorma.sh) creamos un **Diagnóstico de Madurez de Software Científico** de 5 minutos para ayudarte a ver en qué punto está tu equipo.
+
+Completalo y descubrí los puntos ciegos en tu flujo de trabajo. Además, al final podés agendar una charla de 30' sin cargo con nosotros.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+
+---
+**Asunto:** ¿Dónde se frena la innovación en tu equipo?
+
+**Versión 2 (El "Cuello de Botella Oculto")**
+
+Hola [Nombre],
+
+¿Sentís que tu equipo de I+D dedica más tiempo a arreglar bugs o a limpiar datos que a investigar?
+
+A menudo, los cuellos de botella no son obvios. Creamos una encuesta de 5 minutos para ayudarte a identificar dónde se está perdiendo tiempo y potencial.
+
+Tus respuestas nos sirven para entender tu realidad y, si te interesa, tener una charla de diagnóstico gratuita y súper productiva.
+
+>> [Link al Diagnóstico]
+
+Gracias,
+[Tu Nombre]
+
+
+---
+**Asunto:** ¿Qué pasa si tu programador estrella se va mañana?
+
+**Versión 3 (El "Factor Riesgo")**
+
+Hola [Nombre],
+
+Si la persona clave de tu área computacional se va, ¿el conocimiento se va con ella? ¿Alguien más podría reproducir un análisis crítico?
+
+La dependencia de individuos es un riesgo enorme. En Phorma (phorma.sh) ayudamos a crear sistemas que mitigan ese riesgo.
+
+Te invitamos a completar nuestro diagnóstico de 5 minutos para evaluar la reproducibilidad y continuidad de tus proyectos.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
+
+
+---
+**Asunto:** Charla de diagnóstico de 30' (sin cargo)
+
+**Versión 4 (El "Incentivo Directo")**
+
+Hola [Nombre],
+
+Te escribo para ofrecerte una **charla de diagnóstico de 30 minutos, sin cargo,** para conversar sobre los desafíos de software en tu equipo de I+D.
+
+Para que la charla sea 100% enfocada en vos, te pedimos que antes completes este formulario de 5 minutos. Nos da el contexto necesario para ir directo al grano.
+
+Agendá tu charla de diagnóstico completando el formulario:
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+
+---
+**Asunto:** Tu prototipo funciona. ¿Y ahora qué?
+
+**Versión 5 (Del "Prototipo al Producto")**
+
+Hola [Nombre],
+
+Lograr que un prototipo científico funcione es un hito. Pero el paso siguiente suele ser un dolor de cabeza: se comparte "así como está", depende del autor o hay que reescribirlo de cero.
+
+En Phorma (phorma.sh) nos especializamos en ese "y ahora qué".
+
+Te invitamos a usar nuestro **Diagnóstico de Madurez** (5 min) para evaluar cómo transformar tus prototipos en activos valiosos y escalables.
+
+>> [Link al Diagnóstico]
+
+Gracias,
+[Tu Nombre]

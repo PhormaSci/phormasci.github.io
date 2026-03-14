@@ -1,0 +1,94 @@
+# Segmento: Estudiantes de Doctorado y Postdocs
+#
+# Objetivo: Conectar con sus frustraciones diarias (debugging, código heredado)
+# y aspiraciones (graduarse, conseguir un buen trabajo, aprender skills valiosas).
+
+---
+**Asunto:** Menos debugging, más ciencia
+
+**Versión 1 (Ahorrar Tiempo)**
+
+Hola [Nombre],
+
+¿Pasás más tiempo tratando de que el código corra que analizando los resultados? Es una frustración demasiado común.
+
+Tener una estructura de software sólida te devuelve horas de tu semana para que te puedas dedicar a lo importante: tu investigación.
+
+Creamos un **Diagnóstico de 5 minutos** para que identifiques los puntos de dolor en tu workflow. Al final, podés agendar una charla gratis con nosotros.
+
+>> [Link al Diagnóstico]
+
+¡Fuerza con esa tesis!
+[Tu Nombre]
+
+---
+**Asunto:** Convertí tu "código de tesis" en un asset para tu CV
+
+**Versión 2 (Habilidades para el Futuro)**
+
+Hola [Nombre],
+
+Saber programar "para que ande" es una cosa. Saber construir software robusto y documentado es una habilidad que te diferencia en el mercado laboral (académico o industrial).
+
+En Phorma (phorma.sh) ayudamos a los investigadores a adoptar prácticas de ingeniería de software.
+
+Medí tus skills y encontrá puntos de mejora con nuestro **Diagnóstico de Madurez de Software**.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** ¿Heredaste un código indescifrable? No repitas la historia
+
+**Versión 3 (El Código Heredado)**
+
+Hola [Nombre],
+
+Empezar un proyecto con los scripts de un estudiante anterior puede ser una pesadilla.
+
+En Phorma (phorma.sh) promovemos la "Estructura sobre el Caos" para que el próximo que venga no sufra lo mismo que vos. Y para que tu propio trabajo sea más fácil de gestionar.
+
+Identificá las "malas prácticas" que te están frenando con nuestro **Diagnóstico de 5 minutos**.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
+
+---
+**Asunto:** Que tu código no te falle el día de la defensa
+
+**Versión 4 (Confianza)**
+
+Hola [Nombre],
+
+"Esta mañana andaba". La frase que nadie quiere decir en una presentación o defensa de tesis.
+
+La confianza en tus resultados empieza por tener confianza en tu código. Un buen testing y una estructura clara son tus mejores aliados.
+
+Evaluá la robustez de tu software con nuestro **Diagnóstico rápido y gratuito**.
+
+>> [Link al Diagnóstico]
+
+Éxitos,
+[Tu Nombre]
+
+---
+**Asunto:** Idea para tu próxima reunión de laboratorio
+
+**Versión 5 (Proactivo/Colaborativo)**
+
+Hola [Nombre],
+
+¿Querés proponer una mejora concreta en tu grupo?
+
+Podés sugerir que todos completen este **Diagnóstico de Madurez de Software Científico**. Es anónimo (si quieren) y les va a dar un mapa de los problemas que todos enfrentan pero nadie dice en voz alta.
+
+Es una herramienta de 5 minutos que puede iniciar una conversación muy necesaria en tu laboratorio.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]

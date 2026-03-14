@@ -1,0 +1,94 @@
+# Segmento: CTOs de Startups DeepTech
+#
+# Objetivo: Apuntar a sus dolores específicos: deuda técnica, escalar el "código del founder",
+# pasar el due diligence técnico de inversores, y la tensión entre velocidad y robustez.
+
+---
+**Asunto:** ¿Tu MVP está listo para un due diligence?
+
+**Versión 1 (Due Diligence)**
+
+Hola [Nombre],
+
+Sabés que en la próxima ronda de financiación los inversores van a meter a sus ingenieros a mirar tu código.
+
+¿El "código de paper" del founder o el MVP que armaron a las apuradas va a pasar ese filtro? En Phorma (phorma.sh) ayudamos a startups a prepararse para el due diligence técnico.
+
+Hacé una auto-evaluación rápida con nuestro **Diagnóstico de Madurez de Software**. Te va a tomar 5 minutos.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** Del "funciona en mi laptop" a una plataforma escalable
+
+**Versión 2 (Escalabilidad)**
+
+Hola [Nombre],
+
+El salto de un prototipo que funciona para 10 usuarios a una plataforma que soporta 10.000 es donde muchas startups de DeepTech tropiezan.
+
+Como CTO, tu desafío es construir los cimientos para ese crecimiento sin matar la velocidad.
+
+Te invitamos a usar nuestro **Diagnóstico de 5 minutos** para identificar los focos de deuda técnica que pueden comprometer tu escalabilidad.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
+
+---
+**Asunto:** Cómo pagar la deuda técnica sin frenar el roadmap
+
+**Versión 3 (Deuda Técnica)**
+
+Hola [Nombre],
+
+La deuda técnica es inevitable, pero dejar que se acumule es mortal. El desafío es cómo y cuándo empezar a pagarla sin que el equipo de producto te mate.
+
+En Phorma (phorma.sh) creamos hojas de ruta estratégicas para refactorizar y modernizar sistemas críticos de forma incremental.
+
+Nuestro **Diagnóstico gratuito** es el primer paso para mapear esa deuda y priorizarla.
+
+>> [Link al Diagnóstico]
+
+Atentamente,
+[Tu Nombre]
+
+---
+**Asunto:** El "código del founder"
+
+**Versión 4 (El Dilema del Código Fundacional)**
+
+Hola [Nombre],
+
+Muchas startups de DeepTech nacen de un paper. Y el código de ese paper, escrito por el founder, se convierte en el corazón del producto.
+
+Sabés mejor que nadie que eso no es sostenible. Pero refactorizarlo parece una tarea titánica.
+
+¿Querés una perspectiva externa? Empezá con nuestro **Diagnóstico de 5 minutos**. Te dará un marco para pensar el problema.
+
+>> [Link al Diagnóstico]
+
+Saludos,
+[Tu Nombre]
+
+---
+**Asunto:** ¿Tu equipo de ciencia y el de ingeniería hablan el mismo idioma?
+
+**Versión 5 (Cultura de Equipo)**
+
+Hola [Nombre],
+
+Integrar perfiles de ciencia pura con ingenieros de software es uno de los mayores desafíos de un CTO en DeepTech. Chocan las culturas, los lenguajes y las prioridades.
+
+En Phorma (phorma.sh) ayudamos a crear puentes, implementando procesos de RSE (Research Software Engineering) que ambos mundos entienden.
+
+Nuestro **Diagnóstico de Madurez** puede servir como una herramienta neutral para iniciar esa conversación en tu equipo.
+
+>> [Link al Diagnóstico]
+
+Un saludo,
+[Tu Nombre]
