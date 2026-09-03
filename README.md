@@ -98,11 +98,24 @@ npx serve
 just           # List all available commands
 just serve     # Run local server (default port 8000)
 just dev       # Alias for serve
+just build     # Render markdown content into static HTML
 just size      # Check bundle sizes
 just validate  # Validate HTML files
 just clean     # Remove artifacts
 just status    # Git status
 ```
+
+### Content Build
+Services, trainees, team, home, and mission content lives in `content/**/*.md`.
+It is rendered into the HTML pages at build time — there is **no runtime loading**.
+
+```bash
+just build     # run after editing any content/**.md file, then commit the result
+```
+
+CI enforces this: pull requests that change content must include the regenerated
+HTML, or the `Build Check` workflow fails. New markdown files are discovered
+automatically (sorted by their frontmatter `order` field).
 
 ### Deployment
 This repository is configured for GitHub Pages. Any push to `main` will automatically deploy.

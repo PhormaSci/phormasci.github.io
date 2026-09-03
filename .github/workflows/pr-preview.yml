@@ -10,6 +10,7 @@ on:
       - 'css/**'
       - 'content/**'
       - 'assets/**'
+      - 'scripts/build.js'
       # Exclude infrastructure files
       - '!.github/**'
       - '!**.md'
@@ -68,6 +69,11 @@ jobs:
 
           # Create new preview directory
           mkdir -p "preview-repo/test/${{ steps.slug.outputs.branch_slug }}"
+
+      - name: Build static content (markdown -> HTML)
+        run: |
+          cd source
+          node scripts/build.js
 
       - name: Copy PR content to preview directory
         run: |
