@@ -32,6 +32,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Structured data (generated at build time) -->
+  <!-- build:jsonld:start -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Team — Phorma Scientific",
+    "url": "https://phorma.sh/about",
+    "numberOfItems": 2,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Person",
+          "name": "Sasha Kielbowicz",
+          "jobTitle": "Quantitative Systems Architect",
+          "description": "Quantitative systems architect specializing in research software engineering for financial modeling and high-performance computing. Physics graduate with proven expertise delivering mission-critical solutions for tier-1 organizations including Mercado Libre, JP Morgan, Qontigo, and SimCorp.",
+          "url": "https://ak.saxa.xyz/cv/en.html"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Person",
+          "name": "Agustin Corbat",
+          "jobTitle": "BioImage Analyst & Data Scientist",
+          "description": "Interdisciplinary physicist with medical background specializing in extracting quantitative insights from complex visual data. Combines advanced deep learning and physics-based modeling to solve novel problems across scientific and industrial sectors.",
+          "url": "https://acorbat.github.io/"
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- build:jsonld:end -->
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
@@ -78,9 +115,95 @@
   <section class="section">
     <div class="container">
       <div class="team-grid" id="content-container">
-        <div class="loading-state text-center" style="grid-column: 1 / -1; padding: 4rem 1rem;">
-          <p class="text-mono text-muted">Loading...</p>
+      <!-- build:start -->
+      <article class="team-member" id="sasha-kielbowicz">
+        <div class="team-member-header">
+          <h2 class="team-member-name">Sasha Kielbowicz</h2>
+          <p class="team-member-title text-mono">Quantitative Systems Architect</p>
         </div>
+        <div class="team-member-content">
+          <p class="team-member-bio"><p>Quantitative systems architect specializing in research software engineering for financial modeling and high-performance computing. Physics graduate with proven expertise delivering mission-critical solutions for tier-1 organizations including Mercado Libre, JP Morgan, Qontigo, and SimCorp.</p>
+</p>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Current Position</h3>
+            <p><strong>Technical Lead, Financial Planning &amp; Analytics Engineering</strong></p>
+<p>Mercado Libre (Latin America's largest e-commerce platform)</p>
+
+          </div>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Core Expertise</h3>
+            <ul class="styled-list">
+<li>Multi-asset pricing and risk analytics systems</li>
+<li>Research Software Engineering (RSE) and numerical optimization</li>
+<li>High-performance computing (Julia, Python, C#)</li>
+<li>Scientific Machine Learning (SciML)</li>
+<li>System architecture and DevOps</li>
+<li>Domain-Specific Language development</li>
+</ul>
+
+          </div>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Key Achievements</h3>
+            <ul class="styled-list">
+<li>Delivered 300% performance gains on convertible bond pricing engines</li>
+<li>Reduced forecasting pipeline errors by 90% through RSE principles</li>
+<li>Led architectural design of core quantitative monorepo infrastructure</li>
+<li>Increased engineering velocity 15% across 14-person teams</li>
+</ul>
+
+          </div>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Education</h3>
+            <p>Licentiate degree in Physics, University of Buenos Aires</p>
+
+          </div>
+        </div>
+        <div class="team-member-footer">
+          <a href="https://ak.saxa.xyz/cv/en.html" class="team-member-link" target="_blank" rel="noopener noreferrer">View Full CV →</a>
+        </div>
+      </article>
+      <article class="team-member" id="agustin-corbat">
+        <div class="team-member-header">
+          <h2 class="team-member-name">Agustin Corbat</h2>
+          <p class="team-member-title text-mono">BioImage Analyst &amp; Data Scientist</p>
+        </div>
+        <div class="team-member-content">
+          <p class="team-member-bio"><p>Interdisciplinary physicist with medical background specializing in extracting quantitative insights from complex visual data. Combines advanced deep learning and physics-based modeling to solve novel problems across scientific and industrial sectors.</p>
+</p>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Core Expertise</h3>
+            <ul class="styled-list">
+<li>Quantitative image analysis and bioimage informatics</li>
+<li>Deep learning and mathematical modeling</li>
+<li>Microscopy techniques (fluorescence, optical, electron)</li>
+<li>Cell signaling and systems biology</li>
+<li>Agricultural phenotyping and pattern recognition</li>
+<li>Automated microscopy and high-content screening analysis</li>
+</ul>
+
+          </div>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Research Interests</h3>
+            <ul class="styled-list">
+<li>Cell signaling cascades and apoptotic networks</li>
+<li>Mathematical modeling of biological systems</li>
+<li>Developmental biology and pattern formation</li>
+<li>Custom workflow design for scientific data</li>
+</ul>
+
+          </div>
+          <div class="team-member-section">
+            <h3 class="team-member-subtitle text-mono">Education</h3>
+            <p>PhD in Physics, Universidad de Buenos Aires</p>
+<p>Postdoctoral Researcher, Karolinska Institutet</p>
+
+          </div>
+        </div>
+        <div class="team-member-footer">
+          <a href="https://acorbat.github.io/" class="team-member-link" target="_blank" rel="noopener noreferrer">View Portfolio →</a>
+        </div>
+      </article>
+      <!-- build:end -->
       </div>
     </div>
   </section>
@@ -102,13 +225,6 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="js/content-loader.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    // Load team page content
-    document.addEventListener('DOMContentLoaded', function() {
-      loadContent('team', 'en');
-    });
-  </script>
 </body>
 </html>

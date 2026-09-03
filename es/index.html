@@ -64,12 +64,71 @@
     </div>
   </nav>
 
-  <!-- Dynamic Content Container -->
+  <!-- Static content rendered at build time (scripts/build.js) -->
   <div id="content-container">
-    <div class="loading-state text-center" style="padding: 4rem 1rem;">
-      <p class="text-mono text-muted">Cargando...</p>
-    </div>
-  </div>
+      <!-- build:start -->
+    <section class="hero">
+      <div class="container hero-content">
+        <img src="../assets/logo.svg" alt="Phorma Scientific" class="hero-logo">
+        <h1>Rigor. Rendimiento. Arquitectura.</h1>
+        <p class="hero-subheading">Transformamos la complejidad científica en sistemas de producción.</p>
+        <a href="#audit" class="btn btn-primary">Solicitar Auditoría</a>
+      </div>
+    </section>
+    <section class="section border-bottom">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2 class="text-mono">El Desafío</h2>
+            <p class="text-muted">Del Laboratorio al Mercado</p>
+          </div>
+          <div>
+            <p>La investigación pionera requiere agilidad y una iteración rápida, produciendo a menudo prototipos optimizados para el descubrimiento, no para la producción.</p>
+<p>A medida que estas innovaciones maduran, se enfrentan a un nuevo conjunto de desafíos: escalar para satisfacer las demandas empresariales, garantizar el cumplimiento de los estándares de la industria e integrarse sin problemas en la infraestructura existente.</p>
+<p>Esta transición de un prototipo validado a un activo de grado de producción es un paso natural y crítico en el ciclo de vida de la innovación. Es el momento en que la ciencia de vanguardia se encuentra con el rigor del mercado.</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section border-bottom">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2 class="text-mono">La Solución</h2>
+            <p class="text-muted">Elevando la Innovación</p>
+          </div>
+          <div>
+            <p>Nos asociamos con usted para elevar sus avances científicos del laboratorio al mercado.</p>
+<p>Nuestra expertise radica en transformar la investigación validada en activos robustos, escalables y listos para la producción. No solo construimos código; construimos el puente entre su ciencia y su impacto en el mundo real. Ya sea transformando imágenes crudas de microscopía en conocimientos de diagnóstico o escalando modelos financieros para uso empresarial, construimos el puente.</p>
+<p>Al implementar la mejor ingeniería de su clase, amplificamos el valor de su investigación, asegurando que funcione con precisión, escale bajo demanda y resista el paso del tiempo. Cada sistema que entregamos es un testimonio del poder de su innovación, fortalecido con nuestro compromiso con el rigor y la calidad.</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="audit">
+      <div class="container">
+        <div class="highlight-box">
+          <div class="grid grid-2">
+            <div>
+              <h3 class="text-mono mb-sm">Auditoría de Sistema y Arquitectura</h3>
+              <p class="text-muted text-upper" style="font-size: 0.875rem; margin-bottom: 1rem;">Servicio de Entrada</p>
+            </div>
+            <div>
+              <p><strong>Objetivo:</strong> Identificar deuda estructural, cuellos de botella de rendimiento y brechas de cumplimiento en su infraestructura de computación científica.</p>
+<p><strong>Entregable:</strong> Hoja de ruta de modernización arquitectónica con ítems de acción priorizados, benchmarks de rendimiento y estrategia de refactorización.</p>
+
+              <p style="margin-top: 1.5rem;">
+                <a href="contact.html" class="btn">Solicitar Auditoría</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- build:end -->
+      </div>
 
   <!-- Authority -->
   <!-- HIDDEN: Tier-1 Organizations section
@@ -102,13 +161,6 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="../js/content-loader.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    // Load home page content
-    document.addEventListener('DOMContentLoaded', function() {
-      loadContent('home', 'es');
-    });
-  </script>
 </body>
 </html>

@@ -7,8 +7,8 @@ This document provides specific guidance for Claude Code when working with the P
 - **Project Type:** Static website (HTML/CSS/Vanilla JS)
 - **No Build Process:** Pure static files, no compilation needed
 - **No Package Manager:** Zero npm/yarn dependencies
-- **Deployment:** GitHub Pages (auto-deploy on push to `main`)
-- **Testing:** Local server only (`python3 -m http.server 8000`)
+- **Deployment:** Cloudflare Pages (`just deploy` — project: `phorma-sh`, domain: `phorma.sh`)
+- **Testing:** Local server only (`just serve`)
 
 ## Before Making Changes
 
@@ -50,7 +50,7 @@ Always read these files first to understand the current state:
 | `contact.html` / `es/contact.html` | Contact page | Form fields, contact info, response times |
 | `css/styles.css` | All styles | Any visual changes, responsive design |
 | `js/main.js` | Navigation & theme | Header behavior, mobile menu, theme toggle |
-| `js/content-loader.js` | Content system | Markdown parsing, dynamic loading logic |
+| `scripts/build.js` | Content system | Build-time markdown rendering (zero deps) |
 | `content/services/{en\|es}/` | Service content | Adding/editing service offerings |
 | `content/trainees/{en\|es}/` | Training content | Adding/editing training programs |
 
@@ -82,7 +82,7 @@ Always read these files first to understand the current state:
    **Timeline:** Duration estimate
    ```
 
-3. Update file lists in `js/content-loader.js` (lines 166-181)
+3. Run `just build` to render the markdown into static HTML
 
 4. Test on both `/services.html` and `/es/services.html`
 
@@ -129,7 +129,7 @@ The site uses a custom markdown loader for services and trainees pages:
 - Block code ``` ``` — not implemented
 
 If you need these features, either:
-1. Add them to the markdown parser in `js/content-loader.js`, OR
+1. Add them to the markdown parser in `scripts/build.js`, OR
 2. Use raw HTML in markdown files (it passes through)
 
 ### Frontmatter Fields
@@ -184,7 +184,7 @@ outcome: "What you get"  # Required, shown in card footer
 If you notice errors after making changes:
 
 1. **Console Errors:** Open browser DevTools → Console tab
-2. **404s:** Check file paths (case-sensitive on GitHub Pages)
+2. **404s:** Check file paths (case-sensitive on Cloudflare Pages)
 3. **Broken Styles:** Verify CSS syntax, check class names match HTML
 4. **JS Issues:** Check `'use strict';` mode catches errors
 5. **Content Not Loading:** Verify markdown frontmatter syntax
@@ -347,13 +347,13 @@ document.getElementById('myButton').addEventListener('click', function() {
 
 ## Troubleshooting
 
-### Problem: Content Not Loading
+### Problem: Content Not Updating
 
 **Check:**
 1. Markdown file exists in correct `content/{type}/{lang}/` directory
-2. Filename matches pattern in `js/content-loader.js`
-3. Frontmatter has valid YAML syntax (colons, quotes)
-4. `#content-container` div exists on page
+2. Frontmatter has valid YAML syntax (colons, quotes)
+3. `just build` was run after editing the markdown
+4. `#content-container` div and `<!-- build:start -->`/`<!-- build:end -->` markers exist on page
 
 ### Problem: Styles Not Applying
 

@@ -1,0 +1,49 @@
+# Verify that generated content is in sync with markdown sources.
+#
+# The site renders markdown content into static HTML at build time
+# (scripts/build.js). Contributors must run `just build` after editing
+# content/**.md and commit the regenerated pages. This workflow fails the
+# check if the committed HTML doesn't match what the build produces.
+
+name: Build Check
+
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'scripts/build.js'
+      - '*.html'
+      - 'es/*.html'
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run build
+        run: node scripts/build.js
+
+      - name: Check for uncommitted generated changes
+        run: |
+          if git diff --exit-code -- '*.html' 'es/*.html'; then
+            echo "✓ Generated pages are in sync with content sources"
+          else
+            echo "::error::Generated HTML is out of date with content/**.md"
+            echo ""
+            echo "Run the build locally and commit the regenerated pages:"
+            echo ""
+            echo "  just build"
+            echo "  git add -A && git commit --amend || git commit -m 'chore: rebuild static content'"
+            git diff --stat -- '*.html' 'es/*.html'
+            exit 1
+          fi

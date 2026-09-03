@@ -29,21 +29,21 @@ When working with this codebase, always prioritize:
 - **CSS3:** Single stylesheet (`css/styles.css`, ~12KB)
 - **Vanilla JavaScript:** Minimal interaction layer
   - `js/main.js` — Navigation and theme toggling (~4KB)
-  - `js/content-loader.js` — Dynamic markdown content loading
 
 ### File Structure
 
 ```
 .
 ├── assets/                 # Logo variants and images
-├── content/                # Markdown-based content
+├── content/                # Markdown-based content (source of truth)
 │   ├── services/          # Service offerings (en/es)
 │   └── trainees/          # Training programs (en/es)
 ├── css/
 │   └── styles.css         # Single stylesheet
 ├── js/
-│   ├── main.js            # Navigation & theme
-│   └── content-loader.js  # Content loading system
+│   └── main.js            # Navigation & theme
+├── scripts/
+│   └── build.js           # Build-time content rendering (zero deps)
 ├── es/                    # Spanish translations
 │   ├── index.html
 │   ├── services.html
@@ -59,10 +59,12 @@ When working with this codebase, always prioritize:
 
 The site uses a **markdown-based content system** for services and trainees pages:
 
-1. **Markdown Files:** Stored in `content/{services|trainees}/{en|es}/`
+1. **Markdown Files:** Stored in `content/{services|trainees|...}/{en|es}/`
 2. **Frontmatter:** YAML-style metadata (title, meta, order, etc.)
-3. **Dynamic Loading:** `content-loader.js` fetches and renders markdown at runtime
+3. **Build-Time Rendering:** `scripts/build.js` renders markdown into static HTML between `<!-- build:start -->` / `<!-- build:end -->` markers. Pages are fully static — no runtime JS loading, so content is directly crawlable/parsable by agents and search engines. JSON-LD structured data is generated into `<!-- build:jsonld:start -->` / `<!-- build:jsonld:end -->` markers.
 4. **Simple Parsing:** Custom lightweight markdown parser (no external libs)
+
+**Run `just build` (or `node scripts/build.js`) after editing any markdown content.**
 
 #### Example Service Markdown
 
@@ -172,8 +174,10 @@ Footer content here (deliverables, timeline, etc.)
    order: #
    ---
    ```
-4. Update file list in `js/content-loader.js` if needed
+4. Run `just build` to regenerate the static HTML
 5. Verify on both English and Spanish pages
+
+**Note:** Content files are discovered automatically from the `content/` directories — no file lists to maintain. Order is controlled by the frontmatter `order` field.
 
 ### Testing Locally
 
