@@ -6,10 +6,10 @@ order: 11
 duration: 2 days
 format: Hands-on workshop
 prerequisites: Basic programming knowledge
-outcome: Production-ready numerical code that is verifiable and maintainable.
+outcome: Practice writing numerical code with checks for accuracy, stability and reproducibility.
 ---
 
-Master the foundations of robust numerical computing with focus on reproducibility, stability, and correctness.
+Practice numerical computing with attention to reproducibility, numerical stability and accuracy.
 
 - Floating-point arithmetic & numerical errors
 - Algorithm stability & conditioning

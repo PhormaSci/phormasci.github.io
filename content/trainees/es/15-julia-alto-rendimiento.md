@@ -6,12 +6,12 @@ order: 15
 duration: 3 días
 format: Laboratorio intensivo práctico
 prerequisites: Conceptos básicos de Julia, álgebra lineal
-outcome: Mejoras de rendimiento de 10x+ mediante paralelización y optimización.
+outcome: Medí el rendimiento de código Julia, identificá cuellos de botella y compará opciones de optimización y paralelización.
 ---
 
-Desbloquea las capacidades de rendimiento de Julia mediante computación paralela, multi-threading y técnicas de optimización.
+Medí dónde consume tiempo el código Julia y compará formas de mejorarlo mediante optimización y cómputo paralelo.
 
-- Perfilado de rendimiento y benchmarking
-- Multi-threading y paralelismo
+- Medición de tiempos y comparación de rendimiento
+- Ejecución con varios hilos y procesos en paralelo
 - Computación GPU con CUDA.jl
 - Estabilidad de tipos y optimización del compilador

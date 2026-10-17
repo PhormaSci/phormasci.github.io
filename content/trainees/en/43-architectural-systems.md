@@ -6,10 +6,10 @@ order: 43
 duration: 4 days
 format: Architecture workshop + case studies
 prerequisites: Software engineering experience
-outcome: Architectural blueprints for scalable, maintainable systems.
+outcome: Create and compare software architecture designs, documenting dependencies, integration choices and trade-offs.
 ---
 
-Design scalable, maintainable systems using domain-specific languages (DSLs), monorepo strategies, and decoupling patterns.
+Compare ways to organize software components, define interfaces and manage dependencies as a project grows.
 
 - Domain-specific language (DSL) design
 - Monorepo architecture & tooling

@@ -9,9 +9,9 @@ prerequisites: Python, cálculo, álgebra lineal, conceptos básicos de biologí
 outcome: Desarrollar y analizar modelos matemáticos de sistemas biológicos para comprender y predecir su comportamiento.
 ---
 
-Aprenda a traducir preguntas biológicas en modelos matemáticos. Este curso cubre los fundamentos de la construcción, simulación y análisis de modelos de sistemas biológicos,desde células individuales hasta poblaciones.
+Traducí preguntas biológicas a modelos matemáticos y explorá su comportamiento mediante simulación y análisis.
 
-- Modelado basado in ecuaciones diferenciales ordinarias (EDO)
+- Modelado basado en ecuaciones diferenciales ordinarias (EDO)
 - Estimación de parámetros y análisis de sensibilidad
 - Análisis de bifurcaciones y multiestabilidad
 - Modelado estocástico de procesos biológicos

@@ -6,13 +6,13 @@ order: 52
 duration: 2 días
 format: Taller práctico
 prerequisites: Dominio de Python, experiencia básica en análisis de imágenes
-outcome: Desplegar plugins personalizados de Napari con interfaces GUI para no programadores. Publicar en PyPI para adopción comunitaria.
+outcome: Construí un plugin de Napari con interfaz gráfica y preparalo para distribuirlo en el índice de paquetes de Python (PyPI).
 ---
 
-Aprenda a construir y desplegar herramientas de análisis personalizadas dentro de Napari, el visor estándar de imágenes multidimensionales para Python. Cree plugins de grado de producción que cierren la brecha entre métodos computacionales y accesibilidad para el usuario final.
+Construí herramientas de análisis para Napari, un visor de imágenes multidimensionales para Python, y agregá controles gráficos para tus colegas.
 
 - Arquitectura de Napari y ecosistema de plugins
 - MagicGUI para desarrollo rápido de interfaces
-- Patrones de diseño de widgets y flujos de trabajo de usuario
+- Diseño de controles gráficos y pasos que sigue el usuario
 - Estándares de pruebas y documentación
-- Despliegue en PyPI y gestión de versiones
+- Publicación de paquetes en PyPI y gestión de versiones

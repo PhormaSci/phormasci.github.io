@@ -6,10 +6,10 @@ order: 43
 duration: 4 días
 format: Taller de arquitectura + casos de estudio
 prerequisites: Experiencia en ingeniería de software
-outcome: Planos arquitectónicos para sistemas escalables y mantenibles.
+outcome: Diseñá y compará arquitecturas de software, documentando dependencias, opciones de integración y sus ventajas y limitaciones.
 ---
 
-Diseña sistemas escalables y mantenibles usando lenguajes específicos de dominio (DSLs), estrategias de monorepo y patrones de desacoplamiento.
+Compará formas de organizar componentes de software, definir interfaces y gestionar dependencias a medida que crece un proyecto.
 
 - Diseño de lenguajes específicos de dominio (DSL)
 - Arquitectura y herramientas de monorepo

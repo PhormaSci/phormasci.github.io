@@ -4,12 +4,12 @@ meta: Quality Assurance
 category: Software Engineering
 order: 44
 duration: 2 days
-format: Workshop + Hands-on TDD Sessions
+format: Workshop with test-driven development exercises
 prerequisites: Working knowledge of at least one programming language
-outcome: Comprehensive test suites and test-driven development skills for scientific software.
+outcome: Write tests for scientific software and practice using failing tests to guide implementation.
 ---
 
-Build robust, reliable scientific software through systematic testing strategies and test-driven development.
+Write tests for scientific calculations and practice test-driven development: write a failing test, implement the behavior and improve the code.
 
 - Test-driven development (TDD) methodology
 - Testing strategies (unit, integration, end-to-end)

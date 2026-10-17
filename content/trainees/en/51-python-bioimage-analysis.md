@@ -6,10 +6,10 @@ order: 51
 duration: 3 days
 format: Hands-on workshop
 prerequisites: Basic Python knowledge
-outcome: Transition from manual analysis to reproducible scripting pipelines. Build production-ready segmentation workflows.
+outcome: Write repeatable image-analysis scripts and practice checking segmentation results.
 ---
 
-Master the fundamentals of treating images as numerical arrays and building reproducible analysis pipelines. Eliminate "point-and-click" workflows in favor of batch-processable, version-controlled code.
+Represent images as numerical arrays and write scripts to repeat an analysis across many images. Check the results against examples.
 
 - NumPy array operations & image representation
 - Scikit-image for filtering and segmentation

@@ -1,15 +1,15 @@
 ---
 title: Applied Scientific Machine Learning
-meta: SciML
+meta: Machine learning combined with scientific models
 category: Scientific Machine Learning
 order: 31
 duration: 4 days
 format: Intensive hands-on training
-prerequisites: ML basics, calculus, linear algebra
-outcome: Operational SciML models with full validation pipelines.
+prerequisites: Basic machine learning, calculus and linear algebra
+outcome: Build and compare scientific machine-learning models, test their predictions and examine uncertainty.
 ---
 
-Integrate physics-informed ML and differential equation solvers into research workflows.
+Combine machine learning with physical models and differential equations, then evaluate predictions and uncertainty.
 
 - Physics-informed neural networks (PINNs)
 - Neural ODEs & differential equation solvers
