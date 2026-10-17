@@ -252,6 +252,13 @@ function renderTraineeCard(data, lang) {
   const { frontmatter, content } = data;
   const t = frontmatter;
 
+  // Buyer-facing one-page PDF per workshop (one-pagers/<lang>/<site-slug>.pdf;
+  // site slug = markdown filename, mirroring the talleres one-pager naming).
+  const pdfSlug = data.file.replace(/\.md$/, '');
+  const pdfHref = `/one-pagers/${lang}/${pdfSlug}.pdf`;
+  const pdfLabel = lang === 'es' ? 'Ficha del taller (PDF)' : 'Workshop one-pager (PDF)';
+  const pdfLink = `<p class="text-upper" style="font-size: 0.75rem;"><a href="${pdfHref}" download>${pdfLabel} →</a></p>`;
+
   return `      <article class="card" id="${slugify(t.title)}">
         <div class="card-header">
           <h3 class="card-title">${escapeHtml(t.title || '')}</h3>
@@ -265,6 +272,7 @@ function renderTraineeCard(data, lang) {
         </div>
         <div class="card-footer">
           <p class="text-muted text-upper" style="font-size: 0.75rem;"><strong>${lang === 'es' ? 'Resultado:' : 'Outcome:'}</strong> ${escapeHtml(t.outcome || '')}</p>
+          ${pdfLink}
         </div>
       </article>`;
 }
