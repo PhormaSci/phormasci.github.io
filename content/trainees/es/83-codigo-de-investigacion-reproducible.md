@@ -1,18 +1,28 @@
 ---
 title: Código de Investigación Reproducible
-meta: Entornos, Datos y Deuda de Verificación
+meta: Ayudá a un colega a reproducir un resultado de investigación sin depender de tu máquina ni de instrucciones de configuración que solo vos conocés.
 category: Investigación con IA
 order: 3
 duration: 2 días
 format: Taller práctico
-prerequisites: Código de investigación que quieras hacer reproducible
-outcome: Hacer reproducibles el código y los resultados de investigación bajo asistencia de IA: fijación de entornos, versionado de datos y pago de la deuda de verificación antes de que se componga.
+prerequisites: Poder ejecutar scripts de investigación y hacer modificaciones básicas. Usá un repositorio de alcance acordado antes del taller o uno de práctica provisto para la sesión.
+audience: Investigadores cuyo código, modelos o análisis deben poder reproducirse por otras personas.
+highlights: Intentar reproducir un resultado, identificar instrucciones faltantes y registrar las versiones exactas del software y los datos.; Agregar controles sobre los resultados y verificar o aislar cambios sin comprobar, incluidos los generados con IA.; Hacer que un colega reproduzca el resultado y documentar el trabajo pendiente con responsables y próximos pasos.
+outcome: Lográ que un colega reproduzca un resultado seleccionado desde una copia limpia del repositorio utilizado en el taller. Llevate los requisitos de entorno y datos documentados, una prueba de reproducción que pasa y una lista priorizada de verificaciones pendientes.
+modules: Diagnóstico de fallas de reproducción; Corrección de la configuración y verificación de resultados; Prueba de transferencia a un colega y priorización del trabajo pendiente.
+preparation: Acordamos un resultado y un repositorio abordables antes de la sesión. Si tu código es confidencial o demasiado grande para el taller, usá datos anonimizados adecuados para el ejercicio o el repositorio de práctica provisto. La prueba de reproducción cubre el resultado elegido y las condiciones documentadas.
+cta: "Solicitá una propuesta para tu equipo:"
+schedule: "Día 1: 5 h 45 min; día 2: 6 h, más pausas y almuerzo"
 ---
 
-Te vas con un repositorio que pasa el test de reproducción: checkout limpio, un comando, y un colega sin contexto reproduciendo tu número publicado. Fija entornos, versiona datos, audita la deuda de verificación que acumuló tu código asistido por IA, y págala en un sprint guiado.
+Ayudá a un colega a reproducir un resultado de investigación sin depender de tu máquina ni de instrucciones de configuración que solo vos conocés.
 
-- Ejecutar e interpretar el test de reproducción — y obtener los arreglos que el fallo exige
-- Fijar entornos y versionar datos para que los resultados sobrevivan a cambios de máquina y de personal
-- Auditar la deuda de verificación en tu propio repositorio: qué nunca se verificó, qué cuesta, el orden de pago
-- Defenderse de estadísticas fabricadas como fallo arquitectónico — checks en el límite de resultados, no vigilancia en el prompt
-- Priorizar tu código por lo que pasa cuando está mal, y aparejar el esfuerzo de verificación a la criticidad
+- Intentar reproducir un resultado, identificar instrucciones faltantes y registrar las versiones exactas del software y los datos.
+- Agregar controles sobre los resultados y verificar o aislar cambios sin comprobar, incluidos los generados con IA.
+- Hacer que un colega reproduzca el resultado y documentar el trabajo pendiente con responsables y próximos pasos.
+
+A quién está dirigido: Investigadores cuyo código, modelos o análisis deben poder reproducirse por otras personas.
+
+Horario: Día 1: 5 h 45 min; día 2: 6 h, más pausas y almuerzo
+
+Preparación y alcance: Acordamos un resultado y un repositorio abordables antes de la sesión. Si tu código es confidencial o demasiado grande para el taller, usá datos anonimizados adecuados para el ejercicio o el repositorio de práctica provisto. La prueba de reproducción cubre el resultado elegido y las condiciones documentadas.

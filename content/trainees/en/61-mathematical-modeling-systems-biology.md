@@ -9,7 +9,7 @@ prerequisites: Python, calculus, linear algebra, basic biology concepts
 outcome: Develop and analyze mathematical models of biological systems to understand and predict their behavior.
 ---
 
-Learn how to translate biological questions into mathematical models. This course covers the fundamentals of building, simulating, and analyzing models of biological systems, from single cells to populations.
+Translate biological questions into mathematical models and explore their behavior through simulation and analysis.
 
 - Ordinary differential equation (ODE) based modeling
 - Parameter estimation and sensitivity analysis

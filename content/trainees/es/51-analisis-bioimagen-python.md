@@ -6,12 +6,12 @@ order: 51
 duration: 3 días
 format: Taller práctico
 prerequisites: Conocimientos básicos de Python
-outcome: Transición desde análisis manual a pipelines de scripting reproducibles. Construir flujos de trabajo de segmentación listos para producción.
+outcome: Escribí scripts de análisis de imágenes que puedas volver a ejecutar y practicá cómo comprobar los resultados de segmentación.
 ---
 
-Domine los fundamentos de tratar imágenes como arrays numéricos y construir pipelines de análisis reproducibles. Elimine flujos de trabajo de "apuntar y hacer clic" en favor de código procesable por lotes y controlado por versiones.
+Representá imágenes como matrices numéricas y escribí scripts para repetir un análisis sobre muchas imágenes. Comprobá los resultados con ejemplos.
 
-- Operaciones de arrays NumPy y representación de imágenes
+- Operaciones con matrices NumPy y representación de imágenes
 - Scikit-image para filtrado y segmentación
 - Estrategias de procesamiento por lotes y E/S de archivos
 - Integración con Pandas para resultados cuantitativos

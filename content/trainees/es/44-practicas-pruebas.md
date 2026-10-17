@@ -4,16 +4,16 @@ meta: Aseguramiento de Calidad (QA)
 category: Ingeniería de Software
 order: 44
 duration: 2 días
-format: Taller + Sesiones Prácticas de TDD
+format: Taller con ejercicios de desarrollo guiado por pruebas
 prerequisites: Conocimiento práctico de al menos un lenguaje de programación
-outcome: Suites de pruebas exhaustivas y habilidades de desarrollo guiado por pruebas (TDD) para software científico.
+outcome: Escribí pruebas para software científico y practicá cómo usarlas para guiar la implementación.
 ---
 
-Construye software científico robusto y confiable a través de estrategias sistemáticas de prueba y desarrollo guiado por pruebas.
+Escribí pruebas para cálculos científicos y practicá el desarrollo guiado por pruebas: escribir una prueba que falle, implementar el comportamiento y mejorar el código.
 
-- Metodología de desarrollo guiado por pruebas (TDD).
-- Estrategias de testing (unitario, de integración, end-to-end).
-- Métricas de cobertura de pruebas (coverage) y estándares de calidad.
+- Desarrollo guiado por pruebas (TDD).
+- Pruebas de componentes, de integración y del sistema completo.
+- Medición del código cubierto por pruebas y criterios de calidad.
 - Pruebas para cómputo científico y precisión numérica.
-- Uso de mocks, fixtures y gestión de datos de prueba.
-- Testing continuo en pipelines de CI/CD.
+- Simulación de dependencias, preparación de casos y gestión de datos de prueba.
+- Ejecución automática de pruebas al integrar cambios de código.

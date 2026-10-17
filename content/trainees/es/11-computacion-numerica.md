@@ -6,12 +6,12 @@ order: 11
 duration: 2 días
 format: Taller práctico
 prerequisites: Conocimientos básicos de programación
-outcome: Código numérico listo para producción que es verificable y mantenible.
+outcome: Practicá la escritura de código numérico con controles de precisión, estabilidad y reproducibilidad.
 ---
 
-Domina los fundamentos de la computación numérica robusta con enfoque en reproducibilidad, estabilidad y corrección.
+Practicá computación numérica prestando atención a la reproducibilidad, la estabilidad numérica y la precisión.
 
 - Aritmética de punto flotante y errores numéricos
 - Estabilidad de algoritmos y condicionamiento
-- Mejores prácticas de álgebra lineal
+- Prácticas de álgebra lineal
 - Marcos de reproducibilidad

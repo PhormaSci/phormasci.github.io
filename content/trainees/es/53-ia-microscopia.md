@@ -6,13 +6,13 @@ order: 53
 duration: 4 días
 format: Taller práctico
 prerequisites: Python, NumPy, conceptos básicos de aprendizaje automático
-outcome: Entrenar modelos de deep learning personalizados sobre datos específicos del dominio con validación rigurosa. Desplegar pipelines de inferencia sin artefactos de alucinación.
+outcome: Entrená y evaluá modelos de microscopía con datos del área de trabajo, y examiná errores de predicción y alteraciones de la imagen.
 ---
 
-Una inmersión integral en Deep Learning para imágenes de microscopía. Aprenda a entrenar, validar y desplegar modelos de segmentación personalizados usando arquitecturas modernas. Énfasis en calidad de ground truth y evitar predicciones sobre-confiadas.
+Practicá el entrenamiento y la evaluación de modelos de microscopía. Examiná la calidad de las anotaciones, los errores de predicción y los límites al aplicar un modelo a imágenes nuevas.
 
-- Estrategias de anotación de ground truth y control de calidad
+- Preparación de anotaciones de referencia y control de calidad
 - Selección de arquitectura de modelos (StarDist, Cellpose, U-Net)
-- Pipelines de entrenamiento basados en la nube (optimización GPU)
+- Procesos de entrenamiento basados en la nube (optimización GPU)
 - Métricas de validación y análisis de errores
-- Despliegue de inferencia en producción y monitoreo
+- Ejecución de modelos entrenados y seguimiento de sus predicciones

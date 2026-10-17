@@ -9,7 +9,7 @@ prerequisites: Python, PyTorch, experience with deep learning models
 outcome: Design and train custom deep learning architectures for complex image analysis tasks, including self-supervised and multimodal approaches.
 ---
 
-Go beyond standard architectures and delve into the cutting edge of deep learning for scientific imaging. This course focuses on designing and implementing novel solutions for challenging imaging problems.
+Compare and implement advanced deep-learning approaches for scientific images, including learning from unlabeled data and combining different data types.
 
 - Custom CNN and transformer architectures
 - Self-supervised and unsupervised learning for imaging data
