@@ -1,6 +1,6 @@
 ---
 title: AI for Non-Coders
-meta: Create a small tool for a recurring task at work, step by step with AI and instructor support.
+meta: Build a small tool for a recurring task at work with AI, and learn to test whether it works correctly — with step-by-step guidance.
 category: Enterprise AI
 order: 1
 duration: 2 days
@@ -15,7 +15,7 @@ cta: "Request a proposal for your team:"
 schedule: "Day 1: 5 h 45 min; day 2: 6 h, plus breaks and lunch"
 ---
 
-Create a small tool for a recurring task at work, step by step with AI and instructor support.
+Build a small tool for a recurring task at work with AI, and learn to test whether it works correctly — with step-by-step guidance.
 
 - Start with a tool that summarizes meeting notes, using a workspace prepared for you.
 - Describe a task to the AI, try the tool it creates and check its results with examples.

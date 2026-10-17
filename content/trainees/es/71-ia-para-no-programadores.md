@@ -1,6 +1,6 @@
 ---
 title: IA para No Programadores
-meta: Creá una herramienta pequeña para una tarea recurrente de tu trabajo, paso a paso con IA y acompañamiento.
+meta: Creá con IA una herramienta pequeña para una tarea recurrente de tu trabajo y aprendé a comprobar si funciona correctamente, con acompañamiento paso a paso.
 category: IA Empresarial
 order: 1
 duration: 2 días
@@ -15,7 +15,7 @@ cta: "Solicitá una propuesta para tu equipo:"
 schedule: "Día 1: 5 h 45 min; día 2: 6 h, más pausas y almuerzo"
 ---
 
-Creá una herramienta pequeña para una tarea recurrente de tu trabajo, paso a paso con IA y acompañamiento.
+Creá con IA una herramienta pequeña para una tarea recurrente de tu trabajo y aprendé a comprobar si funciona correctamente, con acompañamiento paso a paso.
 
 - Empezar con una herramienta que resume notas de reuniones, con todo preparado para trabajar.
 - Describirle una tarea a la IA, probar la herramienta que genera y comprobar sus resultados con ejemplos.
