@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Augusto (Sasha) Kielbowicz
+ORG:Phorma Scientific
+TITLE:Founder — Scientific Software & AI Evaluation
+EMAIL;TYPE=work:info@phorma.sh
+URL:https://phorma.sh
+ADR;TYPE=work:;;Buenos Aires;;;Argentina
+NOTE:Scientific pipelines fast, reproducible, audit-ready. 2-day fixed-price diagnostic; 30% improvement or we stop. Meeting at Crossing Over LATAM: request via Agenda de Reuniones.
+END:VCARD
